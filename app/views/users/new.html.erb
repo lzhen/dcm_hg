@@ -1,0 +1,19 @@
+<%= content_sheet_div %>
+
+<div class="section">
+
+<%= error_messages_for :user %>
+
+<% form_for(:user, :url => users_path) do |form| %>
+  
+	<%= dcm_edit_text_field( 'Asurite:', form, :login ) %>
+	  
+	<div class="menu FloatLeft FloatClear">
+	  <%= submit_tag " CREATE " %>
+  </div>
+  
+<% end %>
+
+</div>
+
+</div>

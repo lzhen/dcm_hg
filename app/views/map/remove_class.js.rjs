@@ -1,0 +1,36 @@
+unless flash[:notice].nil?
+  page.replace_html 'notice', '<div><p>' + flash[:notice] + '</p></div>'
+  page.visual_effect :scale, 'notice', :duration => 0.5, :scaleFrom => 0.0, :scaleX => false
+  page.visual_effect :appear, 'notice', :duration => 0.5
+  page.delay(5) do
+    page.visual_effect :fade, 'notice', :duration => 0.5
+  end
+  flash.discard
+  
+  #page.visual_effect :blind_down, 'notice', :queue => 'end', :duration => 0.5
+  #page.delay(3) do
+  #  page.visual_effect :blind_up, 'notice'
+  #  page.visual_effect :fade, 'notice'
+  #end
+  #flash.discard
+end
+
+page.replace_html 'Path', :partial => "layouts/path"
+unless @selected_course.nil?
+  page.replace_html 'details', :partial => "details" 
+end
+
+if @refresh_course_strips
+  page.replace_html 'strip_100', :partial => "courses_strip", :locals => {:list => @courses_100 }
+  page.replace_html 'strip_200', :partial => "courses_strip", :locals => {:list => @courses_200 }
+  page.replace_html 'strip_300', :partial => "courses_strip", :locals => {:list => @courses_300 }
+  page.replace_html 'strip_400', :partial => "courses_strip", :locals => {:list => @courses_400 }
+end
+
+#page.replace_html 'Path', :partial => "layouts/path" unless @current_path.nil?
+#page.replace_html @strip_div, :partial => "courses_strip", :locals => {:list => @courses_strip }
+#page.replace_html 'details', :partial => "details"
+#page.visual_effect :appear, 'barmsgid', :queue => 'end', :duration => 1.0
+#page.delay(5) do
+#  page.visual_effect :fade, 'barmsgid'
+#end

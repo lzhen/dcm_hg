@@ -1,0 +1,28 @@
+<%= content_sheet_div %>
+
+<div class="section" id="show-course">
+	
+	<%= render :partial => "show_course"  %>
+
+</div>
+
+
+<% if current_user.can_edit_course?( @course ) %>
+		
+		<%= render :partial => "incoming" if @course.level > 100 %>
+		<%= render :partial => "outgoing" %>
+			
+<% end %>
+
+<div class="section" id="semesters">
+
+  <%= render :partial => "semesters" %>
+
+</div>
+
+<%= render :partial => "reviews" if $SHOW_REVIEWS %>
+
+<%= render :partial => "recommendations" if $SHOW_REVIEWS %>
+
+</div>
+

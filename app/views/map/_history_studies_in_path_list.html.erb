@@ -1,0 +1,4 @@
+<p class="d-header">Historical and Theoretical Studies Courses in current path</p>
+<% @current_path.external_instances.each do |c| %>
+  <p class="d-prof"><%= h(c.external_course.fullname + ' (' + c.semester.fullname + ')') %></p>
+<% end -%>

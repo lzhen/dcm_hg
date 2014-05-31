@@ -1,0 +1,23 @@
+
+<table cellspacing="0">
+	<tr>
+	  <%= header_sortable( 'Login', 'login', 'index', 'users' ) %>
+	  <%= header_sortable( 'Name', 'name', 'index', 'users' ) %>
+	  <%= header_sortable( 'User Type', 'user_type', 'index', 'users' ) %>
+	</tr>
+
+	<% for user in @users %>
+		<tr class="<%= cycle("Alt","Normal") %>">
+			<td><%= link_to h(user.login), edit_user_path(user) %></td>
+			<td><%= link_to h(user.name), edit_user_path(user) %></td>
+			<td><%= user.user_type %></td>
+		</tr>
+	<% end %>
+</table>
+
+<div class="TableFooter">
+			<%= will_paginate @users , :remote => {:update => 'users'} if @users.total_entries > 10 %>
+</div>
+<p>
+	<%= h("Displaying #{@users.offset+1} to #{@users.offset+@users.size} of #{@users.total_entries} Users.") %>
+</p>

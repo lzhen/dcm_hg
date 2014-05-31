@@ -1,0 +1,89 @@
+<div id="hda_primary_nav">
+	<ul>
+    	<li><a href="http://herbergerinstitute.asu.edu/" class="no-border">Herberger Institute for Design and the Arts</a></li>
+  	</ul>
+  
+  	<h1><%= link_to "Digital Culture", "/", :class => "unit_program" %></h1>
+
+	
+	
+</div>
+
+
+<% if @page_title == 'Digital Culture | ASU Herberger Institute for Design and the Arts' %>
+
+<!-- <div id="hda_banner_photo">
+	<%= image_tag("home-banner.jpg") %>
+</div> -->
+
+
+<div id="banner-home">
+	
+	<ul class="banner-images">
+		<li><div id="img1_div"><img src="/images/banner-images/openhouse1.png" alt="" style="z-index:0;left:20px;top:5px;" id="img1" class="banner-image" /></div></li>
+		<li><div id="img2_div"><img src="/images/banner-images/openhouse2.png" alt="" style="z-index:50;left:-60px;top:80px;" id="img2" class="banner-image" /></div></li>
+		<li><div id="img3_div"><img src="/images/banner-images/openhouse3.png" alt="" style="z-index:0;left:-60px;" id="img3" class="banner-image" /></div></li>
+		<li><div id="img4_div"><img src="/images/banner-images/image4.png" alt="" style="z-index:50;left:-70px;top:30px;" id="img4" class="banner-image" /></div></li>
+		<li><div id="img5_div"><img src="/images/banner-images/openhouse5.png" alt="" style="z-index:50;left:-100px;top:80px;" id="img5" class="banner-image" /></div></li>
+		
+
+		
+		
+	</ul>	
+</div>
+
+<% else %>
+
+<div class="header-box">
+	
+<div id="hda_banner_photo">
+	<!-- # <%= javascript_include_tag "hida_photos_digital.js"  %> -->
+	<%= image_tag("banner1.jpg") %>
+	
+</div>
+
+
+<div id="header">
+  <ul class="makeMenu">
+	<li><%=link_to "Home", "/"%></li>
+	<li><%=link_to "About", "/about"%></li> 
+	<li><%= link_to 'Degrees', "/education/degrees" %></li>
+	<li><%= link_to 'Proficiencies', "/education/proficiencies" %></li>
+	<li><%= link_to 'Courses', "/education/courses" %></li>
+	<li><%= link_to 'Faculty', "/education/faculty" %></li>
+	<!--
+	<li>Education
+		<ul>
+			<li><%= link_to 'Degrees', "/education/degrees" %></li>
+			<li><%= link_to 'Proficiencies', "/education/proficiencies" %></li>
+			<li><%= link_to 'Courses', "/education/courses" %></li>
+			<li><%= link_to 'Faculty', "/education/faculty" %></li>
+
+		</ul>
+	</li>
+	-->
+    <li><%= link_to 'Facilities', "/facilities" %></li>
+    <li>Activities &amp; Events
+		<ul>
+			<li><%= link_to "Cultural Networks", "/cn" %></li>
+			<li><%= link_to "Events", "/events" %></li>
+		</ul>
+	</li>
+	<li><%= link_to 'Forms', "/forms" %></li>
+    <li><%= link_to 'Contacts', "/contacts" %></li>
+    <!--<li><%= link_to 'Open House', "/openhouse" %></li>-->
+  </ul>
+</div>
+
+
+
+<div class="signin-box">
+	<a href="/map"><%= image_tag("signin3.png", :class => "signin")%></a>
+</div>
+
+</div>
+
+
+<% end %>
+
+

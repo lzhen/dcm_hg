@@ -1,0 +1,10 @@
+unless @out_notice.nil?
+  page.hide 'out_prof_notice'
+  page.replace_html 'out_prof_notice', '<p>' + @out_notice + '</p>'
+  page.visual_effect :blind_down, 'out_prof_notice', :queue => 'end', :duration => 0.5
+  page.delay(3) do
+    page.visual_effect :blind_up, 'out_prof_notice'
+    page.visual_effect :fade, 'out_prof_notice'
+  end
+end
+page.replace_html 'out_proficiencies', :partial => "outgoing_proficiency_list"

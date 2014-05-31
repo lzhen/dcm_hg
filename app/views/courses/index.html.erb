@@ -1,0 +1,43 @@
+<%= content_sheet_div %>
+
+<div class="section">
+
+	<div class="Container">
+  
+		<div class="menu">
+			<ul class="menuTabs">
+			<% if current_user.can_add_course? %>
+				<li><%= link_to( 'Create new course', new_course_path ) %></li>
+			<% end %>
+			<!--
+			<% if current_user.is_student? %>
+				<li>
+					<%= link_to "View courses I have completed", completed_courses_path %>
+				</li>
+			<% end %>
+			-->
+      		</ul>
+
+			<div class="Searchbox">
+				<%= form_tag( url_for(:controller => :courses, :action => :index), :method => :get, :remote => true ) do %>
+				<div class="" style="float:left; margin: -3px 0px 0px 0px;">
+    				<%= text_field_tag "search_text", @list_options[:search_text], :size => 60, :type => 'search', :class => 'search_name menu_pad', :results => '0', :placeholder => 'Search by Prefix,Number,Title or Description' %>
+				</div>
+				<div class="" style="float:left; margin: -3px 0px 0px 4px;">
+					<%= submit_tag( 'Search' ) %>
+				</div>
+				<% end -%>
+			</div>
+		</div> <!-- menu -->
+
+		<%#= search_observe_field(:search_text) %>
+
+		<div id="courses">
+	     	<%= render :partial => "course_list"  %>
+		</div>
+   
+	</div> <!-- Container -->
+  
+</div>
+  
+</div>

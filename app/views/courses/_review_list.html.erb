@@ -1,0 +1,26 @@
+<p>Average Rating for this course: <%= @course.average_rating %></p>
+
+<table cellspacing="0">
+		
+	<th>Review</th>
+	<th>Recommendation</th>
+	<th>Rating</th>
+	<th>Reviewed On</th>
+			
+	<% for r in @reviews %>
+		<tr>
+			<td>By <%= r.student.name %>
+			<p class="Description"><%= r.review_text %></p>
+				<% if (r.student == current_user) %>
+					<br/><%= link_to_remote "Edit Review", :update => "reviews", :url => {:action => "edit_review", :id => @course, :review_id => r} %>
+				<% end -%>
+			</td>
+			<td><%= r.recommend? ? 'Yes' : 'No' %></td>
+			<td><%= r.rating %></td>
+			<td><%= distance_of_time_in_words(r.created_at, Time.now) %></td>
+		</tr>
+	<% end %>
+		
+</table>
+<div class="TableFooter">
+</div>

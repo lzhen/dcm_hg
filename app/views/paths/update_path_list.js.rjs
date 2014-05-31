@@ -1,0 +1,9 @@
+unless flash[:notice].nil?
+  page.replace_html 'notice', '<div><p>' + flash[:notice] + '</p></div>'
+  page.visual_effect :appear, 'notice', :duration => 0.5
+  page.delay(5) do
+    page.visual_effect :fade, 'notice', :duration => 0.5
+  end
+  flash.discard
+end
+page.replace_html 'Path', :partial => "layouts/path"

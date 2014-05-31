@@ -1,0 +1,11 @@
+
+<%= dcm_edit_text_field( 'Login:', form, :login, :size => 20 ) %>
+<%= dcm_edit_text_field( 'First Name:', form, :first_name, :size => 50 ) %>
+<%= dcm_edit_text_field( 'Middle Name:', form, :middle_name, :size => 50 ) %>
+<%= dcm_edit_text_field( 'Last Name:', form, :last_name, :size => 50 ) %>
+
+<%= dcm_show_text( 'User Type: ', @user.user_type ) %>
+<%= dcm_show_text( 'Admin: ', @user.is_admin ? 'yes' : 'no' ) %>
+
+<%= dcm_edit_text_field( 'email:', form, :email, :size => 50 ) %>
+<%= dcm_edit_text_field( 'Degree:', form, :degree, :size => 50 ) %>

@@ -1,0 +1,37 @@
+<%= content_sheet_div %>
+
+<div class="section" id="courses">
+
+  <div class="sheet_title">
+    <p>Historical and Theoretical Studies Courses</p>
+  </div>
+
+  <%= dcm_show_text( ' ', ' ' ) %>
+
+  <% form_tag( url_for( :controller => :map, :action => :add_history_course ), :remote => true ) do %>
+
+  		<%#= dcm_show_text('&nbsp;',"&nbsp;Add an outgoing proficiency to this course", :font_size => 'Large') %>
+
+  		<%= dcm_edit_select( 'Course:', :external_course, :id, @history_course_options ) %>
+		<%= dcm_edit_select( 'Semester:', :semester, :fullname, @semester_options ) %>
+
+  		<div class="Row">
+  			<div class="Label Right Column1 FloatLeft FloatClear">&nbsp;</div>
+  			<div class="Left Column2 FloatLeft Field"><%= submit_tag(" ADD HISTORY COURSE ") %></div>
+  		</div>
+
+  <% end -%>
+  
+  <%= dcm_show_text( ' ', ' ' ) %>
+
+  <div class="d-outgoing"  id="history_list">
+    <%= render :partial => "history_studies_in_path_list" unless @current_path.external_instances.size == 0 %>
+  </div>
+  
+</div>
+
+<div class="section">
+</div>
+
+
+</div>

@@ -1,0 +1,21 @@
+<h1>Listing course_proficiencies</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @course_proficiencies.each do |course_proficiency| %>
+  <tr>
+    <td><%= link_to 'Show', course_proficiency %></td>
+    <td><%= link_to 'Edit', edit_course_proficiency_path(course_proficiency) %></td>
+    <td><%= link_to 'Destroy', course_proficiency, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Course proficiency', new_course_proficiency_path %>

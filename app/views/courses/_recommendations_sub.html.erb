@@ -1,0 +1,20 @@
+<%= render :partial => "recommendation_list"%>
+
+
+<% if @r.nil? and current_user.can_edit_course?( @course ) %>
+	<p>Submit Recommendation</p>
+	<%= error_messages_for :recommendation %>
+	<% form_remote_tag( :update => "recommendations", :url => { :controller => :courses, :action => :add_recommendation, :id => @course} ) do |form| %>
+		<%= render :partial => "recommendations/edit_recommendation", :locals => { :form => form } %>
+		<%= submit_tag " SUBMIT " %>
+	<% end -%>
+<% end %>
+
+<% if (params[:action] == "edit_recommendation") and show_reco_edit %>
+	<%= error_messages_for :recommendation %>
+  	<% form_remote_tag( :update => "recommendations", :url => { :controller => :courses, :action => :edit_recommendation, :id => @course, :review_id => @review }) do |form| %>
+    	<%= render :partial => "recommendations/edit_recommendation", :locals => { :form => form } %>
+    	<%= submit_tag " UPDATE " %>
+	<% end -%>
+
+<% end -%>

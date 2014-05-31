@@ -1,0 +1,66 @@
+<% content_for :head do %>  
+   <%= javascript_include_tag "compass.js" %> 
+<% end %>
+
+<div id="Path" class="side_section">
+  
+  <p class="path_title">path: <%= h(@current_path.title) unless @current_path.nil? %></p>
+  
+  <% unless current_user.courses.empty? %>
+	<p class="path_semester">Completed Courses</p>
+	<% for course in current_user.courses %>
+		<div class="path_class">
+			<%= link_to course.shortname, course_path(course) %>
+			&nbsp; &nbsp;
+	        <%= link_to 'remove', url_for( :controller => @path_action_controller, :action => 'remove_course_from_completed_courses', :course_id => course.id ), :remote => true %>
+		</div>
+	<% end -%>
+	<br/>
+  <% end -%>
+
+  <% if @current_path.empty? %>
+    <div class="path_class">
+    This path is empty.
+    Its waiting for you to add courses to it.
+    </div>
+  <% else %>
+
+	  <% @path_semesters_sorted.each do |value| %>
+	    <% s = Semester.find(value[0]) %>
+	    <p class="path_semester"><%= h(s.name + ' ' + s.year) %></p>
+	    <% value[1].each do |c| %>
+	      <div class="path_class">
+			<% if c.class == Instance %>
+	          <%= link_to c.course.shortname, course_path(c.course) %>
+	          &nbsp; &nbsp;
+	          <%= link_to 'remove', url_for( :controller => @path_action_controller, :action => 'delete_class_from_path', :instance_id => c.id, :path_id => @current_path ), :remote => true %>
+			<% elsif c.class == ExternalInstance %>
+			  <%= h( c.external_course.shortname ) %>
+			  &nbsp; &nbsp;
+		      <%= link_to 'remove', url_for( :controller => @path_action_controller, :action => 'remove_history_course_from_path', :external_instance_id => c.id ), :remote => true %>
+			<% end %>
+	      </div> 
+	    <% end %>
+	    <br/>
+	  <% end %>
+	
+	  <br/>
+	  <p style="color: #fff; padding-left: 6px; margin-bottom: 4px;">
+		DC CREDIT HOURS: <%= (@current_path.dc_credit_hours_in_path + current_user.credit_hours_in_completed_courses).to_s %>
+	  </p>
+	  <p style="color: #fff; padding-left: 6px; padding-bottom: 4px;">
+		<%= link_to "Send path to advisor", url_for(:controller => :map, :action => 'send_path_advisor', :id => @current_path.id), :style => 'color: #fff; font-size: 11px;' %>
+	  </p>
+
+  <% end %>
+  
+ 
+</div>
+
+
+
+
+ 
+
+
+	

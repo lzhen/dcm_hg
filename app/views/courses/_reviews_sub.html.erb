@@ -1,0 +1,22 @@
+<%= render :partial => "review_list"%>
+
+<% if current_user.can_submit_review?(@course) %>
+	<p>Submit a review</p>
+	<%= error_messages_for :review %>
+	<% form_remote_tag( :update => "reviews", :url => { :controller => :courses, :action => :add_review, :id => @course} ) do |form| %>
+	<%# form_for(:review, :url => { :action => :add_review, :id => @course }, :html => { :method => :put }) do |form| %>
+		<%= render :partial => "reviews/edit_review", :locals => { :form => form } %>
+		<%= submit_tag " SUBMIT " %>
+	<% end -%>
+<% end %>
+
+<% if (params[:action] == "edit_review") and show_review_edit %>
+	<%= error_messages_for :review %>
+  	<% form_remote_tag( :update => "reviews", :url => { :controller => :courses, :action => :edit_review, :id => @course, :review_id => @review }) do |form| %>
+	<%# form_for(:review, :url => { :action => :edit_review, :id => @course, :review_id => @review }, :html => { :method => :put }) do |form| %>
+
+    	<%= render :partial => "reviews/edit_review", :locals => { :form => form } %>
+    	<%= submit_tag " UPDATE " %>
+	<% end -%>
+
+<% end -%>

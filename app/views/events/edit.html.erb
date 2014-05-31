@@ -1,0 +1,27 @@
+<%= content_sheet_div %>
+
+<div class="section">
+	
+	<div class="sheet_title">
+	    <p>EDIT EVENT</p>
+	</div>
+
+<%= error_messages_for :event %>
+  
+<% form_for(:event, :url => event_path(@edit), :html => { :multipart => true, :method => :put }) do |form| %>
+  
+    
+    <%= render :partial => "edit_event", :locals => { :form => form } %>
+    
+    
+    <div class="menu FloatLeft FloatClear">
+      		<%= submit_tag " UPDATE " %>
+  	</div>
+    
+<% end %>
+  
+  
+  
+</div>
+
+</div>

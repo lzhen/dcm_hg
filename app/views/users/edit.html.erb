@@ -1,0 +1,54 @@
+<%= content_sheet_div %>
+
+<div class="section">
+  <%= error_messages_for :user %>
+  <%= form_for(:user, :url => user_path(@user), :html => { :method => :put }) do |form| %>
+  
+    <%= render :partial => "edit_user", :locals => { :form => form } %>
+    <div class="menu FloatLeft FloatClear">
+      <%= submit_tag " UPDATE " %>
+    </div>
+  
+  <% end -%>
+  
+</div>
+
+<div class="section">
+  <div class="sheet_title">
+    <p>Rights</p>
+  </div>
+  
+  <%# form_remote_tag( :update => "rights", :url => { :controller => :users, :action => :add_right, :id => @user} ) do -%>
+  <%= form_tag( url_for( :controller => :users, :action => :add_right, :id => @user.id ), :remote => true ) do |form| %>
+  		
+  		<%#= dcm_edit_text_field( 'Editor for Prefix:', form, :prefix, :size => 10 ) %>
+		<div class="Row">
+  			<div class="Label Right Column1 FloatLeft FloatClear">Prefix:</div>
+  			<div class="Left Column2 FloatLeft Field"><%= text_field_tag( 'prefix' ) %></div>
+  		</div>
+  		
+  		<div class="Row">
+  			<div class="Label Right Column1 FloatLeft FloatClear">&nbsp;</div>
+  			<div class="Left Column2 FloatLeft Field"><%= submit_tag(" ADD RIGHT ") %></div>
+  		</div>
+  	
+  <% end -%>
+  
+  <div id="rights" class="FloatClear">
+  	<%= render :partial => "rights_list"%>
+  </div>
+  
+</div>
+
+<div class="section">
+  <div class="sheet_title">
+    <p>Paths</p>
+  </div>
+  
+  <div id="paths" style="min-width: 600px;">
+	<%= render :partial => "path_list" if @user.paths.size > 0 %>
+  </div>
+  
+</div>
+
+</div>

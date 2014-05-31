@@ -1,0 +1,29 @@
+
+
+  <table cellspacing="0">
+  
+	  <tr>
+  		<th class="Left">Semester</th>
+  		<th class="Left"></th>
+  		<% if current_user.can_edit_course?( @course ) %>
+  		  <th></th>
+  		<% end %>
+  	</tr>
+	
+    <% for i in @course.instances %>
+      <tr class="<%= cycle("Alt","Normal") %>">
+      	<td class="Left"><%= h(i.semester.fullname) %></td>
+  		  <td class="left"><%#= link_to 'Add class to path', url_for( :controller => "paths", :action => 'add_class_to_path', :instance_id => i, :path_id => @current_path ), :remote => true %></td>
+        <% if current_user.can_edit_course?( @course ) %>
+          <td class="left">
+            <%= link_to 'delete', url_for( :action => 'destroy_class', :instance_id => i, :id => @course ), :update => "classes", :remote => true %>
+          </td>
+        <% end %>
+      </tr>
+    <% end -%>
+  
+  </table>
+  
+<div class="TableFooterSlim">
+</div>
+  

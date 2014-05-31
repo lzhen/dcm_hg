@@ -1,0 +1,17 @@
+<% if not @r.nil? %>
+	<table cellspacing="0">
+	
+		<th>Recommendation</th>
+		<tr>
+			<td>
+				<p class="Description"><%= @r.recommendation_text %></p>
+				<% if current_user.can_edit_course?( @course ) %>
+					<br/><%= link_to_remote "Edit Recommendation", :update => "recommendations", :url => {:action => "edit_recommendation", :id => @course, :recommendation_id => @r} %>
+				<% end -%>
+			</td>
+		</tr>
+		
+	</table>
+	<div class="TableFooter">
+	</div>
+<% end -%>

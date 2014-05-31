@@ -1,0 +1,19 @@
+<%= content_sheet_div %>
+
+<div class="section">
+
+<%= error_messages_for :path %>
+
+<% form_for(:path, :url => paths_path) do |form| %>
+  
+	<%= dcm_edit_text_field( 'Title:', form, :title ) %>
+	  
+	<div class="menu FloatLeft FloatClear">
+	  <%= submit_tag " CREATE " %>
+  </div>
+  
+<% end %>
+
+</div>
+
+</div>

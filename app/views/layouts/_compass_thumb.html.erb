@@ -1,0 +1,117 @@
+
+<script type="text/javascript">
+           // <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. --> 
+
+           var swfVersionStr = "10.0.45";
+           // <!-- To use express install, set to playerProductInstall.swf, otherwise the empty string. -->
+           var xiSwfUrlStr = "playerProductInstall.swf";
+
+           var flashvars = {
+				uid: <%= current_user.id %>,
+				pid: <%= current_user.current_path %>
+			};
+           var params = {};
+           params.quality = "high";
+           params.bgcolor = "#ffffff";
+           params.allowscriptaccess = "sameDomain";
+
+           params.allowfullscreen = "true";
+           var attributes = {};
+           attributes.id = "compass_thumbnail";
+           attributes.name = "compass_thumbnail";
+
+           attributes.align = "middle";
+           swfobject.embedSWF(
+               "/flash/dc_compass_thumbnail_small.swf", "flashthumbnail", 
+               "200", "200", 
+               swfVersionStr, xiSwfUrlStr,flashvars, params, attributes);
+			// <!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
+			swfobject.createCSS("#flashthumbnail", "display:block;text-align:left;");
+			
+			$(document).ready(function() {
+				$('#compass_side').hover(function(){
+					$(this).css('cursor','pointer');
+				},
+				function(){
+					$(this).css('cursor','default');
+				});
+				
+				//When you click on a link with class of poplight and the href starts with a # 
+				$('#compass_side').click(function() {
+					
+					  // <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. --> 
+			           var swfVersionStr = "10.0.45";
+			           // <!-- To use express install, set to playerProductInstall.swf, otherwise the empty string. -->
+			           var xiSwfUrlStr = "playerProductInstall.swf";
+
+			           var flashvars = {
+							uid: <%= current_user.id %>,
+							pid: <%= current_user.current_path %>
+						};
+			           var params = {};
+			           params.quality = "high";
+			           params.bgcolor = "#ffffff";
+			           params.allowscriptaccess = "sameDomain";
+
+			           params.allowfullscreen = "true";
+			           var attributes = {};
+			           attributes.id = "compass_thumbnail_large";
+			           attributes.name = "compass_thumbnail_large";
+
+			           attributes.align = "middle";
+			           swfobject.embedSWF(
+			               "/flash/dc_compass_thumbnail_large.swf", "flash_popup", 
+			               "350", "350", 
+			               swfVersionStr, xiSwfUrlStr,flashvars, params, attributes);
+						// <!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
+						swfobject.createCSS("#flash_popup", "display:block;text-align:left;");
+
+
+				    //Fade in the Popup and add close button
+					$('.popup').fadeIn();
+					
+					var popMargTop = ($('.popup').height() + 180) / 2;
+					var popMargLeft = 500-$('.popup').width()/2;
+
+					//Apply Margin to Popup
+					$('.popup').css({
+					    'top' : popMargTop,
+					    'left' : popMargLeft
+					});
+
+				    //Fade in Background
+				    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+				    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+
+				    return false;
+				});
+
+				//Close Popups and Fade Layer
+				$('.closebutton, #fade').live('click', function() { //When clicking on the close or fade layer...
+				    $('#fade , .popup').fadeOut(function() {
+				        $('#fade').remove();  //fade them both out
+				    });
+				    return false;
+				});
+			});
+			
+			
+			
+ </script>
+
+
+<div id="compass_side" class="side_section">
+  <p class="path_title">compass <span id="openCompass"><%=image_tag("add.png", :class => "addbutton", :style => "float:right;") %></span></p>
+  <div id="flashthumbnail" class="path_class">
+    <p>To view this page ensure that Adobe Flash Player version 10.0.45 or greater is installed.</p>
+
+  </div>
+  
+</div>
+
+<div  class="popup">
+   	<%=image_tag("close.png", :class => "closebutton", :style => "float:right;margin-right:10px;margin-bottom:10px;") %>
+<div id="flash_popup">
+	
+</div>
+</div>

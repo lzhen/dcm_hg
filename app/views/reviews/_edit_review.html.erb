@@ -1,0 +1,20 @@
+<table class='borderless'>
+	<tr>
+		<td></td>
+		<td class="Left">
+		<%= text_area(:review, :review_text, :cols => 80, :rows => 4) %></td>
+	</tr>
+	<tr>
+		<td>Do you recommend this course?</td>
+		<td class="Left"><%= check_box(:review, :recommend) %></td>
+	</tr>
+	<tr>
+		<td>Rate this course:</td>
+		<td class="Left">
+			<% 1.upto 5 do |i| %>
+				<%= radio_button("review", "rating", i) %>
+				<%= i %>
+			<% end -%>
+		</td>
+	</tr>
+</table>

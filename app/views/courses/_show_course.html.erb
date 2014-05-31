@@ -1,0 +1,39 @@
+<%= dcm_show_text( 'Course:', @course.prefix + ' ' + @course.number.to_s + ' • ' + @course.title, :font_size => 'Title' ) %>
+<%= dcm_show_text( 'Description:', @course.description ) %>
+<%= dcm_show_text( 'Credit Hours:', @course.credit_hours.to_s ) %>
+		
+<% if current_user.can_edit_course?( @course ) %>
+	<%= dcm_show_text( 'Existing:', @course.is_existing ? 'Yes' : 'No' ) %>
+
+	<%= dcm_show_text( 'Anticipated Start Date:', @course.start_date_as_semester_string() ) %>
+	<%= dcm_show_text( 'Classification:', @course.classification ) %>
+	<%= dcm_show_text( 'Frequency:', @course.frequency ) %>
+	<%= dcm_show_text( 'Special Needs:', @course.facility_needs ) %>
+	<%= dcm_show_text( 'Other Special Needs:', @course.other_special_needs ) %>
+	<%= dcm_show_text( 'Total Seats:', @course.total_seats.to_s ) %>
+	<%= dcm_show_text( 'Reserved Seats:', @course.reserved_seats.to_s + '%' ) %>
+	<%= dcm_show_text( 'Notes:', @course.notes ) %>
+	<%= dcm_show_text( 'High School Incoming Proficiencies:', @course.hs_incoming_proficiencies ) unless @course.hs_incoming_proficiencies.nil? or @course.hs_incoming_proficiencies.empty? %>
+<% end %>
+
+  
+<% unless current_user.can_edit_course?( @course ) %>
+    
+  <%= dcm_show_text( 'Incoming Proficiencies:', @course.incoming_proficiency_string ) %>
+  <%= dcm_show_text( 'Outgoing Proficiencies:', @course.outgoing_proficiency_string ) %>
+  
+<% end %>
+
+<%= dcm_show_text( ' ', ' ' ) %>
+
+<div class="menu FloatLeft FloatClear">
+		<ul class="menuTabs">
+  			<li><%= link_to "Course List", courses_path %></li>
+  		
+  			<% if current_user.can_edit_course?( @course ) %>
+  				<li><%= link_to "Edit", edit_course_path(@course) %></li>
+  				<li><%= link_to "Delete", course_path(@course), :confirm => "Are you sure you want to delete this course: #{@course.fullname}?", :method => :delete %></li>
+  			<% end %>
+  		
+		</ul>
+</div>

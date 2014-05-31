@@ -1,0 +1,46 @@
+$("#Path").html("<%= escape_javascript(render :partial => 'layouts/path') %>");
+
+<% unless @selected_course.nil? or (not @render_detail) %>
+	$("#details").html("<%= escape_javascript(render :partial => 'details') %>");
+<% end %>
+
+<% if @render_map && @refresh_course_strips %>
+	$("#strip_100").html("<%= escape_javascript(render :partial => 'courses_strip', :locals => {:list => @courses_100 }) %>");
+	$("#strip_200").html("<%= escape_javascript(render :partial => 'courses_strip', :locals => {:list => @courses_200 }) %>");
+	$("#strip_300").html("<%= escape_javascript(render :partial => 'courses_strip', :locals => {:list => @courses_300 }) %>");
+	$("#strip_400").html("<%= escape_javascript(render :partial => 'courses_strip', :locals => {:list => @courses_400 }) %>");
+<% end %>
+
+<% if @render_history_list %>
+	$("#history_list").html("<%= escape_javascript(render :partial => 'history_studies_in_path_list') %>");
+<% end %>
+
+<% unless flash[:notice].nil? %>
+	$("#notice").html("<div><p>" + "<%= escape_javascript(flash[:notice]) %>" + "</p></div>").fadeIn(500).delay(5000).fadeOut(500);
+<% end %>
+
+<% if @operation != 0 %>
+
+	updateCompassThumbnail();	
+
+	function getFlashMovie(movieName) 
+	{   
+		var isIE = navigator.appName.indexOf("Microsoft") != -1;   
+		return (isIE) ? window[movieName] : document[movieName];  
+	}  
+
+	function updateCompassThumbnail() 
+	{   
+		// alert("aaa");
+		var course_id = <%= @course.id %>; 
+		var op =  <%= @operation %>;
+		
+		if (op === 4 || op ===3)
+		{
+			course_id = <%= defined?(@course.course_id) ? @course.course_id : @course.id %>;
+		}
+		
+		getFlashMovie("compass_thumbnail").modifyThumbnail(course_id, op);
+	}
+
+<% end %>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title><%= @page_title %></title>
+		
+		<%= render :partial => "layouts/hida_stylesheets" %>
+		<%= stylesheet_link_tag 'dcm', :media => "all" %>
+		<!--[if IE 7]>
+	    <link rel="stylesheet" href="/stylesheets/ie7-dcm.css" type="text/css" media="all" />
+	    <![endif]-->
+	
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js", "rails.js", "swfobject", "application"%>
+	
+	 
+		<%= csrf_meta_tag %>
+		
+		<%= yield :head %>
+	</head>
+	<body>
+		<div id="dcm_wrapper">
+			<%= render :partial => "layouts/hida_header" %>
+			<%= render :partial => "layouts/header" %>
+			
+			<div id="dcm_body_content">
+
+				
+
+				<%= yield :layout %>
+				<div class="clearfloat"></div>
+				
+			</div> <!-- dcm_body_content -->
+
+			<br class="clearfloat" />
+			<%= render :partial => "layouts/hida_footer" %>
+			
+		</div> <!-- dcm_wrapper -->
+		
+		<%= render :partial => "layouts/analytics" %>
+		
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<table cellspacing="0" style="margin-top: 16px;">
+	<tr>
+		<th class="Left">Name</th>
+	</tr>
+	
+  <% for p in @user.paths %>
+    <tr class="<%= cycle("Alt","Normal") %>">
+      <td class="Left"><%= link_to(p.title, path_path(p)) %></td>
+    </tr>
+  <% end -%>
+
+</table>
+
+<div class="TableFooter"></div>
+<p class="TableFootText">
+<% if current_user.paths.size > 0 %>
+  <%= h("Displaying " + pluralize(@user.paths.size,"path") + ".") %>
+<% else %>
+  <%= h("No path to display.") %>
+<% end %>
+</p>

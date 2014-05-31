@@ -1,0 +1,31 @@
+<div class="section">
+
+<div class="sheet_title">
+  <p>Incoming Proficiencies</p>
+</div>
+
+<% form_tag( url_for( :controller => :courses, :action => :add_incoming_proficiency, :id => @course.id ), :id => 'in_prof_form', :remote => true ) do %>
+		
+	<%= dcm_show_text('&nbsp;',"&nbsp;Add an incoming proficiency to this course", :font_size => 'Large') %>
+	
+	<%= dcm_edit_select( 'Proficiency Name:', :in_proficiency, :fullname, @incoming_proficiency_options ) %>
+
+
+
+	<table cellspacing="0" class="borderless FloatClear">
+		<tr>
+			<% 1.upto 5 do |i| %>
+				<td class="IncomingColumn">
+					<%= submit_tag( "ADD TO SLOT #{i}", :name => nil, :onclick => "$('#in_prof_form').attr('action', $('#in_prof_form').attr('action') + ';slot=#{i}' )" ) %>
+				</td>
+			<% end %>
+		</tr>
+	</table>
+	
+<% end %>
+
+<div id="in_proficiencies" class="FloatClear">
+	<%= render :partial => "incoming_proficiency_list"%>
+</div>
+
+</div>

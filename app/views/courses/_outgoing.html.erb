@@ -1,0 +1,28 @@
+<div class="section">
+
+  <div class="sheet_title">
+    <p>Outgoing Proficiencies</p>
+  </div>
+
+  <% form_tag( url_for( :controller => :courses, :action => :add_outgoing_proficiency, :id => @course ), :remote => true ) do %>
+  	
+  		
+  		<%= dcm_show_text('&nbsp;',"&nbsp;Add an outgoing proficiency to this course", :font_size => 'Large') %>
+  		
+  		<%= dcm_edit_select( 'Proficiency Name:', :out_proficiency, :fullname, @outgoing_proficiency_options ) %>
+  		<div class="Row">
+  			<div class="Label Right Column1 FloatLeft FloatClear">&nbsp;</div>
+  			<div class="Left Column2 FloatLeft Field"><%= submit_tag(" ADD OUTGOING PROFICIENCY ") %></div>
+  		</div>
+  	
+  <% end -%>
+
+
+  <div id="out_prof_notice">
+  </div>
+  <div id="out_proficiencies" class="FloatClear">
+  	<%= render :partial => "outgoing_proficiency_list"%>
+  </div>
+
+  
+</div>

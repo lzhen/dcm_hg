@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <script language="javascript" src="javascripts/jquery.SPServices-0.5.7.min.js"></script>
+  <script type="text/javascript" src="javascripts/expand.js"></script>
+  <script type="text/javascript" src="javascripts/planner_ui.js"></script>
+  <script type="text/javascript" src="javascripts/scrolltop.js"></script>
+  <script type="text/javascript" src="javascripts/spservices.js"></script>
+</header>
+<body>
+<div class="father">
+	<div class="leftDiv" id="navigation">
+		<ul>
+			<li>
+				<a href="#">Proficiency
+					<span style="float:right;">
+						<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+						<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+					</span>
+				</a>
+				<ul id="proficiency_list">
+					<li id="scienceandengineering">
+				    <ul class="proficiency_subcat" >
+				        <li><a id="algebra" href="#" title="Algebra"><div><p>Algebra</p></div></a></li>
+    					<li><a id="calculus" href="#" title="Calculus"><div><p>Calculus</p></div></a></li>
+    					<li><a id="communicationandnetworks" href="#" title="Communication and Networks"><div><p>Comm. & Networks</p></div></a></li>
+    					<li><a id="computationalmediaanalysis" href="#" title="Computational Media Analysis"><div><p>Comp. Media Analysis</p></div></a></li>
+    					<li><a id="computationaltools" href="#" title="Computational Tools"> <div><p>Computational Tools</p></div></a></li>
+    					<li><a id="digitalarchivingandpublishing" href="#"  title="Digital Archiving and Publishing"><div><p>Archiving & Publishing</p></div></a></li>
+    					<li><a id="modelingandinference" href="#" title="Modeling and Inference"><div><p>Modeling & Inference</p></div></a></li>
+    					<li><a id="routineactivityanddecisionmaking" href="#" title="Routine Activity and Decision-Making"><div><p>Routine Act. & Decision.</p></div></a></li>
+    					<li><a id="sensorsandsignals" href="#" title="Sensors and Signals"> <div><p>Sensors & Signals</p></div></a></li>
+    					<li><a id="visualizationandsonification" href="#" title="SVisualization and Sonification"> <div><p>Visualization & Sonification</p></div></a></li>
+				    </ul>
+				</li>
+					<li id="socialscience">
+					  <ul class="proficiency_subcat">
+					    <li><a id="perceptionandcognition" href="#" title="Perception and Cognition"><div><p>Perception & Cognition</p></div></a></li>
+    					<li><a id="researchmethodologyandwriting" href="#" title="Research Methodology and Writing"><div><p>Research Method. & Writ.</p></div></a></li>
+    					<li><a id="systemdesigndevelopment" href="#" title="System Design/Development"><div><p>Sys. Design/Development</p></div></a></li>
+					  </ul>
+					</li>
+					<li id="media">
+					  <ul class="proficiency_subcat">
+					    <li><a id="editingandprocessing" href="#" title="Editing and Processing"><div><p>Editing & Processing</p></div></a></li>
+  					 	<li><a id="fabricationandbuilding" href="#" title="Fabrication and Building"><div><p>Fabrication & Building</p></div></a></li>
+    					<li><a id="improvisationanditerativedesign" href="#" title="Improvisation and Iterative Design"><div><p>Improv. & Iterative Design</p></div></a></li>
+    					<li><a id="mediainphysicalspace" href="#" title="Media in Physical Space"><div><p>Media in Physical Space</p></div></a></li>
+    					<li><a id="projectdesignandproduction" href="#" title="Project Design and Production"><div><p>Proj. Design & Production</p></div></a></li>
+    					<li><a id="reflectivepractices" href="#" title="Reflective Practices"><div><p>Reflective Practices</p></div></a></li>
+					  </ul>
+					</li>
+					<li id="humanities">
+					  <ul class="proficiency_subcat">
+					    <li><a id="collaborativeprinciples" href="#" title="Collaborative Principles"><div><p>Collaborative Principles</p></div></a></li>
+    					<li><a id="culturalpracticeandstudies" href="#" title="Cultural Practice and Studies"><div><p>Cultural Practice &...</p></div></a></li>
+    					<li><a id="historyandtheory" href="#" title="History and Theory"><div><p>History & Theory</p></div></a></li>
+    					<li><a id="routineactivityanddecisionmaking" href="#" title="Routine Activity and Deci."><div><p>Social Mech & Understand.</p></div></a></li>
+					  </ul>
+					</li>
+					<li id="art">
+					  <ul class="proficiency_subcat">
+					    <li><a id="routineactivityanddecisionmaking" href="#" title="Routine Activity and Deci."><div><p>Embodiment & Kinesth.</p></div></a></li>
+      					<li><a id="formandcomposition" href="#" title="Form and Composition"><div><p>Form & Composition</p></div></a></li>
+      					<li><a id="narrativeconstruction" href="#" title="Narrative Construction"><div><p>Narrative Construction</p></div></a></li>
+      					<li><a id="performanceandinteraction" href="#" title="Performance and Interaction"><div><p>Performance & Interaction</p></div></a></li>
+					  </ul>
+					</li>
+				</ul>
+			  </li>
+		</ul>
+	</div>
+	<div class="middleDiv">
+		<div id="mycourse">
+		  <ul>
+			<li>
+				<a href="#" style="background:#e5e5e5; color:#000;">
+					<span>Completed Courses</span> 
+					<span style="float:right;">
+						<img src="images/up_black.gif" class="rollButton" alt="roll up"/>
+						<img src="images/down_black.gif" class="rollButton" alt="roll down" style="display:none"/>
+					</span>
+				</a> 
+				<ul id="super-list" class="fitRows clearfix noHiden">
+				</ul>
+			</li>	
+		  </ul>
+		</div>
+		<div id="course">
+			<ul id="2011spring">
+				<li>
+					<a href="#">
+						<span>2011 Spring</span>
+						<span class="rotatedButton"> 
+    	  					<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+    	  					<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+    	  				</span>
+    	  				<span class='selectedcourse'> 
+    	  					<img src="images/selectedCourse.png" id="11sscienceandengineering"   title="Science and Engineering"  	class="noDisplay framed"/>
+				 			<img src="images/selectedCourse.png" id="11ssocialscience" 		     title="Social Science"				class="noDisplay framed"/>
+							<img src="images/selectedCourse.png" id="11smedia" 					 title="Media"						class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="11shumanities"				 title="Humanities"					class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="11sart"					 title="Art"						class="noDisplay framed"/>
+    	  				</span>
+					</a>
+					<ul id="super-list" class="fitRows clearfix followingsemester">
+					</ul>
+				</li>
+			</ul>
+			<ul id="2011fall">
+				<li>
+					<a href="#">
+						<span>2011 Fall</span>
+						<span class="rotatedButton"> 
+    	  					<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+    	  					<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+    	  				</span>
+    	  				<span class='selectedcourse'> 
+    	  					<img src="images/selectedCourse.png" id="11fscienceandengineering"   title="Science and Engineering"  	class="noDisplay framed"/>
+				 			<img src="images/selectedCourse.png" id="11fsocialscience" 		     title="Social Science"				class="noDisplay framed"/>
+							<img src="images/selectedCourse.png" id="11fmedia" 					 title="Media"						class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="11fhumanities"				 title="Humanities"					class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="11fart"					 title="Art"						class="noDisplay framed"/>
+    	  				</span>
+					</a>
+					<ul id="super-list" class="fitRows clearfix followingsemester">
+					</ul>
+				</li>
+			</ul>
+			<ul id="2012spring">
+				<li>
+					<a href="#">
+						<span>2012 Spring</span>
+						<span class="rotatedButton"> 
+    	  					<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+    	  					<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+    	  				</span>
+    	  				<span class='selectedcourse'> 
+    	  					<img src="images/selectedCourse.png" id="12sscienceandengineering"   title="Science and Engineering"  	class="noDisplay framed"/>
+				 			<img src="images/selectedCourse.png" id="12ssocialscience" 		     title="Social Science"				class="noDisplay framed"/>
+							<img src="images/selectedCourse.png" id="12smedia" 					 title="Media"						class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="12shumanities"				 title="Humanities"					class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="12sart"					 title="Art"						class="noDisplay framed"/>
+    	  				</span>
+					</a>
+					<ul id="super-list" class="fitRows clearfix followingsemester">
+					</ul>
+				</li>
+			</ul>
+			<ul id="2012fall">
+				<li>
+					<a href="#">
+						<span>2012 Fall</span>
+						<span class="rotatedButton"> 
+    	  					<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+    	  					<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+    	  				</span>
+    	  				<span class='selectedcourse'> 
+    	  					<img src="images/selectedCourse.png" id="12sscienceandengineering"   title="Science and Engineering"  	class="noDisplay framed"/>
+				 			<img src="images/selectedCourse.png" id="12ssocialscience" 		     title="Social Science"				class="noDisplay framed"/>
+							<img src="images/selectedCourse.png" id="12smedia" 					 title="Media"						class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="12shumanities"				 title="Humanities"					class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="12sart"					 title="Art"						class="noDisplay framed"/>
+    	  				</span>
+					</a>
+					<ul id="super-list" class="fitRows clearfix followingsemester">
+					</ul>
+				</li>
+			</ul>
+			<ul id="2013spring">
+				<li>
+					<a href="#">
+						<span>2013 Spring</span>
+						<span class="rotatedButton"> 
+    	  					<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+    	  					<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+    	  				</span>
+    	  				<span class='selectedcourse'> 
+    	  					<img src="images/selectedCourse.png" id="12sscienceandengineering"   title="Science and Engineering"  	class="noDisplay framed"/>
+				 			<img src="images/selectedCourse.png" id="12ssocialscience" 		     title="Social Science"				class="noDisplay framed"/>
+							<img src="images/selectedCourse.png" id="12smedia" 					 title="Media"						class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="12shumanities"				 title="Humanities"					class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="12sart"					 title="Art"						class="noDisplay framed"/>
+    	  				</span>
+					</a>
+					<ul id="super-list" class="fitRows clearfix followingsemester">
+					</ul>
+				</li>
+			</ul>
+			<ul id="2013fall">
+				<li>
+					<a href="#">
+						<span>2013 Fall</span>
+						<span class="rotatedButton"> 
+    	  					<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+    	  					<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+    	  				</span>
+    	  				<span class='selectedcourse'> 
+    	  					<img src="images/selectedCourse.png" id="12sscienceandengineering"   title="Science and Engineering"  	class="noDisplay framed"/>
+				 			<img src="images/selectedCourse.png" id="12ssocialscience" 		     title="Social Science"				class="noDisplay framed"/>
+							<img src="images/selectedCourse.png" id="12smedia" 					 title="Media"						class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="12shumanities"				 title="Humanities"					class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="12sart"					 title="Art"						class="noDisplay framed"/>
+    	  				</span>
+					</a>
+					<ul id="super-list" class="fitRows clearfix followingsemester">
+					</ul>
+				</li>
+			</ul>
+			<ul id="2014spring">
+				<li>
+					<a href="#">
+						<span>2014 Spring</span>
+						<span class="rotatedButton"> 
+    	  					<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+    	  					<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+    	  				</span>
+    	  				<span class='selectedcourse'> 
+    	  					<img src="images/selectedCourse.png" id="14sscienceandengineering"   title="Science and Engineering"  	class="noDisplay framed"/>
+				 			<img src="images/selectedCourse.png" id="14ssocialscience" 		     title="Social Science"				class="noDisplay framed"/>
+							<img src="images/selectedCourse.png" id="14smedia" 					 title="Media"						class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="14shumanities"				 title="Humanities"					class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="14sart"					 title="Art"						class="noDisplay framed"/>
+    	  				</span>
+					</a>
+					<ul id="super-list" class="fitRows clearfix followingsemester">
+					</ul>
+				</li>
+			</ul>
+			<ul id="2014fall">
+				<li>
+					<a href="#">
+						<span>2014 Fall</span>
+						<span class="rotatedButton"> 
+    	  					<img src="images/up_white.gif" class="rollButton" alt="roll up"/>
+    	  					<img src="images/down_white.gif" class="rollButton" alt="roll down" style="display:none"/>
+    	  				</span>
+    	  				<span class='selectedcourse'> 
+    	  					<img src="images/selectedCourse.png" id="14sscienceandengineering"   title="Science and Engineering"  	class="noDisplay framed"/>
+				 			<img src="images/selectedCourse.png" id="14ssocialscience" 		     title="Social Science"				class="noDisplay framed"/>
+							<img src="images/selectedCourse.png" id="14smedia" 					 title="Media"						class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="14shumanities"				 title="Humanities"					class="noDisplay framed"/>
+			     			<img src="images/selectedCourse.png" id="14sart"					 title="Art"						class="noDisplay framed"/>
+    	  				</span>
+					</a>
+					<ul id="super-list" class="fitRows clearfix followingsemester">
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="rightDiv" id="courseDescription">
+		<div id="rightDivInner">
+			<ul>
+			<li>
+				<a href="#"><span style="float:left; margin-left:-2px;"><img src="images/popdown.png" class="rollButton" alt="roll up"/><img src="images/popup.png" class="rollButton" alt="roll down" style="display:none"/></span><span>Course Information</span></a>
+				<ul>
+					<li class="title"></li>
+					<li class="credit"></li>
+					<li class="totalSeats"></li>
+					<li class="reservedSeats"></li>
+					<li class="description"></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+	</div>
+<div class="clear"></div>
+</div>
+</body>

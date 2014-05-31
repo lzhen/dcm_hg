@@ -1,0 +1,14 @@
+<%= content_sheet_div %>
+
+<div class="section">
+  <%= error_messages_for :review %>
+  <% form_for(:review, :url => review_path(@review), :html => { :method => :put }) do |form| %>
+  
+    <%= render :partial => "edit_review", :locals => { :form => form } %>
+    <%= submit_tag " UPDATE " %>
+  
+  <% end -%>
+  
+</div>
+
+</div>

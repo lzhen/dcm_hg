@@ -1,0 +1,13 @@
+digraph courses {<br/>
+  node [shape = rect, style = rounded, fontname = Helvetica];<br/>
+  edge[arrowsize = 0.4];<br/>
+	rankdir = LR;<br/>
+  <% for course in @courses %>
+    <%= h("\"#{course.shortname_with_id}\";") %><br/>
+  <% end %>
+  
+  <% @course_links.each do |connection| %>
+    <%= h("#{connection};") %><br/>
+  <% end %>
+  
+}<br/>

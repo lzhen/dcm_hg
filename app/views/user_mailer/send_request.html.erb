@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+<p>A Digital Culture request from <%= @issue.user.name %>.</p>
+
+<p><%= dcm_formatted_datetime( @issue.created_at.in_time_zone('Arizona') ) %></p>
+<p>FROM: <%= @issue.user.name + '<' + @issue.user.email + '>' %></p>
+<p>SUBJECT:<br/><%= @issue.subject %></p>
+<p>DETAILS:<br/><%= @issue.details %></p>
+
+<p style="margin:0px; padding:0px">School of Arts, Media and Engineering</p>
+<p style="margin:0px; padding:0px">Herberger Institute for Design and the Arts</p>
+<p style="margin:0px; padding:0px">Arizona State University</p>
+
+  </body>
+</html>

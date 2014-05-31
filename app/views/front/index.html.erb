@@ -1,0 +1,49 @@
+<% content_for :head do %>  
+  <%= javascript_include_tag "front_banner_images" %> 
+<% end %>
+
+<div class="homecontent">
+	
+<div class="lowerpart">
+	
+<div id="left" class="sub-div">
+	The School of Arts Media and Engineering and 15 partnering units have designed a new undergraduate initiative in <span style="color:#ffcb66;">Digital Culture</span> to educate 21st century students. The initiative incorporates both creative and technical components, with a curriculum that pushes students to learn how to integrate both.
+</div>
+
+<div id="middle" class="sub-div">
+	<h5><span style="color:#0aefe3;">prospective</span> student</h5>
+	<p>
+		<%= link_to "About", "/about" %> &nbsp;&nbsp;
+		<%= link_to "Degrees", "/education/degrees" %> &nbsp;&nbsp;
+		<%= link_to "Proficiencies", "/education/proficiencies" %> &nbsp;&nbsp; 
+		<%= link_to "Courses", "/education/courses" %><br />
+		<%= link_to "Faculty", "/education/faculty" %> &nbsp;&nbsp;
+		<%= link_to "Facilities", "/facilities" %> &nbsp;&nbsp;
+		<%= link_to "Contacts", "/contacts" %> &nbsp;&nbsp;<br />
+	</p>
+	
+	<h5 style="margin-top:30px;">other links</h5>
+	<p>
+		<%= link_to "Herberger Institute for Design and the Arts", "http://herbergerinstitute.asu.edu/" %><br/>
+		<%= link_to "School of Arts, Media + Engineering", "http://ame.asu.edu/" %><br/>
+	</p>
+	
+</div>
+
+<div id="right" class="sub-div">
+	<h5><span style="color:#0aefe3;">community</span> member</h5>
+	<a href="map"><%= image_tag("signin_home.png", :class => "signin")%></a>
+	<p>
+		<br/>
+		<%= link_to "Cultural Networks", "/cn" %>&nbsp;&nbsp;<!-- <br/> -->
+		<%= link_to "Events", "/events" %><br />
+		<%#= link_to "Open House", "/openhouse" %>	
+	</p>
+</div>
+
+</div>
+
+</div>
+
+
+

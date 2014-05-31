@@ -1,0 +1,23 @@
+<table cellspacing="0">
+	<tr>
+		<th>Digital Culture Proficiencies</th>
+	</tr>
+
+	<% for p in @proficiencies %>
+		<tr class="<%= cycle("Alt","Normal") %>">
+			<td class="Left">
+		  		<%#= link_to h("#{p.fullname}"), proficiency_path(p) %>
+		  		<%= p.name %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<div class="TableFooter">
+		<p>
+			<%= h("Displaying #{@proficiencies.offset+1} to #{@proficiencies.offset+@proficiencies.size} of #{@proficiencies.total_entries} Proficiencies.") %>
+		</p>	
+</div>
+
+<%#= will_paginate @proficiencies, :renderer => 'RemoteLinkRenderer' , :remote => {:update => 'proficiencies'} if @proficiencies.total_entries > 10 %>
+

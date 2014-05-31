@@ -1,0 +1,29 @@
+<%= content_sheet_div %>
+
+<div class="section">
+
+  <div class="Container">
+  
+    <div class="menu">
+      <ul class="menuTabs">
+        <li><%= link_to "Create New Path", new_path_path %></li>
+        <li><%#= link_to "Turn off current path", :controller => :paths, :action => 'turn_off_current_path', :id => current_user %></li>
+		    <li><%#= link_to "Courses Taken", user_path(current_user)%></li>
+      </ul>
+    </div>
+    
+    <p class="help-intro" style="clear: both;">
+    A path is simply a sequence of courses in the Digital Culture curriculum. You can create multiple paths to experiment with
+    different sets and sequences of courses. Only one path is the CURRENT path that you can add courses to on other parts of
+    the site. If you have more than one path, set which one is the CURRENT path on this page.
+    </p>
+		
+		<div id="paths" style="min-width: 600px;">
+    <%= render :partial => "path_list" if current_user.paths.size > 0 %>
+    </div>
+    
+  </div>
+  
+</div>
+
+</div>

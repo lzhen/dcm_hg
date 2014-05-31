@@ -1,0 +1,6 @@
+<% unless @course.is_general %>
+  
+ <%= dcm_edit_text_area( 'Special Incoming Proficiencies:', form, :special_incoming_proficiencies ) %>
+ <%= dcm_edit_text_area( 'Special Outgoing Proficiencies:', form, :special_outgoing_proficiencies ) %>
+
+<% end %>

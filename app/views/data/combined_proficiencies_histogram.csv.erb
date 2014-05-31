@@ -1,0 +1,4 @@
+<% @prof_names.each do |prof| -%>
+<%=prof.name + ', ' + @input_count[prof.name][100].to_s + ', ' + @input_count[prof.name][200].to_s + ', ' + @input_count[prof.name][300].to_s + ', ' + @input_count[prof.name][400].to_s + ', ' + @output_count[prof.name][100].to_s + ', ' + @output_count[prof.name][200].to_s + ', ' + @output_count[prof.name][300].to_s + ', ' + @output_count[prof.name][400].to_s -%>
+
+<% end %>

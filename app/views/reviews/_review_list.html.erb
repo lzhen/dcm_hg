@@ -1,0 +1,24 @@
+<div id="reviews">
+  <table cellspacing="0">
+	<tr>
+		<th class="Left">Course</th>
+		<th>Recommendation</th>
+		<th>Reviewed On</th>
+	</tr>
+	
+  <% for r in current_user.reviews %>
+    <tr class="<%= cycle("Alt","Normal") %>">
+    	<td class="Left">
+			<%= link_to h(r.course.fullname), course_path(r.course) %>
+			<p class="Description"><%= r.review_text %></p>
+			<%= link_to "Edit Review", edit_review_path(r) %>
+		</td>
+		<td class="Left"><%= r.recommend? ? 'Yes' : 'No' %></td>
+		<td class="left"><%= distance_of_time_in_words(r.created_at, Time.now) %></td>
+    </tr>
+  <% end -%>
+  </table>
+  <div class="TableFooter">
+    
+  </div>
+</div>

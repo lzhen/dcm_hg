@@ -1,0 +1,16 @@
+<h1><%= @title %></h1>
+
+<%= error_messages_for :proficiency %>
+
+<% form_for(:proficiency, :url => proficiencies_path) do |form| %>
+	<p>
+		<strong> Name: </strong>
+  		<%= form.text_field :name %>
+	 	<%#= dcm_edit_select( 'Level:', 'proficiency', :level, Proficiency::LEVEL_OPTIONS ) %>
+	</p>
+	
+	<p>
+		<%= submit_tag "Create" %>
+	</p>
+
+<% end %>

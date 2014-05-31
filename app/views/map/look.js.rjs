@@ -1,0 +1,5 @@
+page.replace_html 'strip_100', :partial => "courses_strip", :locals => {:list => @courses_100 }
+page.replace_html 'strip_200', :partial => "courses_strip", :locals => {:list => @courses_200 }
+page.replace_html 'strip_300', :partial => "courses_strip", :locals => {:list => @courses_300 }
+page.replace_html 'strip_400', :partial => "courses_strip", :locals => {:list => @courses_400 }
+page.replace_html 'details', :partial => "details"

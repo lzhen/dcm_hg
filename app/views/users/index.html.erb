@@ -1,0 +1,38 @@
+<%= content_sheet_div %>
+
+<div class="section">
+
+	<div class="Container">
+  
+    	<div class="menu">
+			<%= form_tag( url_for(:controller => :users, :action => :index), :method => :get, :remote => true ) do %>
+			<ul class="menuTabs">
+				<% if current_user.can_add_user? %>
+				
+				<li><%= link_to "Create New User with ASURITE", new_user_path %></li>
+				
+				<% end -%>
+				
+				<li>
+				<%= text_field_tag "search_name", '', :size => 40, :type => 'search', :class => 'search_name menu_pad', :results => '0', :placeholder => 'Search by Name' %>
+				</li>
+				
+				<li>
+				<%= submit_tag( 'Search', :class => 'menu_pad' ) %>
+				</li>
+				
+			</ul>
+			<% end -%>
+
+	    </div> <!-- menu -->
+	
+		<div id="users" style="min-width: 600px;">
+			<%= render :partial => "user_list"  %>
+		</div>
+    
+	</div> <!-- Container -->
+  
+</div>	<!-- section -->
+  
+</div>
+

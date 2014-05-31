@@ -1,0 +1,7 @@
+<p class="bartitle" style="">Course Details</p>
+
+<% if @show_proficiency %>
+  <div class="barbtn">
+    <%= link_to( "Clear Proficiency Search", url_for( :controller => "map", :action => 'clear_look_for_proficiency' ), :remote => true ) %>
+  </div>
+<% end %>

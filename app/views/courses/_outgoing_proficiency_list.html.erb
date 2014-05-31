@@ -1,0 +1,18 @@
+<table cellspacing="0">
+	<tr>
+		<th class="Left">Proficiency Name</th>
+		<th>Leads to</th>
+		<th></th>
+	</tr>
+
+		<% @course.outgoing_proficiencies.each do |prof| %>
+  		<tr class="<%= cycle("Alt","Normal") %>">
+  			<td class="Left"><%= h(prof.fullname) %></td>
+			<td class="Left"><%= prof.courses_with_input.length %> Courses</td>
+			  <% @course_proficiency = prof.course_proficiencies.find_by_course_id(@course.id) %>
+        <td class="Left"><%= link_to 'delete', url_for( :action => ('destroy_outgoing_proficiency'), :course_proficiency_id => @course_proficiency, :id => @course ), :update => "out_proficiencies", :remote => true %></td>
+  		</tr>
+		<% end -%>
+</table>
+<div class="TableFooterSlim">
+</div>

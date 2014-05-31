@@ -1,0 +1,3 @@
+#page.visual_effect :fade, @strip_div, :duration => 0.5
+page.replace_html @strip_div, :partial => "courses_strip", :locals => {:list => @courses_strip }
+#page.visual_effect :appear, @strip_div, :duration => 0.5

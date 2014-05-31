@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Digital Culture Course and Path Planner</title>
+
+   
+    <link rel="stylesheet" href="http://asu.edu/asuthemes/2.0/css/global.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://asu.edu/asuthemes/2.0/css/asu_header_nav.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://asu.edu/asuthemes/2.0/css/leftnav_dynamic.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://asu.edu/asuthemes/2.0/css/asu_footer.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://asu.edu/asuthemes/2.0/css/asu_print.css" type="text/css" media="print" />
+	<link rel="shortcut icon" href="http://asu.edu/asuthemes/2.0/images/favicon.ico" type="image/x-icon" />
+
+
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="/asuthemes/2.0/css/ie-classic.css" type="text/css" media="screen" />
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/asuthemes/2.0/css/ie-vista.css" type="text/css" media="screen" />
+    <![endif]-->
+    <!--[if IE 8]>
+  	<link rel="stylesheet" href="/asuthemes/2.0/css/ie-eight.css" type="text/css" media="screen" />
+  	<![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="/asuthemes/2.0/css/ie-print.css" type="text/css" media="print" />
+    <![endif]-->
+
+    <script type="text/javascript" src="/asuthemes/2.0/javascript/menu.js"></script>
+    <script type="text/javascript" src="/asuthemes/2.0/javascript/external.js"></script>
+
+	<link rel="stylesheet" href="/stylesheets/hda_main.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/stylesheets/hda_main_print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="/stylesheets/dcm.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/stylesheets/dcm_about.css" type="text/css" media="all" />
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/stylesheets/ie7-dcm.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/stylesheets/ie7-dcm_about.css" type="text/css" media="all" />
+    <![endif]-->
+       
+	<style type="text/css" media="screen">
+		
+
+	</style>
+  </head>
+  
+  <body>
+  <div id="dcm_wrapper">
+  <!-- START SKIP LINKS FOR ACCESSIBILITY -->
+  <ul class="skip">
+    <li><a href="#asu_content">Skip to Content</a></li>
+    <li><a href="#asu_nav">Skip to Menu</a></li>
+  </ul>
+  <!-- END SKIP LINKS -->
+
+  <!-- <div id="asu_container"> -->
+	
+	<!-- START GOLD HEADER -->
+	<!--
+	<div id="asu_mask" style="width:100%;height:100%;background-color:#fff;z-index:100;position:absolute;top:0;left:0"></div>
+	-->
+	<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/3.0/css/header_compressed.css" />
+	
+  
+	<div id="asu_hdr" class=" asu_hdr_gold">
+		<div id="asu_logo">
+		  <a target="_top" href="http://herbergerinstitute.asu.edu/" title="ASU - Herberger Institute "><img src="https://www.asu.edu/asuthemes/3.0/images/logos/hda_asu_208_123_k.png" alt="ASU - Herberger Institute " height="55" width="310" style="margin-top:2.5px" title="ASU - Herberger Institute " /></a> 	
+		</div>
+
+    	<div id="asu_nav_wrapper">
+		    <ul id="asu_universal_nav">
+		      <li><a target="_top" href="http://www.asu.edu/">ASU Home</a></li>
+		      <li><a target="_top" href="https://my.asu.edu/">My ASU</a></li>
+		      <li><a target="_top" href="http://www.asu.edu/colleges/">Colleges &amp; Schools</a></li>
+		      <li><a target="_top" href="http://www.asu.edu/index/">A-Z Index</a></li>
+		      <li><a target="_top" href="http://www.asu.edu/directory/">Directory</a></li>
+		      <li><a target="_top" href="http://www.asu.edu/map/">Map</a></li>
+			</ul>
+
+			<ul id="asu_login_module" class='hidden'>
+		        <li id="asu_hdr_ssi" class="end">
+		        <a target="_top" href="https://weblogin.asu.edu/cgi-bin/login?callapp=##w.l##" 
+		           onmouseover="this.href = header_alterLoginHref(this.href);" 
+		           onclick="this.href = header_alterLoginHref(this.href);">SIGN IN</a>
+		      </li>
+		    </ul>
+
+		    <script type="text/javascript">
+		// <![CDATA[
+		// If we're in an iFrame, force the document domain to be asu.edu
+		var inIFrame = (window.top != window) ? true : false;
+		if (inIFrame) {
+		    document.domain = 'asu.edu';
+		}
+		var header_signin_url = '';
+
+		function header_alterLoginHref(url) {
+		    if (header_signin_url) {
+		        return header_signin_url;
+		    }
+		    var callApp = window.location.toString();
+		    if (inIFrame) {
+		        callApp = window.parent.location.toString();
+		    }
+
+		    // Decode the URL
+		    url = unescape(url);
+
+		    // Dyanamic Drupal login links
+		    if (url.match('##w.l.d##') && typeof(Drupal) != 'undefined') {
+		        var re = /https?:\/\/[^\/]*/i;
+		        var result = re.exec(window.location.toString());
+		        callApp = result + Drupal.settings.basePath + 'asuwebauth-login';
+		        url = url.replace('##w.l.d##', callApp);
+		    }
+		    url = url.replace('##w.l##', callApp);
+		    header_signin_url = url;
+		    return header_signin_url;
+		}
+
+		function header_checkSSOCookie() {
+		    // try to parse out the username from SSONAME cookie
+		    var cookies = document.cookie.split(";");
+		    for(var i = 0; i < cookies.length; i++) {
+		        if (cookies[i].indexOf('SSONAME') > 0) {
+		            var sso_name = document.createElement('li');
+		            if (cookies[i].substring(9) == "") {
+		                break;
+		            }
+		            sso_name.innerHTML = cookies[i].substring(9);
+
+		            var sso_link = document.createElement('li');
+		            sso_link.innerHTML = '<a target="_top" href="https://webapp4.asu.edu/myasu/Signout">SIGN OUT</a>';
+		            sso_link.className = 'end';
+		            sso_link.id = 'asu_hdr_sso';
+
+		            var ul = document.getElementById('asu_login_module');
+		            while (ul.childNodes[0]) {
+		                ul.removeChild(ul.childNodes[0]);
+		            }
+		            ul.appendChild(sso_name);
+		            ul.appendChild(sso_link);
+
+		            break;
+		        }
+		    }
+		    // unhide
+		    document.getElementById('asu_login_module').style.display = 'inline-block';
+		}
+
+		if (typeof(jQuery) != 'undefined') {
+		    $(document).ready(function() {
+		            header_checkSSOCookie();
+		    });
+		}
+		else {
+		    if (window.addEventListener) {
+		        window.addEventListener('load', header_checkSSOCookie, false);
+		    } 
+		    else if (window.attachEvent) {
+		        window.attachEvent('onload', header_checkSSOCookie);
+		    }
+		}
+
+		// ]]>
+		</script>
+		                        	</div>
+
+		    <div id="asu_search_module">
+			<form target="_top" action="http://search.asu.edu/search" method="get" name="gs">
+		  <label class="hidden" for="asu_search_box">Search</label>
+		    <fieldset class="asu_search_selection">
+		    <label for="herberger_collection"><input type="radio" checked="checked" value="herberger_collection" id="herberger_collection" name="site" onclick="header_searchSwitch('Herberger Institute Site')"/>Herberger Institute Site</label>
+		    <label for="asu_collection"><input type="radio" value="default_collection" id="asu_collection" name="site" onclick="header_searchSwitch('ASU')"/>ASU</label>
+		  </fieldset>
+		    <input type="text" name="q" size="32" value="Search Herberger Institute Site" id="asu_search_box" class="asu_search_box" onfocus="header_searchFocus(this)" onblur="header_searchBlur(this)" /> 
+		  <input type="submit" value="Search" title="Search" class="asu_search_button" />
+		  <input name="sort" value="date:D:L:d1" type="hidden" /> 
+		  <input name="output" value="xml_no_dtd" type="hidden" /> 
+		  <input name="ie" value="UTF-8" type="hidden" /> 
+		  <input name="oe" value="UTF-8" type="hidden" /> 
+		  <input name="client" value="asu_frontend" type="hidden" /> 
+		  <input name="proxystylesheet" value="asu_frontend" type="hidden" />
+		</form>
+		  </div>
+		  </div>
+
+		<script type="text/javascript">
+		// <![CDATA[
+		var header_default_search_text = "Search Herberger Institute Site";
+		function header_searchSwitch(name) {
+		    var field = document.getElementById('asu_search_box');
+		    if (field != null) {
+		        var oldDefault = header_default_search_text;
+		        header_default_search_text = "Search "+name;
+		        if (field.value == oldDefault) {
+		            field.value = header_default_search_text;
+		        }
+		    }
+		}
+		function header_searchFocus(field) {
+		    if (typeof field != "undefined") {
+		        if (field.value == header_default_search_text) {
+		            field.value = "";
+		        }
+		    }
+		}
+		function header_searchBlur(field) {
+		    if (typeof field != "undefined") {
+		        if (field.value == "") {
+		            field.value = header_default_search_text;
+		        }
+		    }
+		}
+		function header_searchToggle(radio) {
+		    var google = document.getElementById('asu_search_google');
+		    if (google != null) {
+		        if (google.style.display == "none") {
+		            header_default_search_text = "Search ASU";
+		            google.style.display = "block";
+		        } else {
+		            google.style.display = "none";
+		        }
+		    }
+		    var alt = document.getElementById('asu_search_alternate');
+		    if (alt != null) {
+		        if (alt.style.display == "none") {
+		            header_default_search_text = "Search Herberger Institute Site";
+		            alt.style.display = "block";
+		        } else {
+		            alt.style.display = "none";
+		        }
+		    }
+
+		    if (typeof radio != "undefined") {
+		        radio.checked = false;
+		    }
+		}
+		// ]]>
+		</script>
+
+		<div style="clear:both;"></div>
+
+
+		    <!-- END GOLD HEADER -->
+    
+    <div id="hda_primary_nav">
+	  <ul>
+	    <li><a href="http://herbergerinstitute.asu.edu/" class="no-border">Herberger Institute for Design and the Arts</a></li>
+	  </ul>
+	  <h1><a href="http://herbergerinstitute.asu.edu/degrees/digital_culture/" class="unit_program">Digital Culture</a></h1>
+	</div>
+	<div id="hda_banner_photo">
+		
+	    <script src="/javascripts/hida_photos_digital.js" language="JavaScript" type="text/javascript"></script>
+
+	</div>
+	<div id="Header">
+	  <div id="Tabs">
+	  </div>
+	</div>
+
+	<div id="dcm_body_content1" class="body_content"  >
+		
+		<div class="planner_box">
+			<p class="planner_h3"><span style="font-size: 160%;">Digital Culture</span><br/>Interactive Course and Path Planner</p>
+			<p style="font-size: 275%; font-weight: bold; letter-spacing: -1px; padding: 16px; margin: 0; text-align: center;"><a href="map">Sign In &rsaquo;</a></p>
+			<p>
+				Sign in to the Interactive Course and Path Planner to view Digital Culture course descriptions and create
+				your own customized course path. Create the sequence and outcome that fits your interest.
+			</p>
+		</div>
+
+		<p class="body_h3">What is Digital Culture at ASU?</p>
+
+
+		<p>Digital Culture is an exciting new undergraduate iniative at ASU. In order to educate for the 21st century student, the school of Arts Media and Engineeing (AME) has designed a new major, minor, and certificate that incorporates both creative and technical components, and developed a curriculum that pushes students to learn how to integrate both. Students take a wide range of classes from cooperating departments all across campus. </p>
+
+		<p>Through the Digital Culture Initiative, the Herberger Institute for Design and the Arts focuses on the creative exploration of how new media influences our culture, or rather, the way we live, learn, create and communicate. We hope to graduate creative practitioners that can contribute significantly to the development of the next-generation of new media systems with cultural applications. </p>
+
+		<p class="body_h3">Why Digital Culture? </p>
+
+		<p>ASU is at the forefront of innovation in higher education, and Digital Culture is one of these innovations. The aim of Digital Culture is to train the next generation of digital problem solvers to apply computing and media arts to the world around us. We need students who can not only solve problems, but creatively formulate, frame, and redefine the problems. </p>
+
+		<p>Real-world problems that are worth solving aren't easy to even understand, let alone solve. In order to formulate the hard problems of the future, we need students who can think creatively with technology, find information that is lacking, or discard information that is not relevant, work in diverse teams, and synthesize new knowledge. </p>
+
+		<p class="body_h3">Complexity is the new reality.</p>
+
+		<p>The information environment of today and tomorrow is increasingly complex. The pace of change, the numbers of people involved, and the interactions and links between people are all increasing. This is the new normal, and our new challenge. But training students to understand complex systems is not simple. Complex systems are dynamic, hard to predict, and often not intuitive. Dealing with complex systems is central in many fields, communication, computing, gaming and entertainment, product design and architecture, health care, biodesign, education and government. </p>
+
+		<blockquote>
+		<p>"Digital technologies are powerful catalysts of cultural change—this is a trivial observation in our present circumstances. The past decade has seen cultural innovation on a massive scale, from the virtualization of group networks and social identities to the digital convergence of text and audiovisual media. Although it is tempting to see technological change as an independent driver of this process, there is powerful reciprocity at work: New technologies take hold only in the context of accompanying cultural innovation as their latent possibilities are explored. This interdependence means that technologies are not merely received but, through processes of adoption, socially defined and, eventually, socially embedded in new collective and institutional practices. Social construction, in turn, feeds back into processes of technical innovation, shaping research priorities and design. In the end there is no simple causality: no chickens, no eggs."</p>
+		</blockquote>
+
+		<p class="body_citation">Structures of Participation in Digital Culture<br/>
+		edited by Joe Karaganis </p>
+
+
+		<p class="body_h3">Courses and Outcomes</p>
+
+		<p>The Digital Culture curriculum is outcomes based rather than course sequence based.  The curriculum uses an innovative proficiency-based network to connect courses across academic disciplines, instead of traditional methods such as course prerequisites. Each course provides certain proficiencies. These proficiencies are accumulated and then unlock access to higher level courses, which in turn provide further proficiencies.</p>
+
+		<p>Proficiencies in the Digital Culture curriculum identify generalized learning outcomes that are common across disciplines participating in digital culture coursework. Proficiencies provide the connections across disciplines in the digital culture network rather than the traditional pre-requisites.</p>
+
+		<p>Because the curriculum is proficiency based, students can follow unique paths through the coursework. For instance, a student who has completed ENG 102 and MAT 210 demonstrates the proficiencies necessary for the 200-level digital culture core courses and could by-pass the 100-level classes, whereas a student without MAT 210 may need one of the 100-level courses.</p>
+		
+		<img src="images/about_outcomes.png" width="466" height="316" class="about_figure">
+
+		<p class="body_h3">The Digital Culture Facilities - a new learning/creation space</p>
+		<p>
+			Our building, currently being renovated, will open in January 2011. It will consist of several digital labs, attached to one large reconfigurable learning space. This large space is designed to be re-arranged quickly. The main computing facilities for digital culture will consist of 100 laptops for instructors to use in their classes. Students will pick up a laptop and arrange tables and chairs into groups for working collaboratively in class. This large space can also be opened up for larger performances, installations and lectures. 
+		</p>
+		
+		<ul>
+			<li>indoor and outdoor spaces</li>
+			<li>highly reconfigurable</li>
+			<li>portable, networked technologies</li>
+			<li>few high end labs</li>
+			<li>all 58 digital culture courses</li>
+			<li>student projects</li>
+			<li>Technology in the background – people in the foreground</li>
+			
+		</ul>
+		
+		<p class="body_h3">Digital Fabrication</p>
+		
+		<p>
+			In addition to our reconfigurable spaces, we also have a high-end workstation computer lab, and two digital fabrication labs. The first digital fab-lab is a 3d CAD/CAM development studio. This studio will house 3D FDM printers, laser cutters and digital scanning and modeling tools. The second digital fabrication space is a centered around large format CNC milling and cutting tables and lathes. This space also is a full wood/metal shop. 
+		</p>
+
+		<p class="body_h3">Careers</p>
+
+		<p>Upon graduation, digital culture students are greeted by a wide array of career opportunities. The following fields are rapidly hiring graduates that exhibit proficiency in their creative and technological education in New Media:</p>
+
+		<ul>
+			<li><strong>Communication:</strong> Cisco, Facebook, Google, Nokia </li>
+			<li><strong>Gaming and Entertainment:</strong> Electronic Arts, ImageMovers Digital, Industrial Light and Magic, Lucas Arts, Nintendo, Pixar, Universal Studios</li>
+			<li><strong>Media Arts examples:</strong> Multimedia shows (Cirque de Soleil), Concert Production and Staging (U2), </li>
+			<li><strong>Sound and Image production and software:</strong> Adobe, Avid, MixOne studios </li>
+			<li><strong>Public Art Installations:</strong> UnitedVisualArtists </li>
+			<li><strong>Design and Architecture:</strong> diller scofidio + renfro, IDEO, Herman Miller, Steelcase </li>
+			<li><strong>Human Centered Computing:</strong> Apple, Microsoft, IBM </li>
+		</ul>
+
+		<p class="body_h3">Future areas</p>
+
+		<p>The digital culture curriculum prepares students for leadership roles in the development of state of the art media systems that address complex socio-technical problems, such as:</p>
+
+		<ul>
+			<li>Social Networking and Reflection tools for promoting sustainability: Reflective Living</li>
+			<li>Diagnostic, monitoring and assistive cyber-physical tools and methods for improving health care outcomes and delivery: Apple Science, Mixed Reality Rehabilitation, PROMIS</li>
+			<li>Systems for interactive and adaptive learning and computational assessment in K-12 education: Arts, Media and Engineering SMALLab, Macarthur Foundation</li>
+			<li>New systems and forms for collaborative, participatory content creation and sharing: Jason Freeman, Grisha Coleman/echo system, Miranda July, Zefrank</li>
+		</ul>
+
+
+		<p>Graduates of the Herberger Institute bachelor's degrees with a focus in digital culture who are interested in continuing their higher education will be well prepared to apply for admission to the top interdisciplinary new media programs in the nation: 
+		</p>
+
+		<ul>
+			<li>ASU Herberger Institute School of Arts, Media and Engineering</li>
+			<li>Carnegie Mellon University Entertainment Technology Center</li>
+			<li>Georgia Tech School of Interactive Computing</li>
+			<li>Massachusetts Institute of Technology Media Lab </li>
+			<li>New York University Tisch School of the Arts - Interactive Telecommunications Program</li>
+			<li>University of Southern California Interactive Media Division</li>
+		</ul>
+
+		<p class="body_h3">More Information</p>
+		
+		<ul>
+			<li><a href="http://asunews.asu.edu/20100311_digitalculture">ASU News: Students create new futures with Digital Culture Initiative.</a></li>
+			<li><a href="http://herbergerinstitute.asu.edu/degrees/digital_culture/">Digital Culture Initiative degrees at Herberger Institute for Design and the Arts.</a></li>
+			<li><a href="http://herbergerinstitute.asu.edu/degrees/digital_culture/courses.php">2010-2011 Digital Culture courses.</a></li>
+		</ul>
+		
+	</div>
+    
+	<br class="clearfloat" />
+	<div id="hda_asu_footer">
+       
+	<!-- START FOOTER /asuthemes/2.0/includes/html/asu_footer.shtml -->   
+   	<ul id="asu_footer" class="asu_black_footer">
+		<li><a href="http://www.asu.edu/copyright/">Copyright &amp; Trademark</a></li>
+		<li><a href="http://www.asu.edu/accessibility/">Accessibility</a></li>
+		<li><a href="http://www.asu.edu/privacy/">Privacy</a></li>
+		<li><a href="http://www.asu.edu/emergency/">Emergency</a></li>
+		<li class="no-border"><a href="http://www.asu.edu/contactasu/">Contact ASU</a></li>
+	</ul>
+	<!-- END FOOTER -->
+	
+	<!-- START HDA FOOTER  -->   
+	<div id="asu_footer_contact_info">
+		<p>Herberger Institute for Design and the Arts<br />
+		PO Box 872102<br />
+		Tempe, AZ 85287-2102  | <a href="http://www.asu.edu/map/interactive/?campus=tempe" class="noprintedlink">Campus map</a> | 480.965.6536<br />
+		<a href="http://herbergerinstitute.asu.edu/contact/" class="noprintedlink">Contact Herberger Institute</a> | 
+		<a href="http://herbergerinstitute.asu.edu/webupdates/" class="noprintedlink">Web corrections</a></p>
+	</div>
+	<!-- END FOOTER -->
+	
+	</div> <!-- END #hda_asu_footer-->
+
+  <!--</div> -->
+  </div> <!-- END #hda_wrapper-->
+
+	<% if RAILS_ENV == 'production' %>
+	<!-- Piwik -->
+	<script type="text/javascript">
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://ame4.hc.asu.edu/piwik/" : "http://ame4.hc.asu.edu/piwik/");
+	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+	piwikTracker.trackPageView();
+	piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+	</script><noscript><p><img src="http://ame4.hc.asu.edu/piwik/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+	<!-- End Piwik Tag -->
+	<% end %>
+
+  </body>
+</html>

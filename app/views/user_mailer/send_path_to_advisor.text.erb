@@ -1,0 +1,30 @@
+A Digital Culture path for <%= @path.student.name %>.
+
+<% if @path.student.courses.size > 0 %>
+
+	Completed Courses
+
+<% for course in @path.student.courses %>	
+	<%= course.fullname %>
+<% end -%>
+
+<% end %>
+
+<% @path_semesters_sorted.each do |value| %>
+	<% s = Semester.find(value[0]) %>
+	<%= h(s.name + ' ' + s.year) %>
+	<% value[1].each do |c| %>
+		<% if c.class == Instance %>
+			<%= c.course.fullname %>
+		<% elsif c.class == ExternalInstance %>
+			<%= c.external_course.fullname %>
+		<% end %>
+	<% end %>
+<% end %>
+
+Total DC Credit Hours: <%= (@path.dc_credit_hours_in_path + @path.student.credit_hours_in_completed_courses).to_s %>
+
+
+School of Arts, Media and Engineering
+Herberger Institute for Design and the Arts
+Arizona State University

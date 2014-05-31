@@ -1,0 +1,224 @@
+<% content_for :head do %>  
+  <%= javascript_include_tag "front_courses" %> 
+<% end %>
+
+<div class="maincontent">
+	
+	<h1>Courses</h1>
+	
+	<p>Through a collaboration with five ASU schools and colleges, the Herberger Institute and the School of Arts, Media and Engineering have created curriculum that will not only prepare students with tangible skills in New Media, but also with skills to be thought leaders in this digital world over the next 40 years.
+		<br/>
+		<br/>
+	</p>
+	
+	<table cellspacing="0">
+		<thead>
+		<tr> <!-- Header Row -->
+			<th>&nbsp;</th>
+			<th>FALL:<br/>Digital Culture Studies</th>
+			<th>FALL:<br/>Digital Media</th>
+			<th>FALL:<br/>Related Digital Culture</th>
+			<th>SPRING:<br/>Digital Culture Studies</th>
+			<th>SPRING:<br/>Digital Media</th>
+			<th>SPRING:<br/>Related Digital Culture</th>
+		</tr>
+		</thead>
+		
+		<tfoot>
+		<tr> <!-- Footer Row -->
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</tfoot>
+		
+		<tbody>
+		<tr> <!-- Row 101 -->
+			<td>100</td>
+			
+			<td class="link"><%= course_link( 'AME 194 Intro to Digital Culture (Core Course)', 40 ) %></td>
+			<td class="link"><%= course_link( 'AME 194 Digital Culture Studio I', 7777 ) %></td>
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME 194 Computational Thinking', 39 ) %></td>
+			<td class="link"><%= course_link( 'AME 194 Digital Culture Studio I', 7777 ) %></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr> <!-- Row 102 -->
+			<td>&nbsp;</td>
+			
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'ART 194 Digital Art & Culture', 47 ) %></td>
+			<td>&nbsp;</td>
+		</tr>
+		
+		<tr> <!-- Row 201 -->
+			<td class="border-row">200</td>
+			<td class="border-row link"><%= course_link( 'ART 294 3D Tools', 86 ) %></td>
+			<td class="border-row link"><%= course_link( 'AME 294 Digital Culture Studio II', 7777 ) %></td>
+			<td class="border-row">&nbsp;</td>
+			<td class="border-row link"><%= course_link( 'AME 294 Programming for Media Arts', 82 ) %></td>
+			<td class="border-row link"><%= course_link( 'AME 294 Digital Culture Studio II', 7777 ) %></td>
+			<td class="border-row">&nbsp;</td>
+		</tr>
+		
+		<tr> <!-- Row 202 -->
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME/ART 294 Intro to Interactive Environments', 32 ) %></td>
+			<td class="link"><%= course_link( 'ART 294 The Still Image in Digital Culture', 89 ) %></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'MUE 294 Open Minds Digital Ears', 55 ) %></td>
+			<td>&nbsp;</td>
+		</tr>
+		
+		<tr> <!-- Row 203 -->
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'DCE 294 Hybrid Action: Physical Intelligence in Digital Culture', 31 ) %></td>
+			<td class="link"><%= course_link( 'FMP 294 Writing & Story Development for Interactive Gaming', 37 ) %></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'DSC 294 Media Editing', 61 ) %></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr> <!-- Row 204 -->
+			<td>&nbsp;</td>
+			
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'FMP 294 Intro to Animation', 36 ) %></td>
+			<td>&nbsp;</td>
+		</tr>
+		
+		<tr> <!-- Row 301 -->
+			<td class="border-row">300</td>
+			<td class="border-row link"><%= course_link( 'DSC 394 Digital Modeling', 64 ) %></td>
+			<td class="border-row link"><%= course_link( 'AME 394 Digital Culture Studio III', 7777 ) %></td>
+			<td class="border-row link"><%= course_link( 'EDT 329 Games, Simulations & Virtual Environments', 83 ) %></td>
+			<td class="border-row link"><%= course_link( 'ANP 394 Digital Fabrication', 57 ) %></td>
+			<td class="border-row link"><%= course_link( 'AME 394 Digital Culture Studio III', 7777 ) %></td>
+			<td class="border-row link"><%= course_link( 'ASB 394 Rules, Games & Society', 76 ) %></td>
+		</tr>
+		
+		<tr> <!-- Row 302 -->
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'ANP/AME 394 How to Build a Digital Physical System', 44 ) %></td>
+			<td class="link"><%= course_link( 'FMP 394 Non-linear Editing', 35 ) %></td>
+			<td class="link"><%= course_link( 'ENG 394 Social Media & Digital Cultures', 95 ) %></td>
+			<td class="link"><%= course_link( 'AME 394 Motion Capture for Integrative Systems', 98 ) %></td>
+			<td class="link"><%= course_link( 'CSE 394 Data Structures', 68 ) %></td>
+			<td>&nbsp;</td>
+		</tr>
+		
+		<tr> <!-- Row 303 -->
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME 394 Compositional & Computational Principals for Media Arts', 43 ) %></td>
+			<td class="link"><%= course_link( 'MUE 394 Performing in Digital & Hybrid Music Groups', 56 ) %></td>
+			<td class="link"><%= course_link( 'ASB 344 Technology and Society', 75 ) %></td>
+			<td class="link"><%= course_link( 'AME 394 Collaborative Projects & Research I & II (Junior Yr.)', 93 ) %></td>
+			<td class="link"><%= course_link( 'EEE 394 Signal Analysis for Digital Culture', 65 ) %></td>
+			<td class="link"><%= course_link( 'ENG 394 Writing in Cyberspace', 96 ) %></td>
+		</tr>
+		
+		<tr> <!-- Row 304 -->
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME 394 Collaborative Projects & Research I & II (Junior Yr.)', 93 ) %></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="link"></td>
+			<td class="link"><%= course_link( 'EGR 394 Graphics & Info Visualization (Polytechnic campus)', 110 ) %></td>
+			<td>&nbsp;</td>
+		</tr>
+		
+		<tr> <!-- Row 401 -->
+			<td class="border-row">400</td>
+			<td class="border-row link"><%= course_link( 'AME 494 Integrated System Development', 91 ) %></td>
+			<td class="border-row link"><%= course_link( 'ANP 494 Design by Algorithm', 46 ) %></td>
+			<td class="border-row link"><%= course_link( 'EDT 431 Computer Gaming Learning & Literacy', 85 ) %></td>
+			<td class="border-row link"><%= course_link( 'ART/AME 494/598 Media Installations', 90 ) %></td>
+			<td class="border-row link"><%= course_link( 'ART 494 Visualization & Prototyping', 108 ) %></td>
+			<td class="border-row link"><%= course_link( 'ASB 430 Social Simulation', 77 ) %></td>
+		</tr>
+		
+		<tr> <!-- Row 402 -->
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME 494 Animating Virtual Worlds', 38 ) %></td>
+			<td class="link"><%= course_link( 'EGR 494 Music and Engineering', 94 ) %></td>
+			<td class="link"><%= course_link( 'MCO 435 Media 2.0 Social Media', 97 ) %></td>
+			<td class="link"><%= course_link( 'ANP 494 Designing Hybrid Spaces', 58 ) %></td>
+			<td class="link"><%= course_link( 'EEE/CSE 494 Information Analysis & Search for Digital Culture', 66 ) %></td>
+			<td class="link"><%= course_link( 'ARE 494 Digital Ethnography in Virtual Worlds', 53 ) %></td>
+		</tr>
+
+		<tr> <!-- Row 403 -->
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME 494 Programming for Social and Interactive Media', 109 ) %></td>
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME 494/598 Understanding Activity', 100 ) %></td>
+			<td class="link"><%= course_link( 'AME 494 Digital Culture Capstone I & II (Senior Yr.)', 1 ) %></td>
+			<td class="link"><%= course_link( 'ANP 494 Digital Ecologies: Parametric Systems Design', 45 ) %></td>
+			<td class="link"><%= course_link( 'AME 494/594 Experiential Media Theory & Methodology I', 62 ) %></td>
+		</tr>
+		
+		<tr> <!-- Row 404 -->
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME 494 Digital Culture Capstone I & II (Senior Yr.)', 1 ) %></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="link"><%= course_link( 'AME 494/598 Integrated Perception & Cognition', 59 ) %></td>
+			<td class="link"><%= course_link( 'AME/MUE 494/598 Advanced Interactive Sound', 92 ) %></td>
+			<td>&nbsp;</td>
+		</tr>
+
+
+		</tbody>
+		
+	</table>
+
+	<h2>Departments/Schools offering Digital Culture Courses</h2>
+	<ul>
+		<li>Arts, Media & Engineering (AME)</li>
+		<li>Architecture (ANP)</li>
+		<li>Design (DSC)</li>
+		<li>Art Education (ARE)</li>
+		<li>Art (ART)</li>
+		<li>Anthropology (ASB)</li>
+		<li>Computer Science & Engineering (CSE)</li>
+		<li>Dance (DCE)</li>
+		<li>Teacher's College (EDT)</li>
+		<li>Electrical Engineering (EEE)</li>
+		<li>College of Technology Innovation (EGR)</li>
+		<li>English</li>
+		<li>Theater and Film (FMP,THP)</li>
+		<li>Journalism and Mass Communication (MCO)</li>
+		<li>Music (MUE)</li>
+		<li>Psychology (PSY)</li>
+		<li>Interdisciplinary Arts and Performance (IAP)</li>
+	</ul>	
+	
+		
+	<div style="margin-top:20px;">
+		<p style=" font-size:14px;">*For more information about our undergraduate programs, contact:<br/>
+		Erica Green, Digital Culture Education Coordinator
+		<a href="">Erica.G.Green@asu.edu</a></p>
+	</div>	
+	
+</div>
+
+<div class="clearfloat">
+</div>
+
+<div id="course_detail" class="course_detail">
+	<h2>AME 194 Intro to Digital Culture</h2>
+	<p>
+		Introduction to Digital Culture examines the effects of digital technology on the way we live, communicate, learn, and create. It proposes that we are moving towards a hybrid (physical-digital) existence and culture. It traces that evolution, looks at current examples of hybrid cultural processes and outcomes and discusses possible future trends. It discusses how these changes are influencing the work and career possibilities of people involved in all aspects of human culture. The syllabus comprises diverse readings, media products, class interaction, group discussion and hands on collaborative projects exploring concepts covered in class. A number of guest lectures from faculty members from HIDA, FSE, and CLAS are also included.
+	</p>
+</div>

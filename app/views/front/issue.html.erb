@@ -1,0 +1,28 @@
+<div class="maincontent">
+	<h1>Need help?</h1>
+	<p>Do you need some help? Students with a course related question should contact their instructor or teaching assistant directly. For other questions or issues, you may submit a help request with this form.</p>
+	
+	<br/>
+	<%= form_for(:issue, :url => '/submit_issue') do |form| %>
+
+		<p>Subject:</p>
+		<%= form.select :subject, [["Equipment","Equipment"], ["Facilities Access","Facilities Access"], ["Labs","Labs"] ] %>
+	
+		<br/><br/>
+		<p>Details:</p>
+		<%= form.text_area :details, :size => "120x6" %>
+
+
+	    <br/><br/>
+	    <%= submit_tag " SUBMIT " %>
+
+	<% end %>
+	
+	<br/>
+	<div style="margin-top:20px;">
+		<p style=" font-size:10px;">*For more information about our undergraduate programs, contact:<br/>
+		Erica Green, Digital Culture Education Coordinator
+		<a href="">Erica.G.Green@asu.edu</a></p>
+	</div>
+</div>
+<div class="clearfloat"></div>

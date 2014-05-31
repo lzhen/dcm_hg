@@ -1,0 +1,17 @@
+<div class="maincontent">
+	<h1>Request has been sent</h1>
+	
+	<p><%= dcm_formatted_datetime( @issue.created_at.in_time_zone('Arizona') ) %></p>
+	<p><%= current_user.name %>,</p>
+	<p>Your request has been sent. We will respond as soon as we are able, using your email address <%= current_user.email %>. Thank you.</p>
+	<p>SUBJECT:<br/><%= @issue.subject %></p>
+	<p>DETAILS:<br/><%= @issue.details %></p>
+	
+	<br/>
+	<div style="margin-top:20px;">
+		<p style=" font-size:10px;">*For more information about our undergraduate programs, contact:<br/>
+		Erica Green, Digital Culture Education Coordinator
+		<a href="">Erica.G.Green@asu.edu</a></p>
+	</div>
+</div>
+<div class="clearfloat"></div>

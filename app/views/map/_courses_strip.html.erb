@@ -1,0 +1,13 @@
+<div>
+
+  <%= course_prev_box(list) %>
+
+  <% for course in list.courses %>
+
+    <%= link_to course_box(course), url_for( :controller => "map", :action => 'select', :id => course.id ), :html => { :class => "course_tooltip" } , :remote => true %>
+  
+  <% end %>
+
+  <%= course_next_box(list) %>
+
+</div>

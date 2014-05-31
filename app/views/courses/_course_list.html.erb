@@ -1,0 +1,49 @@
+<table cellspacing="0">
+	<tr>
+	  <%= header_sortable( 'Prefix', 'prefix, number', 'index', 'courses' ) %>
+	  <%= header_sortable( 'Number', 'number, prefix', 'index', 'courses' ) %>
+	  <%= header_sortable( 'Title', 'title', 'index', 'courses', 'Left' ) %>
+		
+		<th>Credit Hours</th>
+		<% if current_user.is_student? %>
+			<th>Completed</th>
+		<% end %>
+	</tr>
+
+	<% for course in @courses %>
+		<tr class="<%= cycle("Alt","Normal") %>">
+			<td><%= course.prefix %></td>
+			<td><%= course.number %></td>
+			<td class="Left">
+		  		<%= link_to h(course.title), course_path(course) %>
+		  		<p class="Description"><%= h( course.description ) %></p>
+		  		<%= show_proficiencies_in_list(course) %>
+			</td>
+			<td><%= course.credit_hours %></td>
+			<% if current_user.is_student? %>
+				<td>
+		      <% unless current_user.is_course_in_completed_list?(course) %>
+		        <%= link_to "+", url_for( :controller => :courses, :action => :add_completed_course, :id => course.id, :method => :get ), :html => { :title => 'Add to my list of completed courses' }, :remote => true %>
+		      <% else %>
+					  <%= link_to "completed", url_for( :controller => :courses, :action => :remove_course_from_completed_courses, :course_id => course.id, :method => :get ), :html => { :title => 'Remove from my list of completed courses' }, :remote => true %>
+					<% end -%>
+				</td>
+			<% end -%>
+		</tr>
+	<% end %>
+</table>
+
+<div class="TableFooter">
+			<%= will_paginate @courses, :remote => {:update => 'courses'} if @courses.total_entries > 10 %>
+</div>
+<p class="TableFootText">
+  <% if @courses.size > 0 %>
+	  <%= h("Displaying #{@courses.offset+1} to #{@courses.offset+@courses.size} of " + pluralize(@courses.total_entries,"course") + ".") %>
+	<% else %>
+	  <%= h("No courses to display.") %>
+	<% end %>
+</p>
+
+
+
+

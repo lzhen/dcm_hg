@@ -1,0 +1,7 @@
+$("#Path").html("<%= escape_javascript(render :partial => 'layouts/path') %>");
+
+$("#history_list").html("<%= escape_javascript(render :partial => 'history_studies_in_path_list') %>");
+
+<% unless flash[:notice].nil? %>
+	$("#notice").html("<div><p>" + "<%= escape_javascript(flash[:notice]) %>" + "</p></div>").fadeIn(500).delay(5000).fadeOut(500);
+<% end %>

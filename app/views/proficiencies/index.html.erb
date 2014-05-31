@@ -1,0 +1,39 @@
+<%= content_sheet_div %>
+
+<div class="section">
+
+  <div class="Container">
+  
+    <div class="menu">
+      <ul class="menuTabs">
+        <% if current_user.can_add_proficiency? %>
+        <li><%= link_to "Create New Proficiency", new_proficiency_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  	
+  	<p class="help-intro">
+    	The Digital Culture curriculum uses an innovative concept called proficiencies to connect courses across academic disciplines, 
+    	instead of traditional methods such as course prerequisites. You may be familiar with prerequisites that are used to enforce a 
+    	certain course sequence within one academic department. Proficiencies in the Digital Culture curriculum identify generalized 
+    	learning outcomes that are common across disciplines participating in digital culture. The benefit of proficiencies is this: 
+    	you may gain a 200 level proficiency in "Form and Composition" from either the 200 level Design course "Media Editing" or the 
+    	200 level Art course "Introduction to Visualization and Prototyping". In either case, that proficiency will provide part of the 
+    	knowledge you need to take the 300 level Computer Science course "Graphics and Information Visualization for Digital Culture". 
+    	Proficiencies provide the connections across disciplines in the digital culture network.<br/>
+    	<br/>
+    	Each proficiency can be earned at the 100, 200, 300 and 400 level. Earning a proficiency at a higher level, satisfies any
+    	requirement for a proficiency at a lower level. For example, if you complete a course with the outgoing proficiency 
+    	"Narrative Composition 200 level", that proficiency fulfills the requirement for any course with an incoming proficiency of 
+    	"Narrative Composition 100 level" or "Narrative Composition 200 level".
+    	</p>
+	
+	  <div id="proficiencies" style="min-width: 600px;">
+      <%= render :partial => "proficiency_list"  %>
+    </div>
+    
+  </div>
+  
+</div>
+  
+</div>

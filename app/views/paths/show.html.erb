@@ -1,0 +1,26 @@
+<%= content_sheet_div %>
+
+<div class="section">
+
+  <div class="sheet_title">
+    <p><%= h('Path: ' + @path.title + ' [ ') %><%= link_to( @path.student.name, edit_user_path(@path.student) ) %><%= h(' ]') %></p>
+  </div>
+  
+  <% @path_dictionary.each do |value| %>
+	    <% s = Semester.find(value[0]) %>
+	    <p class="path_semester"><%= h(s.name + ' ' + s.year) %></p>
+	    <% value[1].each do |c| %>
+	      <div class="path_class">
+			<% if c.class == Instance %>
+	          <%= h(c.course.fullname) %>
+			<% elsif c.class == ExternalInstance %>
+			  <%= h( c.external_course.fullname ) %>
+			<% end %>
+	      </div> 
+	    <% end %>
+	    <br/>
+	<% end %>
+
+</div>
+
+

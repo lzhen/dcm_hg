@@ -1,0 +1,5 @@
+<% @prof_names.each do |prof| %>
+  
+  <%= h( prof.name + ', ' + @input_count[prof.name][100].to_s + ', ' + @input_count[prof.name][200].to_s + ', ' + @input_count[prof.name][300].to_s + ', ' + @input_count[prof.name][400].to_s + ', ' + @input_count[prof.name][101].to_s + ', ' + @input_count[prof.name][201].to_s + ', ' + @input_count[prof.name][301].to_s + ', ' + @input_count[prof.name][401].to_s ) %><br/>
+  
+<% end %>

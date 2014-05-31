@@ -1,0 +1,14 @@
+<%= content_sheet_div %>
+
+<div class="section">
+  <%= error_messages_for :recommendation %>
+  <% form_for(:recommendation, :url => recommendation_path(@recommendation), :html => { :method => :put }) do |form| %>
+  
+    <%= render :partial => "edit_recommendation", :locals => { :form => form } %>
+    <%= submit_tag " UPDATE " %>
+  
+  <% end -%>
+  
+</div>
+
+</div>

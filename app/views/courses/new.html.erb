@@ -1,0 +1,24 @@
+<%= content_sheet_div %>
+
+<div class="section">
+
+<%= error_messages_for :course %>
+
+<%= form_for(:course, :url => courses_path) do |form| %>
+  
+    
+    <%= render :partial => "edit_course", :locals => { :form => form } %>
+    
+    
+    <div class="menu FloatLeft FloatClear">
+      		<%= submit_tag " CREATE " %>
+  	</div>
+    
+<% end %>
+  
+  
+  
+</div>
+
+</div>
+

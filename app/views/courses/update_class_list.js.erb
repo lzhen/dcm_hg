@@ -1,0 +1,5 @@
+$("#classes").html("<%= escape_javascript(render :partial => 'class_list') %>");
+
+<% unless flash[:notice].nil? %>
+	$("#notice").html("<div><p>" + "<%= escape_javascript(flash[:notice]) %>" + "</p></div>").fadeIn(500).delay(5000).fadeOut(500);
+<% end %>

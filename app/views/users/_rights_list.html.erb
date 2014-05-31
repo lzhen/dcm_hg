@@ -1,0 +1,18 @@
+<table cellspacing="0">
+	<tr>
+		<th>Prefix</th>
+		<th>Name</th>
+		<th></th>
+	</tr>
+
+	<% for right in @user.rights %>
+		<tr class="<%= cycle("Alt","Normal") %>">
+			<td><%= right.prefix %></td>
+			<td><%= right.name %></td>
+			<td>
+			<%= link_to 'delete', url_for( :action => ('destroy_right'), :right_id => right.id, :id => @user ), :remote => true %>
+		</tr>
+	<% end %>
+</table>
+<div class="TableFooterSlim">
+</div>

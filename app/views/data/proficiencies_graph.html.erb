@@ -1,0 +1,17 @@
+digraph proficiencies {<br/>
+  node [shape = rect, style = rounded, fontname = Helvetica];<br/>
+  edge[arrowsize = 0.4];<br/>
+	rankdir = LR;<br/>
+  <% @proficiencies.each do |prof| %>
+    <% 
+      n = prof.courses_with_output 
+      c = prof_outputs_color_map(n.size)
+    %>
+    <%= h("\"#{prof.fullname}\" [fillcolor = \"#{c}\"];") %><br/>
+  <% end %>
+  
+  <% @prof_links.each do |connection| %>
+    <%= h("#{connection};") %><br/>
+  <% end %>
+  
+}<br/>

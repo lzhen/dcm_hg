@@ -1,0 +1,64 @@
+<div id="hda_primary_nav">
+	<ul>
+	  <li><a href="http://herbergerinstitute.asu.edu/" class="no-border">Herberger Institute for Design and the Arts</a></li>
+	</ul>
+	
+	<h1><%= link_to "Digital Culture", "/", :class => "unit_program" %></h1>
+</div>
+
+<div id="hda_banner_photo">
+	<!-- # <%= javascript_include_tag "hida_photos_digital.js"  %> -->
+	<%= image_tag("banner1.jpg") %>
+	
+</div>
+
+<div class="signin-box">
+	<p>
+		Hello,<br />
+	   <span style="font-weight:bold;"><%= current_user.first_name %></span>
+	<br />
+	<br />
+	<%= link_to "map", "/map", :class => "unit_program" %>
+	<%= link_to "compass", "/compass", :class => "unit_program" %>
+	
+	</p>
+	<%= image_tag("signin.png", :class => "signin")%>
+</div>
+
+<% 
+	notice_display_state = ''
+	if flash[:error].nil? and flash[:notice].nil?
+		notice_display_state = 'display: none;'
+	end
+%>
+<div id="notice" style="<%= notice_display_state %>">
+	<p style="">
+		<% if not flash[:error].nil? %>
+			<%= flash[:error] %>
+		<% elsif not flash[:notice].nil? %>
+			<%= flash[:notice] %>
+		<% end %>
+	</p>
+</div>
+
+<div id="Header">
+  
+  <div id="Tabs">
+    <ul id="MainTabs">
+	
+      <% @controllers.each { | c | %>
+        <li>
+        <% if c[:name] == controller.controller_name %>
+          <a href="<%= c[:path] %>" class="current" title="<%= c[:title] %>"><%= c[:ui_name] %></a>
+        <% else %>
+          <a href="<%= c[:path] %>" title="<%= c[:title] %>"><%= c[:ui_name] %></a>
+        <% end %>
+        </li>
+      <% } %>
+	
+    </ul>
+  </div>
+  
+  
+      
+</div>

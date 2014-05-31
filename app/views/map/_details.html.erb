@@ -1,0 +1,93 @@
+<div id="course_details_bar">
+  <%= render :partial => "coursebar" %>
+</div>
+
+<% unless @selected_course.nil? %>
+  <div class="detail">
+    <div class="d-name">
+      <p class="d-prefix"><%= @selected_course.shortname %></p>
+      <p class="d-title"><%= @selected_course.title %></p>
+	  <% unless current_user.is_student? %>
+	  <p class="d-title"><%= link_to raw('&rsaquo;'), course_path(@selected_course) %></p>
+	  <% end %>
+    </div>
+    <div class="d-button-area">
+	
+  	  <% if current_user.is_course_in_completed_list?(@selected_course) %>
+		<div class="d-button">
+			<%= link_to raw("Remove from my<br/>completed courses list"), url_for( :controller => 'map', :action => 'remove_selected_from_completed_courses', :id => @selected_course.id ), :remote => true %>
+		</div>
+	  <% end %>
+      <% if @is_course_in_path %>
+        <div class="d-button">
+          <%= link_to( raw("Remove<br/>from path"), url_for( :controller => "map", :action => 'remove_class', :id => @selected_course.id ), :remote => true ) %>
+        </div>
+      <% else %>
+		<% unless current_user.is_course_in_completed_list?(@selected_course) %>
+        <% for a_class in @selected_course.instances do %>
+		  <% if a_class.semester.year.to_i >= @now.year() %>
+	          <% if @current_path.has_required_proficiencies(a_class) %>
+	            <div class="d-button">
+	              <%= link_to( raw("Add<br/>#{a_class.semester.fullname}"), url_for( :controller => "map", :action => 'add_class', :id => a_class.id ), :remote => true ) %>
+	            </div>
+	          <% else %>
+	            <div class="d-button-disable">
+	              <%= raw("Add<br/>#{a_class.semester.fullname}") %>
+	            </div>
+	          <% end %>
+		  <% end %>
+		<% end %>
+        <% end %>
+      <% end %>
+	  <% unless current_user.is_course_in_completed_list?(@selected_course) %>
+		<div class="d-button">
+			<%= link_to raw("Add to my<br/>completed courses list"), url_for( :controller => 'map', :action => 'add_completed_course', :id => @selected_course.id ), :remote => true %>
+		</div>
+	  <% end %>
+    </div>
+    <div class="d-description">
+      <p class="d-header">COURSE DESCRIPTION</p>
+      <p class="d-description-text"><%= @selected_course.description %></p>
+    </div>
+    
+    <% unless @incoming_slots.empty? %>
+    <div class="d-incoming">
+      <p class="d-header">INCOMING PROFICIENCIES</p>
+      <div class="d-slot-list">
+      <% @incoming_slots.each do |list_of_profs| %>
+        <div class="d-slot">
+        <% if list_of_profs == @incoming_slots.first %>
+          <p class="d-in-prof">Requirements</p>
+        <% else %>
+          <p class="d-in-prof">Alternate Requirements</p>
+        <% end %>
+        <% list_of_profs.each do |prof| %>
+          <% if @profs_in_path.include?(prof) %>
+            <p class="d-in-prof green"><%= prof.fullname %></p>
+          <% else %>
+            <div class="d-prof-button">
+              <%= link_to( "#{prof.fullname}", url_for( :controller => "map", :action => 'look_for_proficiency', :course_id => @selected_course.id, :id => prof.id ), :remote => true ) %> 
+            </div>
+          <% end %>
+        <% end -%>
+        </div>  
+      <% end -%>
+      </div>
+    </div>
+    <% end %>
+    
+    <% unless @selected_course.hs_incoming_proficiencies.nil? or @selected_course.hs_incoming_proficiencies.empty? %>
+    <div class="d-outgoing">
+      <p class="d-header">HIGH SCHOOL PROFICIENCIES</p>
+      <p class="d-prof"><%= @selected_course.hs_incoming_proficiencies %></p>
+    </div>
+    <% end %>
+    
+    <div class="d-outgoing">
+      <p class="d-header">OUTGOING PROFICIENCIES</p>
+      <% @selected_course.outgoing_proficiencies.each do |prof| %>
+        <p class="d-prof"><%= prof.fullname %></p>
+      <% end -%>
+    </div>
+  </div>
+<% end -%>

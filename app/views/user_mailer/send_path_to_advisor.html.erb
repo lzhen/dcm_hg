@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+<p>A Digital Culture path for <%= @path.student.name %>.</p>
+
+<% if @path.student.courses.size > 0 %>
+
+	<h3>Completed Courses</h3>
+<% for course in @path.student.courses %>	
+	<p><%= course.fullname %></p>
+<% end %>
+
+<% end %>
+
+<% @path_semesters_sorted.each do |value| %>
+	<% s = Semester.find(value[0]) %>
+	<h3><%= h(s.name + ' ' + s.year) %></h3>
+	<% value[1].each do |c| %>
+		<% if c.class == Instance %>
+			<p><%= c.course.fullname %></p>
+		<% elsif c.class == ExternalInstance %>
+			<p><%= c.external_course.fullname %></p>
+		<% end %>
+	<% end %>
+<% end %>
+
+<br/>
+<h3>Total DC Credit Hours: <%= (@path.dc_credit_hours_in_path + @path.student.credit_hours_in_completed_courses).to_s %></h3>
+<br/>
+<p style="margin:0px; padding:0px">School of Arts, Media and Engineering</p>
+<p style="margin:0px; padding:0px">Herberger Institute for Design and the Arts</p>
+<p style="margin:0px; padding:0px">Arizona State University</p>
+
+  </body>
+</html>

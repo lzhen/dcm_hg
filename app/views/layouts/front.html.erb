@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title><%= @page_title %></title>
+		
+		<%= render :partial => "layouts/hida_stylesheets" %>
+		<%= stylesheet_link_tag 'dcm', :media => "all" %>
+		<%= stylesheet_link_tag 'front', :media => "all" %>
+
+		<!--[if IE 7]>
+	    <link rel="stylesheet" href="/stylesheets/ie7-dcm.css" type="text/css" media="all" />
+	    <![endif]-->
+	
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js", "rails.js", "application", "front" %>
+		<%= csrf_meta_tag %>
+	
+		<%= yield :head %>
+	</head>
+	<body>
+		<div id="dcm_wrapper">
+			<%= render :partial => "layouts/hida_header" %>
+			<%= render :partial => "layouts/front_header" %>
+			
+			<% if @page_title != 'Digital Culture | ASU Herberger Institute for Design and the Arts'%>
+			<div id="dcm_body_content">
+
+				<%= yield :layout %>
+				
+			</div> <!-- dcm_body_content -->
+			<% else %>
+			<div id="dcm_home_content">
+
+				<%= yield :layout %>
+			
+			</div> <!-- dcm_body_content -->
+			<% end %>
+			<br class="clearfloat"/>
+			
+			<%= render :partial => "layouts/hida_footer" %>
+			
+		</div> <!-- dcm_wrapper -->
+		
+		<%= render :partial => "layouts/analytics" %>
+		
+	</body>
+</html>

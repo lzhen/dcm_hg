@@ -1,0 +1,8 @@
+<% unless @selected_course.nil? %>
+	$("#details").html("<%= escape_javascript(render :partial => 'details') %>");
+
+	$("#strip_100").html("<%= escape_javascript(render :partial => 'courses_strip', :locals => {:list => @courses_100 }) %>");
+	$("#strip_200").html("<%= escape_javascript(render :partial => 'courses_strip', :locals => {:list => @courses_200 }) %>");
+	$("#strip_300").html("<%= escape_javascript(render :partial => 'courses_strip', :locals => {:list => @courses_300 }) %>");
+	$("#strip_400").html("<%= escape_javascript(render :partial => 'courses_strip', :locals => {:list => @courses_400 }) %>");
+<% end %>

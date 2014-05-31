@@ -1,0 +1,13 @@
+A Digital Culture request from <%= @issue.user.name %>.
+
+<%= dcm_formatted_datetime( @issue.created_at.in_time_zone('Arizona') ) %>
+FROM: <%= @issue.user.name + '<' + @issue.user.email + '>' %>
+SUBJECT:
+<%= @issue.subject %>
+
+DETAILS:
+<%= @issue.details %>
+
+School of Arts, Media and Engineering
+Herberger Institute for Design and the Arts
+Arizona State University

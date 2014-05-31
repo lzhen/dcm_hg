@@ -1,0 +1,194 @@
+<!-- START SKIP LINKS FOR ACCESSIBILITY -->
+  <ul class="skip">
+    <li><a href="#asu_content">Skip to Content</a></li>
+    <li><a href="#asu_nav">Skip to Menu</a></li>
+  </ul>
+  <!-- END SKIP LINKS -->
+
+  <!-- <div id="asu_container"> -->
+  
+    <!-- START GOLD HEADER -->
+	<!-- <div id="asu_mask" style="width:100%;height:100%;background-color:#fff;z-index:100;position:absolute;top:0;left:0"></div> -->
+	<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/3.0/css/header_compressed.css" />
+
+	<div id="asu_hdr" class=" asu_hdr_gold">
+		<div id="asu_logo">
+		  <a target="_top" href="http://herbergerinstitute.asu.edu/" title="ASU - Herberger Institute "><img src="https://www.asu.edu/asuthemes/3.0/images/logos/hda_asu_208_123_k.png" alt="ASU - Herberger Institute " height="55" width="310" style="margin-top:2.5px" title="ASU - Herberger Institute " /></a> 	
+		</div>
+
+    	<div id="asu_nav_wrapper">
+		    <ul id="asu_universal_nav">
+		      <li><a target="_top" href="http://www.asu.edu/">ASU Home</a></li>
+		      <li><a target="_top" href="https://my.asu.edu/">My ASU</a></li>
+		      <li><a target="_top" href="http://www.asu.edu/colleges/">Colleges &amp; Schools</a></li>
+		      <li><a target="_top" href="http://www.asu.edu/index/">A-Z Index</a></li>
+		      <li><a target="_top" href="http://www.asu.edu/directory/">Directory</a></li>
+		      <li><a target="_top" href="http://www.asu.edu/map/">Map</a></li>
+			</ul>
+
+			<ul id="asu_login_module" class='hidden'>
+		        <li id="asu_hdr_ssi" class="end">
+		        <a target="_top" href="https://weblogin.asu.edu/cgi-bin/login?callapp=##w.l##" 
+		           onmouseover="this.href = header_alterLoginHref(this.href);" 
+		           onclick="this.href = header_alterLoginHref(this.href);">SIGN IN</a>
+		      </li>
+		    </ul>
+
+		    <script type="text/javascript">
+		// <![CDATA[
+		// If we're in an iFrame, force the document domain to be asu.edu
+		var inIFrame = (window.top != window) ? true : false;
+		if (inIFrame) {
+		    document.domain = 'asu.edu';
+		}
+		var header_signin_url = '';
+
+		function header_alterLoginHref(url) {
+		    if (header_signin_url) {
+		        return header_signin_url;
+		    }
+		    var callApp = window.location.toString();
+		    if (inIFrame) {
+		        callApp = window.parent.location.toString();
+		    }
+
+		    // Decode the URL
+		    url = unescape(url);
+
+		    // Dyanamic Drupal login links
+		    if (url.match('##w.l.d##') && typeof(Drupal) != 'undefined') {
+		        var re = /https?:\/\/[^\/]*/i;
+		        var result = re.exec(window.location.toString());
+		        callApp = result + Drupal.settings.basePath + 'asuwebauth-login';
+		        url = url.replace('##w.l.d##', callApp);
+		    }
+		    url = url.replace('##w.l##', callApp);
+		    header_signin_url = url;
+		    return header_signin_url;
+		}
+
+		function header_checkSSOCookie() {
+		    // try to parse out the username from SSONAME cookie
+		    var cookies = document.cookie.split(";");
+		    for(var i = 0; i < cookies.length; i++) {
+		        if (cookies[i].indexOf('SSONAME') > 0) {
+		            var sso_name = document.createElement('li');
+		            if (cookies[i].substring(9) == "") {
+		                break;
+		            }
+		            sso_name.innerHTML = cookies[i].substring(9);
+
+		            var sso_link = document.createElement('li');
+		            sso_link.innerHTML = '<a target="_top" href="https://webapp4.asu.edu/myasu/Signout">SIGN OUT</a>';
+		            sso_link.className = 'end';
+		            sso_link.id = 'asu_hdr_sso';
+
+		            var ul = document.getElementById('asu_login_module');
+		            while (ul.childNodes[0]) {
+		                ul.removeChild(ul.childNodes[0]);
+		            }
+		            ul.appendChild(sso_name);
+		            ul.appendChild(sso_link);
+
+		            break;
+		        }
+		    }
+		    // unhide
+		    document.getElementById('asu_login_module').style.display = 'inline-block';
+		}
+
+		if (typeof(jQuery) != 'undefined') {
+		    $(document).ready(function() {
+		            header_checkSSOCookie();
+		    });
+		}
+		else {
+		    if (window.addEventListener) {
+		        window.addEventListener('load', header_checkSSOCookie, false);
+		    } 
+		    else if (window.attachEvent) {
+		        window.attachEvent('onload', header_checkSSOCookie);
+		    }
+		}
+
+		// ]]>
+		</script>
+		                        	</div>
+
+		    <div id="asu_search_module">
+			<form target="_top" action="http://search.asu.edu/search" method="get" name="gs">
+		  <label class="hidden" for="asu_search_box">Search</label>
+		    <fieldset class="asu_search_selection">
+		    <label for="herberger_collection"><input type="radio" checked="checked" value="herberger_collection" id="herberger_collection" name="site" onclick="header_searchSwitch('Herberger Institute Site')"/>Herberger Institute Site</label>
+		    <label for="asu_collection"><input type="radio" value="default_collection" id="asu_collection" name="site" onclick="header_searchSwitch('ASU')"/>ASU</label>
+		  </fieldset>
+		    <input type="text" name="q" size="32" value="Search Herberger Institute Site" id="asu_search_box" class="asu_search_box" onfocus="header_searchFocus(this)" onblur="header_searchBlur(this)" /> 
+		  <input type="submit" value="Search" title="Search" class="asu_search_button" />
+		  <input name="sort" value="date:D:L:d1" type="hidden" /> 
+		  <input name="output" value="xml_no_dtd" type="hidden" /> 
+		  <input name="ie" value="UTF-8" type="hidden" /> 
+		  <input name="oe" value="UTF-8" type="hidden" /> 
+		  <input name="client" value="asu_frontend" type="hidden" /> 
+		  <input name="proxystylesheet" value="asu_frontend" type="hidden" />
+		</form>
+		  </div>
+		  </div>
+
+		<script type="text/javascript">
+		// <![CDATA[
+		var header_default_search_text = "Search Herberger Institute Site";
+		function header_searchSwitch(name) {
+		    var field = document.getElementById('asu_search_box');
+		    if (field != null) {
+		        var oldDefault = header_default_search_text;
+		        header_default_search_text = "Search "+name;
+		        if (field.value == oldDefault) {
+		            field.value = header_default_search_text;
+		        }
+		    }
+		}
+		function header_searchFocus(field) {
+		    if (typeof field != "undefined") {
+		        if (field.value == header_default_search_text) {
+		            field.value = "";
+		        }
+		    }
+		}
+		function header_searchBlur(field) {
+		    if (typeof field != "undefined") {
+		        if (field.value == "") {
+		            field.value = header_default_search_text;
+		        }
+		    }
+		}
+		function header_searchToggle(radio) {
+		    var google = document.getElementById('asu_search_google');
+		    if (google != null) {
+		        if (google.style.display == "none") {
+		            header_default_search_text = "Search ASU";
+		            google.style.display = "block";
+		        } else {
+		            google.style.display = "none";
+		        }
+		    }
+		    var alt = document.getElementById('asu_search_alternate');
+		    if (alt != null) {
+		        if (alt.style.display == "none") {
+		            header_default_search_text = "Search Herberger Institute Site";
+		            alt.style.display = "block";
+		        } else {
+		            alt.style.display = "none";
+		        }
+		    }
+
+		    if (typeof radio != "undefined") {
+		        radio.checked = false;
+		    }
+		}
+		// ]]>
+		</script>
+
+		<div style="clear:both;"></div>
+
+
+		    <!-- END GOLD HEADER -->

@@ -1,0 +1,17 @@
+<div id="classes_in_path">
+  <table cellspacing="0">
+	<tr>
+		<th>Course Name</th>
+		<th>Semester Name</th>
+		<th></th>
+	</tr>
+	
+  <% for @path_class in @path.path_instances %>
+    <tr class="<%= cycle("Alt","Normal") %>">
+    	<td class="left"><%= h(@path_class.class.course.title) %></td>
+		<td class="left"><%= h(@path_class.semester.fullname) %></td>
+      	<td class="left"><%= link_to_remote 'Delete from path', :url => { :action => 'destroy_path_class', :path_instance_id => @path_class, :id => @path }, :update => "classes_in_path" %></td>
+    </tr>
+  <% end -%>
+  </table>
+</div>

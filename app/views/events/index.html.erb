@@ -1,0 +1,55 @@
+<%= content_sheet_div %>
+
+<div class="maincontent">
+	
+	    <h1>Digital Culture Events
+		<% if (not current_user.nil?) && current_user.is_event_editor %>
+			&nbsp;&nbsp;&nbsp;<span style="font-sytle:normal; font-size:80%;"><%= link_to "[admin]", "/events/admin" %></span>
+		<% end %>
+		</h1>
+	
+	
+	
+	<% @events.each do |event| %>
+	
+		<div class="event" style="margin: 16px 16px 32px 0;">
+		<h2 style="padding: 0px; border: none;"><%= event.title %></h2>
+		<p style="font-style: italic; font-size: 14px; color: #21d0cc; margin: -8px 0px 10px 0px;"><%= dcm_formatted_datetime( event.happens_at ) %></p>
+
+		<% unless event.photo_file_name.nil? %>
+			<img src="<%= event.photo.url %>" class="event_img" />
+		<% end %>
+		<p><%= raw(event.body) %></p>
+
+		</div>
+	
+	<% end %>
+	
+	
+</div>
+
+</div>
+
+
+
+<div class="others">
+	
+<% unless @coming_events.nil? or @coming_events.empty? %>
+
+	<div class="future_events">
+		<p class="future_box_title">FUTURE EVENTS</p>
+		<% @coming_events.each do |event| %>
+			<div class="event" style="margin: 8px 8px 8px 8px;">
+				<h3 style="padding: 0px; border: none; letter-spacing: 0px; line-height: 98%; font-size:12px"><%= event.title %></h3>
+				<p style="font-style: italic; font-size: 11px; color: #4a0030; margin: -6px 0px 10px 0px;"><%= dcm_formatted_datetime( event.happens_at ) %>
+			</div>
+		<% end %>
+	</div>
+
+<% end %>
+
+</div>
+
+
+<div class="clearfloat">
+</div>

@@ -1,0 +1,22 @@
+<%= dcm_edit_text_field( 'Title:', form, :title ) %>
+<%= dcm_edit_datetime( 'Date:', 'event', :happens_at ) %>
+<%= dcm_edit_text_area( 'Body:', form, :body, :rows => 20 ) %>
+
+<div class="Row">
+	<div class="Label Right Column1 FloatLeft FloatClear">Photo:</div>
+	<div class="Left Column2 FloatLeft Field"><%= form.file_field :photo %></div>
+</div>
+<% unless @event.photo_file_name.nil? %>
+<div class="Row">
+	<div class="Label Right Column1 FloatLeft FloatClear">&nbsp;</div>
+	<div class="Left Column2 FloatLeft Field"><%= @event.photo_file_name %></div>
+</div>
+<div class="Row">
+	<div class="Label Right Column1 FloatLeft FloatClear">Delete photo:</div>
+	<%= form.check_box :delete_photo %>
+</div>
+<div class="Row">
+	<div class="Label Right Column1 FloatLeft FloatClear">&nbsp;</div>
+	<div class="Left Column2 FloatLeft Field"><img src="<%= @event.photo.url %>" class="event_img" /></div>
+</div>
+<% end %>

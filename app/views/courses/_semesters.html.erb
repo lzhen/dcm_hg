@@ -1,0 +1,27 @@
+
+
+ <div class="sheet_title">
+   <p>Course is offered during these semesters</p>
+ </div>
+
+
+<% if current_user.can_edit_course?( @course ) %>
+  
+	<%= form_tag( url_for( :action => :add_class, :id => @course ), :remote => true ) do %>
+	  
+		
+			<%= dcm_edit_select( 'Semester:', :semester, :fullname, @semesters_options ) %>
+			
+			<div>
+ 				<div class="Label Right Column1 FloatLeft FloatClear">&nbsp;</div>
+   			<div class="Left Column2 FloatLeft Field"><%= submit_tag(" ADD CLASS ") %></div>
+ 			</div>
+ 			
+		
+	<% end -%>
+	
+<% end %>
+
+<div id="classes" class="FloatClear">
+	<%= render :partial => "class_list" %>
+</div>

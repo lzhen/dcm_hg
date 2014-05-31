@@ -1,0 +1,35 @@
+<table cellspacing="0">
+	<tr>
+		<th class="Left">Name</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	
+  <% for p in current_user.paths %>
+    <tr class="<%= cycle("Alt","Normal") %>">
+    	<td class="Left"><%= h(p.title) %></td>
+		  <td class="Left">
+		    <% if p.id == current_user.current_path %>
+		      <%= h('CURRENT PATH') %>
+		    <% else %>
+		      <%= link_to "Make this the current path", :controller => 'paths', :action => 'set_as_current_path', :id => p %>
+		    <% end %>
+		  </td>
+		  <td class="Left"><%= link_to "rename", edit_path_path(p) %></td>
+		  <td class="left">
+			<%= link_to "delete", path_path(p), :confirm => "Are you sure you want to delete the path: #{p.title}?", :method => :delete %>
+		  </td>
+    </tr>
+  <% end -%>
+
+</table>
+
+<div class="TableFooter"></div>
+<p class="TableFootText">
+<% if current_user.paths.size > 0 %>
+  <%= h("Displaying " + pluralize(current_user.paths.size,"path") + ".") %>
+<% else %>
+  <%= h("No path to display.") %>
+<% end %>
+</p>

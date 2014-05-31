@@ -1,0 +1,47 @@
+
+<% if current_user.is_admin %>
+  <%= dcm_edit_text_field( 'Prefix:', form, :prefix, :size => 10 ) %>
+<% else %>
+  <%= dcm_edit_select( 'Prefix:', 'course', :prefix, current_user.rights.find(:all, :select => "prefix").map(&:prefix)) %>
+<% end %>
+  <%= dcm_edit_text_field( 'Number:', form, :number, :size => 10 ) %>
+  <%= dcm_edit_text_field( 'Title:', form, :title ) %>
+  <%= dcm_edit_text_area( 'Description:', form, :description ) %>
+  <%= dcm_edit_text_field( 'Credit Hours:', form, :credit_hours, :size => 10 ) %>
+  
+  <%= dcm_edit_check_box( 'Existing:', form, :is_existing, :checked => true ) %>
+  <%#= dcm_edit_check_box( 'Planned:', form, :is_planned ) %>
+  
+  <%= dcm_edit_select( 'Frequency:', 'course', :frequency, Course::FREQUENCY_OPTIONS ) %>
+  
+  <%#= dcm_edit_date( 'Anticipated Start Date:', 'course', :anticipated_start_date, :start_year => 2009 ) %>
+  
+  <div class="Row">
+    <div class="Label Right Column1 FloatLeft FloatClear">Anticipated Start Date:</div>
+    <div class="Left Column2 FloatLeft Field">
+      <% puts @course.anticipated_start_date.to_s %>
+      <%= select("start_semester", "name", Semester::SEMESTER_OPTIONS, {:include_blank => false}) %>
+      <%= date_select( :course, :anticipated_start_date, :include_blank => false, :start_year => start_year(), :end_year => end_year(), :prompt => 'Choose year', :order => [:year] ) %>
+    </div>
+  </div>
+  
+  <%#= dcm_edit_select( 'Facility:', 'course', :facility, Course::FACILITY_OPTIONS ) %>
+  <%= dcm_edit_select( 'Facility Needs:', 'course', :facility_needs, Course::SPECIAL_NEEDS_OPTIONS ) %>
+  <%= dcm_edit_text_area( 'Other Special Needs:', form, :other_special_needs ) %>
+  <%= dcm_edit_text_field( 'Total Seats:', form, :total_seats, :size => 10 ) %>
+  <%= dcm_edit_select( 'Reserved Seats:', 'course', :reserved_seats, Course::RESERVED_SEATS_OPTIONS ) %>
+  <%= dcm_edit_text_area( 'Notes:', form, :notes ) %>
+  
+  <%= dcm_edit_select( 'Classification:', 'course', :classification, Course::CLASSIFICATION_OPTIONS ) %>
+  <%= dcm_edit_text_area( 'High School Incoming Proficiencies:', form, :hs_incoming_proficiencies ) %>
+  
+  
+  <p class="section-caption">
+    Other special needs, Notes, and High School incoming proficiencies are optional fields.
+    All other fields must be filled out.
+  </p>
+
+  
+  
+
+

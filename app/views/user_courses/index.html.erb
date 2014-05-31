@@ -1,0 +1,21 @@
+<h1>Listing user_courses</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_courses.each do |user_course| %>
+  <tr>
+    <td><%= link_to 'Show', user_course %></td>
+    <td><%= link_to 'Edit', edit_user_course_path(user_course) %></td>
+    <td><%= link_to 'Destroy', user_course, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User course', new_user_course_path %>

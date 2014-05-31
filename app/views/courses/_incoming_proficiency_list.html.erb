@@ -1,0 +1,37 @@
+<table cellspacing="0" class="borderless">
+	<tr>
+		<% 1. upto 5 do |j| %>
+			<td class="IncomingColumn">
+				<table cellspacing="0">
+				  <% unless @course.incoming_proficiencies_for_slot(j).empty? %>
+					<tr>
+						<th>Proficiency Name</th>
+					</tr>
+					<% end %>
+					<% for @c in @course.incoming_proficiencies_for_slot(j) %>
+					
+						<tr class="<%= cycle("Alt","Normal") %>">
+							<td class="<%= count_modifier(@c) %>">
+								<%= h(@c.fullname)%>
+								<% @course_proficiency = @c.course_proficiencies.find_by_course_id_and_slot(@course.id, j) %>
+								<%= change_proficiency_level( @course, @course_proficiency ) %>
+								(<%= @c.courses_with_output.length %> Courses)
+								<%= link_to 'Delete', url_for( :controller => :courses, :action => :destroy_incoming_proficiency, :id => @course, :course_proficiency_id => @course_proficiency), :remote => true %>
+								</td>
+						</tr>
+					<% end %>
+					<% unless @course.is_slot_possible?(j) %>
+					<tr class="Impossible">
+						<td class="ImpossibleLabel">UNREACHABLE</td>
+					</tr>
+					<% end %>
+				</table>
+				<div class="TableFooterSlim">
+				</div>
+			</td>
+		<% end %>
+	</tr>
+</table>
+<div>
+  <%= dcm_show_text( 'Incoming Proficiencies:', @course.incoming_proficiency_string ) %>
+</div>

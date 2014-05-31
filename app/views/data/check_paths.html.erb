@@ -1,0 +1,27 @@
+<% @courses.each do |course| %>
+  
+  Course: <%= course.fullname %><br/><br/>
+  
+  <% slots_inputs = @courses_inputs[course.id] %>
+  
+  <% slots_inputs.each do |inputs| %>
+    
+    &nbsp;&nbsp;Slot:
+    
+      <% inputs.each do |list| %>
+        
+        &nbsp;&nbsp;<%= list.size %> 
+      
+      <% end %>
+    
+    <br/>
+    
+  <% end %>
+  
+  <% unless at_least_one_slot_filled?(slots_inputs) %>
+    &nbsp;&nbsp;*** NO COMPLETE PATH EXISTS TO THIS COURSE<br/>
+  <% end %>
+  
+  <br/><br/>
+  
+<% end %>
