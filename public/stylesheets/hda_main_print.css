@@ -1,0 +1,229 @@
+body { 
+	margin: 0;
+	padding: 0;
+	font-family:"Akzidenz Grotesk", Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	color: #000;
+}
+#hda_logo { display: none; } /* Hides color logo */
+#print_logo { display: block; margin-bottom: .25in; } /* Show black and white logo for print */
+
+a:active, a:visited { color: #000; text-decoration: none; }
+/*a[href^="http://"]:after { content: " (Visit on the web at: "attr(href)")"; }  adds URL on printed page */
+a.noprintedlink[href^="http://"]:after { content: ""; } /* removes URL for when we don't want it to show */
+
+hr { border: none; border-bottom: .3pt solid #000; }
+table { border: none; }
+
+#hda_primary_nav { display: none; }
+#hda_secondary_nav { display: none; }
+#hda_tertiary_nav { display: none; }
+#hda_banner_photo { display: none; }
+
+/* positions left nav */
+#hda_left_nav { 
+	postion: absolute;
+	width: 1.75in; 
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+/* type styles for left nav */
+#hda_left_nav ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0 0 0 .08in;
+	line-height: 8pt;
+}
+#hda_left_nav ul a {
+	background: none;
+	padding-left: .125in;
+}
+#hda_left_nav ul a.down { background: none; }
+#hda_left_nav .box { background: #ffdd95; }
+#hda_left_nav ul li a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	text-decoration:none;
+	color: #000;
+}
+#hda_left_nav ul li a[href^="http://"]:after { content: ""; }
+
+/* positions left sidebar */
+#hda_left_sidebar { 
+	postion: absolute;
+	width: 2in; 
+	min-height: 190px;
+	padding: 0;
+	margin: 0px;
+	border: none;
+	float: left;
+}
+/* type styles for left sidebar */
+#hda_left_sidebar h1 {
+	font: 12pt/14pt "Akzidenz Grotesk", Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	color: #000;
+	font-weight: bold;
+	margin: .6em 0 0 0;
+	border: none;
+}
+#hda_left_sidebar h1 a {
+	color: #000;
+	text-decoration: none;
+}
+#hda_left_sidebar h2 {
+	font: 12pt/12pt Arial, Helvetica, sans-serif;
+	color: #000;
+	margin: .4em 0 0 0;
+	padding: 2px 0 2px 4px;
+	background: #999;
+}
+#hda_left_sidebar h2 a {
+	color: #000;
+	text-decoration: none;
+}
+
+/* positions right sidebar */
+#hda_right_sidebar { 
+	float: none;
+	width: 5.25in;
+	height: auto;
+	display: block;
+	position: relative;
+	margin-left: 2.1in;
+	padding: 0px;
+}
+/* type styles for right sidebar */
+#hda_right_sidebar h1 {
+	font: 12pt/14pt "Akzidenz Grotesk", Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	color: #000;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#hda_right_sidebar h1 a {
+	color: #000;
+	text-decoration: none;
+}
+#hda_right_sidebar img {
+	float: left;
+	padding-right: 10pt;
+}
+#hda_right_sidebar h2 {
+	font: 10pt/10pt Arial, Helvetica, sans-serif;
+	color: #000;
+	margin: .4em 0 0 0;
+	padding: 2px 0 2px 4px;
+}
+#hda_right_sidebar h2 a {
+	color: #000;
+	text-decoration: none;
+}
+/* type styles for right sidebar news feeds */
+#hda_right_sidebar a.newsfeed {
+	font: 10pt/10pt Arial, Helvetica, sans-serif;
+	margin: 0 0 0 .4em;
+	color: #333;
+}
+
+/* positions main body content */
+#hda_body_content { 
+	width: 5.25in;
+	height: auto;
+	display: block;
+	position: relative;
+	margin-left: 2.1in;
+	padding: 0px;
+}
+/* type styles for main body content */
+#hda_body_content h1 {
+	font: 14pt/16pt "Akzidenz Grotesk", Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	color: #000;
+	border: none;
+	font-weight: bold;
+	padding: 0 0 .1em 0;
+	margin: 1em 0 0 0;
+}
+#hda_body_content h1 a {
+	color: #000;
+	text-decoration: none;
+}
+
+#hda_body_content h2 {
+	font: 12pt/14pt "Akzidenz Grotesk", Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	color: #000;
+	font-weight: bold;
+	border-bottom-color:#000;
+	border-bottom: solid;
+	border-bottom-width: thin;
+	padding: 0 0 .2em 0;
+	margin: 1em 0 0 0;
+}
+#hda_body_content h2 a {
+	color: #000;
+	text-decoration: none;
+}
+
+#hda_body_content h3 {
+	font: 10pt/10pt "Akzidenz Grotesk", Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase; 
+	letter-spacing: .05em;
+	border-bottom-color:#000;
+	border-bottom: solid;
+	border-bottom-width: thin;
+	padding: 0 0 .2em 0;
+	margin: 1em 0 0 0;
+}
+#hda_body_content h3 a {
+	color: #000;
+	text-decoration: none;
+}
+
+/* type styles for main body content + right sidebar + left sidebar (program homepages only) */
+#hda_body_content p, #hda_right_sidebar p, #hda_left_sidebar p {
+	font: 9pt/11pt Arial, Helvetica, sans-serif;
+	color: #000;
+}
+#hda_body_content a, #hda_right_sidebar a, #hda_left_sidebar a {
+	color: #000;
+	text-decoration: none;
+}
+#hda_right_sidebar p { padding-right: 0 }
+#hda_body_content ul, #hda_right_sidebar ul, #hda_left_sidebar ul { padding-left: 2em; margin: 0; color: #000; }
+#hda_body_content ul li, #hda_right_sidebar ul li, #hda_left_sidebar ul li { font: 9pt/11pt Arial, Helvetica, sans-serif; }
+#hda_body_content ol, #hda_right_sidebar ol, #hda_left_sidebar ol { padding-left: 2em; margin: 0px; color: #000; }
+#hda_body_content ol li, #hda_right_sidebar ol li, #hda_left_sidebar ol li { font: 9pt/11pt Arial, Helvetica, sans-serif; }
+#hda_right_sidebar ul, #hda_left_sidebar ul { padding-left: 2em; }
+#hda_right_sidebar ol, #hda_left_sidebar ol { padding-left: 2em; }
+#hda_body_content table p, #hda_right_sidebar table p { font: 9pt/11pt Arial, Helvetica, sans-serif; }
+#hda_body_content table ul li, #hda_right_sidebar table ul li { font: 9pt/11pt Arial, Helvetica, sans-serif; }
+#hda_body_content table ol li, #hda_right_sidebar table ol li { font: 9pt/11pt Arial, Helvetica, sans-serif; }
+#hda_body_content table, #hda_right_sidebar table { font: 9pt/11pt Arial, Helvetica, sans-serif; }
+#hda_body_content table tr.header_row, #hda_right_sidebar table tr.header_row { background: #ffdd95 }
+#hda_body_content table tr.odd_row, #hda_right_sidebar table tr.odd_row { background: #eeeeee }
+#hda_body_content table tr.even_row, #hda_right_sidebar table tr.even_row { background: #dbdbdb; }
+#hda_body_content table td, #hda_right_sidebar table td { color: #333; padding: 1px 3px; border: none; }
+#hda_body_content form table td, #hda_right_sidebar form table td {	padding: 1px 0;	border: none; }
+
+#hda_asu_footer { padding: 0; display: block; width: 7in; margin: 0; }
+#hda_asu_footer p { font: 7pt/8pt Verdana, Arial, Helvetica, sans-serif; }
+#hda_asu_footer a { font: 7pt/8pt Verdana, Arial, Helvetica, sans-serif; text-decoration:none; color: #000; }
+
+/* Homepage print styles */
+#hda_home_highlight { font-size:12px; line-height: 14px; }
+#hda_home_highlight:before { content: "Herberger Institute for Design and the Arts: Architecture + Landscape Architecture, Art, Arts, Media + Engineering, Dance, Design Innovation, Music, Theatre and Film, ASU Art Museum, Community School, Herberger Online" }
+#fullsize, #thumbnails { display: none; }
+#hda_home_highlight img { padding: 20pt 0 5pt 0; }
+
+/* print style for Slimbox gallery*/
+#hda_body_content .gallery { width: 5.25in; }
+#hda_body_content .gallery ul { list-style: none; padding-left: 0px; }
+#hda_body_content .gallery ul li { display: inline-table; }
+#hda_body_content .gallery ul img { padding: 0; }
+
+/* style for RSS Bar on News and Events index pages*/
+#rssbar {
+	display: none;
+}

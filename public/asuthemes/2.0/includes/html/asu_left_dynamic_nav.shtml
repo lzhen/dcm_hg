@@ -1,0 +1,21 @@
+      <!-- START NAVIGATION /asuthemes/2.0/includes/html/asu_left_dynamic_nav.shtml -->
+      <div id="asu_nav">
+        <ul class="asu_primary">
+          <li><a href="#">Primary Navigation<br />(2 line example)</a>
+            <ul class="asu_secondary">
+              <li><a href="#">Secondary Navigation<br />(2 line example)</a>
+                <ul class="asu_tertiary">
+                  <li><a href="#">Tertiary Navigation<br />(2 line example)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Primary Navigation</a>
+            <ul class="asu_secondary">
+              <li><a href="#">Secondary Navigation</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Primary Navigation</a></li>
+        </ul>
+      </div>
+      <!-- END NAVIGATION -->

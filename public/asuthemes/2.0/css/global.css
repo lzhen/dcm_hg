@@ -1,0 +1,653 @@
+/*
+Title: ASU Template
+Copyright: (c) 2008 Arizona Board of Regents
+Authors: Christopher Puleo, Kathy Marks, Nathan Gudmunson and Arizona State University
+Designers: The ASU Template Design Team, led by Cindi Farmer, Natalie Goebig and Anish Adalja
+Description: Site controls for basic ASU content template
+*/
+
+
+/* =Basic Elements
+--------------------------------------------------------- */
+
+body {
+   background-color: #fff;
+   font: .75em/1.33em Tahoma, Arial, Helvetica, sans-serif; color: #000;
+   margin: 0; padding: 0;
+   }
+
+a  {
+   color: #903; text-decoration: underline;
+   font-size: inherit;
+   }
+
+a:hover {
+   color: #903; text-decoration: underline;
+   }
+
+a:visited {
+   color: #666;
+   }
+
+p {
+   font-size: 1em;
+   margin: 0 0 10px 0; padding:0;
+   }
+
+h1 {
+   font-size: 2.33em; font-weight: normal; color: #4a0030; /* 28px */
+   line-height: 1.33em;
+   margin: 0; padding: 0;
+   }
+
+h2 {
+   border-bottom: 1px solid #ccc;
+   font-size: 1.67em; font-weight: normal; color: #4a0030; /* 20px */
+   line-height: 1.33em;
+   margin: 0 0 .75em 0; padding: 5px 0;
+   }
+
+h3 {
+   border-bottom: 1px solid #ccc;
+   font-size: 1.33em; font-weight: bold; color: #4a0030; /* 16px */
+   line-height: 1.33em; text-transform: uppercase; letter-spacing: 2px;
+   margin: 1.06em 0 .625em 0; padding: 5px 0;
+   }
+
+h4 {
+   border-bottom: 1px solid #ccc;
+   font-weight: bold; font-size: 1.16em; color: #4a0030; /* 14px */
+   margin: 1.07em 0 .71em 0; padding: 5px 0;
+   }
+
+h5 {
+   border-bottom: 1px solid #ccc;
+   font-weight: bold; font-size: 1em; color: #4a0030; /* 12px */
+   margin: 1.5em 0 1em 0; padding: 5px 0;
+   }
+
+strong {
+   font-weight: bold;
+   }
+
+em {
+   font-style: italic;
+   }
+
+img {
+   border: 0;
+   }
+
+dl {
+   margin: 0; padding: 0;
+   }
+
+dt {
+   font-size: inherit; font-weight: bolder;
+   }
+
+dd {
+   padding-bottom: 5px;
+   }
+
+fieldset {
+   border: 1px solid #ccc;
+   padding: 10px;
+   }
+
+legend {
+   font-weight: bold; font-size: 1.16em; color: #4a0030;
+   }
+
+ul,
+ol {
+
+   }
+
+li {
+   font-size: inherit;
+   }
+
+label {
+   cursor: pointer;
+   }
+
+/* =ASU TABLE STYLES
+----------------------------------------------------------------*/
+
+table {
+   color: #333;
+   font: 11px/15px Tahoma, Arial, Helvetica, sans-serif;
+   table-layout: auto;
+   width: 95%; 
+   }
+
+th,
+tr.header th,
+tr.header td {
+   border: 1px solid #ddd;
+   background-color: #f0d6b2;
+   padding: 4px 12px;
+   color: #555;
+   font-weight: bold;
+   white-space: nowrap;
+   text-align: left;
+   }
+
+td {
+   border: 1px solid #ddd;
+   color: #555;
+   padding: 4px 12px;
+   text-align: left;
+   }
+
+td.column_header {
+   font-weight: bold; 
+   width: 200px;  
+   }
+
+td.narrow_cell {
+   text-align: center;
+   width: 5%;
+   white-space: nowrap;
+   }
+   
+tr.footer td {
+   background-color: #e1d1b3;
+   border: 1px solid #ddd;
+   padding: 4px 12px;
+   }
+
+/*
+------------------------------------------------------
+IMPORTANT:
+For proper rendering of table row striping in Drupal
+implementations, change the "tr.odd td" and
+"tr.even td" classes in the asu_drupal.css file
+------------------------------------------------------
+*/
+
+tr.odd td {
+   border: 1px solid #ddd;
+   background-color: #fbfbf3;
+   padding: 4px 12px;
+   vertical-align: top;
+   }
+
+tr.even td {
+   border: 1px solid #ddd;
+   background-color: #f1ebe0;
+   padding: 4px 12px;
+   vertical-align: top;
+   }
+
+tr.selected td {
+   border: 1px solid #ddd;
+   background-color: #ffe8b7;
+   padding: 4px 12px;
+   vertical-align: top;
+   }
+
+/* =ASU FORM STYLES
+----------------------------------------------------------------*/
+
+form {
+   margin: 0;
+   padding: 0;
+   }
+
+input,
+textarea,
+input[type="file"],
+input[type="password"],
+input[type="text"] {
+   background-color: #f2f2e6;
+   border: 1px solid #999;
+   font: 11px/15px Tahoma, Arial, Helvetica, sans-serif; 
+   color: #333;
+   padding: 2px 0 3px 3px;
+   }
+
+select {
+   background-color: #f2f2e6;
+   border: 1px solid #999;
+   font: 11px/15px Tahoma, Arial, Helvetica, sans-serif; 
+   color: #333;
+   padding: 2px 0;
+   }
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input.form-submit,
+input.button {
+   background-color: #ddd;
+   border: 1px solid #d4c4aa;
+   color: Black;
+   cursor: pointer;
+   font-size: 11px;
+   margin: 0 10px 0 0;
+   padding: 2px 4px;
+   }
+   
+span.checkbox input,
+span.radio input,
+td.checkbox input,
+td.radio input,
+input[type="radio"],
+input[type="checkbox"] {
+   background-color: transparent;
+   border: 0px solid black;
+   }
+
+div.form {
+   margin: 10px 0 15px 0;
+   padding: 0;
+   }
+
+div.form_element {
+   color: #333;
+   margin: 7px 0 7px 0;
+   }
+
+label.field {
+   float: left;
+   text-align: right;
+   width: 150px;
+   font-weight: normal;
+   padding: 2px 5px 0 0;
+   margin: 0;
+   }
+
+label.label {
+   cursor: default;
+   float: left;
+   text-align: right;
+   width: 150px;
+   font-weight: normal;
+   padding: 2px 5px 0 0;
+   margin: 0;
+   }
+
+br.nobr {
+   display: none;
+   }
+
+span.data {
+   display: block;
+   margin: 0 0 0 155px;
+   padding: 2px 0 0 0;
+   }
+
+span.input_hint {
+   color: #00b;
+   font-size: 10px;
+   }
+
+div.form_buttons {
+  margin: 7px 0 7px 155px;
+  }
+  
+div.field_buttons {
+  margin: 3px 0 7px 155px;
+  }
+
+input.defaultButton {
+   background-color: #ddd;
+   border: 1px solid #999;
+   color: Maroon;
+   cursor: pointer;
+   font-size: 11px;
+   font-weight: bold;
+   margin: 0 10px 0 0;
+   padding: 2px 4px;
+   }
+
+input.smallButton {
+   background-color: #ddd;
+   border: 1px solid #999;
+   color: Black;
+   cursor: pointer;
+   font-size: 9px;
+   padding: 1px 2px;
+   margin: 0 5px;
+   }
+
+span.required {
+   color: #3c608a;
+   font-size: smaller;
+   }
+
+span.info {
+   color: #00d;
+   font: normal 70%/110% Tahoma, Vrdana, Arial, Helvetica, sans-serif;
+   }
+
+.invalidEntry {
+   background-color: #ff6;
+   }
+
+ul.form_errors {
+   margin: 0;
+   padding: 0;
+   }
+
+ul.form_errors li {
+   color: #903;
+   font-style: italic;
+   margin: 5px 0 0 40px;
+   padding: 0;
+   list-style-type: disc;
+   }
+   
+input.invalidEntry,
+textarea.invalidEntry,
+select.invalidEntry,
+input[type="file"].invalidEntry,
+input[type="password"].invalidEntry,
+input[type="text"].invalidEntry {
+   background-color: #ff6;
+   }
+
+.visible {
+   visibility: visible;
+   }
+
+.hidden {
+   visibility: hidden;
+   }
+
+span.highlighted {
+   background-color: #ffe8b7;
+   color: #000;
+   font-weight: bold;
+   }
+
+.redTextBlock {
+   color: #903;
+   display: block;
+   font-style: italic;
+   margin-top: 2px;
+   }
+
+.greenBackground {
+   background-color: #060;
+   color: #fff;
+   font-weight: bolder;
+   padding: 2px;
+   }
+
+.redBackground {
+   background-color: #600;
+   color: #fff;
+   font-weight: bolder;
+   padding: 2px;
+   }
+
+.lightredBackground {
+   background-color: #966;
+   color: #fff;
+   font-weight: bolder;
+   padding: 2px;
+   }
+
+.blueBackground {
+   background-color: #006;
+   color: #fff;
+   font-weight: bolder;
+   padding: 2px;
+   }
+
+.greenBackground a {
+   color: #fff;
+   }
+
+.greenBackground a:visited {
+   color: #fff;
+   }
+
+.redBackground a {
+   color: #fff;
+   }
+
+.redBackground a:visited {
+   color: #fff;
+   }
+
+.lightredBackground a {
+   color: #fff;
+   }
+
+.lightredBackground a:visited {
+   color: #fff;
+   }
+
+.blueBackground a {
+   color: #fff;
+   }
+
+.blueBackground a:visited {
+   color: #fff;
+   }
+
+/* =Universal
+--------------------------------------------------------- */
+
+.skip {
+   display: block;
+   font-size: 1px;
+   height: 0;
+   line-height: 1px;
+   margin-top: -2px;
+   text-indent: -9999px;
+   display: none;
+   }
+
+#asu_container {
+   margin: 0; padding: 0;
+   text-align: left;
+   min-width: 1000px;
+   }
+
+#asu_container li.no-border {
+   border: none;
+   }
+
+.visible {
+   visibility: visible;
+   }
+
+.hidden {
+   visibility: hidden;
+   }
+
+/* ----{ Float Clearing }---- */
+
+#asu_gold_hdr:after,
+#asu_content:after,
+#asu_body_copy:after,
+.asu_body_copy .tabs ul:after,
+.asu_body_copy .block-menu .content ul.asu_primary:after {
+   content: ".";
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;
+   }
+
+/* =Content Area
+-------------------------------------------------------- */
+
+#asu_content {
+   background: #fff url(/asuthemes/2.0/images/asu_single_col_divider.gif) 195px 0 repeat-y;
+   height: 1%;
+   margin: 5px 0; padding: 0 0 2.1em 0;
+   }
+
+#asu_content_container {
+   margin: 0 0 0 202px; padding: 0 5px 0 0;
+   }
+
+#asu_content_well {
+   display: block;
+   float: right;
+   margin: 0 0 0 -202px; padding: 0;
+   width: 100%;
+   }
+
+.asu_body_copy {
+   display: block;
+   height: 1%;
+   margin: 0 0 0 20px;
+   }
+
+.asu_body_copy ul {
+   margin-left: 36px;
+   padding-left: 0;
+   margin-bottom: 1em;
+   }
+
+
+/* ----{ Title Block }---- */
+
+#asu_ttl_block {
+   background: #eee url(/asuthemes/2.0/images/asu_ttl_block_bg.jpg) bottom left repeat-x;
+   border-bottom: 1px solid #bbb;
+   display: block;
+   margin: 0 0 1.67em 0; padding: .83em 20px 0 20px;
+   }
+
+#asu_ttl_block h1 {
+   /* border-bottom: 1px solid #bab988; */ /* Re-activate this if breadcrumb is re-added */
+   display: block;
+   padding: 0 0 .29em 0;
+   }
+
+/* ----{ Breadcrumb Nav }---- */
+
+.asu_breadcrumb {
+   border-top: 1px solid #fff;
+   padding: .67em 0 0 0;
+   }
+
+.asu_breadcrumb a:visited {
+   color: #903;
+   }
+
+/* ----{ Drupal "Tabs" }---- */
+
+.asu_body_copy .tabs ul,
+.asu_body_copy .block-menu .content ul.asu_primary {
+   background: #fff url(/asuthemes/2.0/images/asu_gray_line.gif) bottom left repeat-x;
+   height: 1%; /* IE7 float clearing */
+   margin: .5em 0 2em 0; padding: 0 1em;
+   }
+
+.asu_body_copy .tabs ul li,
+.asu_body_copy .block-menu .content ul.asu_primary li {
+   background-color: #fbfbf3;
+   border: 1px solid #ccc; border-bottom: none;
+   float: left;
+   list-style-type: none;
+   margin: 0 5px 0 0; padding: 0;
+   }
+   
+.asu_body_copy .tabs ul li a,
+.asu_body_copy .block-menu .content ul.asu_primary li a {
+   background-color: #fbfbf3;
+   display: block;
+   font-size: 1em; line-height: 2em;
+   margin: 0; padding: 0 1em;
+   text-decoration: none;
+   }
+   
+.asu_body_copy .tabs ul li a:hover,
+.asu_body_copy .block-menu .content ul.asu_primary li a:hover {
+   background-color: #f1ebe0;
+   color: #000; text-decoration: underline;
+   }
+
+/* ----{ Relevant Links }---- */
+
+#asu_right_content_column {
+   background-color: #fff;
+   float: right;
+   margin: 0 0 0 0; padding: 0 0 0 20px;
+   }
+
+.block-relatedlinks,
+#asu_relevant_links {
+   background: #903 url(/asuthemes/2.0/images/asu_relevant_links_bg.gif) top left repeat-x;
+   border-bottom: 1px solid #7a0029;
+   margin: 0 0 1.25em 0; padding: 12px 18px;
+   width: 195px;
+   width/**/:/**/ 159px;
+   }
+
+.block-relatedlinks h2,
+#asu_relevant_links h5 {
+   font-weight: bold; font-size: 1.17em; color: #fc0;
+   line-height: 1.29em;
+   border: 0; margin: 0; padding: 0;
+   }
+
+.block-relatedlinks .content,
+#asu_relevant_links .content {
+   margin: 0; padding: 0;
+}
+
+.block-relatedlinks ul,
+#asu_relevant_links ul {
+   margin: 0 0 0 12px; padding: .42em 0;
+   }
+
+.block-relatedlinks .content li,
+.block-relatedlinks .content li a,
+#asu_relevant_links li,
+#asu_relevant_links li a {
+   color: #fff;
+   }
+
+.block-relatedlinks li a:hover,
+#asu_relevant_links li a:hover {
+   color: #fc0;
+   }
+
+/* ----{ Text Promotions }---- */
+
+#asu_text_promos {
+   background: #e5e5e5 url(/asuthemes/2.0/images/asu_text_promo_bg.gif) bottom left repeat-x;
+   border-bottom: 1px solid #9e9e9e;
+   margin: 0 0 1.25em 0; padding: 0 18px 1em 18px;
+   width: 195px;
+   width/**/:/**/ 159px;
+   }
+
+#asu_text_promos ul {
+   margin: 0; padding: 0;
+   }
+
+#asu_text_promos li {
+   border-bottom: 1px dashed #fff;
+   color: #000;
+   list-style-type: none;
+   padding: .83em 0;
+   }
+
+.asu_body_copy .block-menu .content li a,
+#asu_text_promos li a {
+   color: #903;
+   font-size: 1.17em;
+   }
+
+.asu_body_copy .block-menu .content li a:hover,
+#asu_text_promos li a:hover {
+   color: #000;
+   }
+   
+/* ----{ University Ad Styles }---- */
+
+p.badge {
+   text-align: center;
+   }
+   

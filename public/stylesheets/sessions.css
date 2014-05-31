@@ -1,0 +1,18 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+	color: #222;
+	background-color: #e5e5e5;
+	text-align: center;
+}
+#login_box {
+	width: 300px;
+	height: 230px;
+	margin: 75px auto;
+	padding: 25px 25px;
+	font-size: 100%; 
+	text-align: left;
+	background: #efefef;
+	border: 2px solid #777777;
+}

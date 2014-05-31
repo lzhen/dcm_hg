@@ -1,0 +1,60 @@
+/*
+Title: ASU Template
+Copyright: (c) 2008 Arizona Board of Regents
+Authors: Christopher Puleo, Kathy Marks, Nathan Gudmunson and Arizona State University
+Designers: The ASU Template Design Team, led by Cindi Farmer, Natalie Goebig and Anish Adalja
+Description: Footer styles for ASU content template
+*/
+
+
+/* =Footer
+-------------------------------------------------------- */
+.asu_black_footer {
+   background-color: #000;
+   }
+   
+.asu_dark_grey_footer {
+   background-color: #666;
+   }
+   
+.asu_light_grey_footer {
+   background-color: #999;
+   }
+
+#asu_footer {
+   display: block;
+   height: 2em;
+   margin: 0; padding: 0 25px 0 0;
+   text-align: right;
+   clear: left;
+   }
+
+#asu_footer ul {
+	margin: 0; padding: 0;
+   }
+   
+#asu_footer li {
+   border-right: 1px solid #fff;
+   display: inline; list-style-type: none;
+   font: normal .95em/2em Tahoma, Arial, sans-serif; color: #fff;
+   margin: 0; padding: 0;
+   }
+   
+#asu_footer li a {
+   color: #fff; text-decoration: none;
+   padding: 0 .66em;
+   }
+   
+#asu_footer li a:hover {
+   color: #ffb310; text-decoration: underline;
+   }
+   
+#asu_footer_contact_info {
+   clear: both;
+   text-align: right;
+   margin: 0; padding: 10px 30px 10px 0;
+   font: normal .95em/1.2em Tahoma, Arial, sans-serif; color: #666;
+   background-color: #fff;
+   display: block;
+   }
+

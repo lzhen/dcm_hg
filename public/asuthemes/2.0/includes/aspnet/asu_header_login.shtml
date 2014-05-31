@@ -1,0 +1,18 @@
+    <!-- START HEADER /asuthemes/2.0/aspnetincludes/asu_header_signin.shtml -->
+    <div id="asu_gold_hdr">
+<!--#include virtual="/asuthemes/2.0/includes/html/asu_logo.shtml"-->
+<!--#include virtual="/asuthemes/2.0/includes/html/asu_universal_nav.shtml"-->
+      <!-- START LOGIN SEARCH MODULE -->
+      <div id="asu_login_search">
+        <!-- START LOGIN MODULE -->
+        <ul id="asu_login_module">
+          <asp:Literal id="_litLoginStatus" runat="server" />
+        </ul>
+        <!-- END LOGIN MODULE -->
+
+<!--#include virtual="/asuthemes/2.0/includes/html/asu_search.shtml"-->
+      </div>
+      <!-- END NO LOGIN SEARCH MODULE -->
+
+    </div>
+    <!-- END GOLD HEADER-->

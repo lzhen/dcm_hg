@@ -1,0 +1,686 @@
+body{
+	background: #000 url(../images/bg_dcm.jpg) center top no-repeat fixed;
+}
+
+hda_primary_nav
+{
+	background:url(../images/slash.png) repeat-x;
+}
+
+#dcm_wrapper {
+	background: none;
+}
+#dcm_body_content {
+	background:url(../images/slash-2.png) 0 0 repeat;
+}
+#dcm_home_content
+{
+	margin: 20px 0px 0px 0px;
+	/*background:url(../images/slash.png) 0 0 repeat;*/	
+/*	border:1px solid #000;*/
+}
+
+/*-------------------------------------------------
+BANNER
+-------------------------------------------------*/
+#banner-home
+{
+/*	position:relative;*/
+	width:1000px;
+	height:215px;
+/*	background:url(../images/slash.png) 0 0 repeat;*/
+	margin-top:100px;
+	
+}
+
+ul.banner-images
+{
+	float:left;
+	margin:0 0;
+	padding:0 0;
+	list-style:none;
+}
+
+ul.banner-images li
+{
+	float:left;
+	position:relative;
+	margin:0 0;
+	padding:0 0;
+	width:200px;
+	height:200px;
+}
+
+ul.banner-images li img
+{
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+
+
+
+/*-------------------------------------------------
+DROPDOWN
+-------------------------------------------------*/
+#header {
+	
+	position: absolute;
+	top: 290px;
+	left: 0px;
+	width: 1000px;
+	height: 24px;
+}
+ul.makeMenu, ul.makeMenu ul {
+  
+  background: black;
+  padding-left: 0px;           /* stops the usual indent from ul */
+  cursor: default;             /* gives an arrow cursor */
+    margin-left: 0px;
+	margin-top: 0px;
+  list-style:none;
+	position: relative;
+	white-space: nowrap;
+	padding: 4px 0px;
+	
+}
+ul.makeMenu {
+	padding: 4px 36px;
+}
+ul.makeMenu li {
+  list-style-type: none;       /* removes the bullet points */
+  margin: 0px;                 /* Opera 7 puts large spacings between li elements */
+  position: relative;          /* makes the menu blocks be positioned relative to their parent menu item
+                                  the lack of offset makes these appear normal, but it will make a difference
+                                  to the absolutely positioned child blocks */
+  color: #fff;                 /* sets the default font colour to white */
+	display: inline;
+	padding: 4px 4px;
+	
+}
+ul.makeMenu li > ul {          /* using the > selector prevents many lesser browsers (and IE - see below) hiding child ULs */
+  display: none;               /* hides child menu blocks - one of the most important declarations */
+  position: absolute;          /* make child blocks hover without leaving space for them */
+  top: 16px;                    /* position slightly lower than the parent menu item */
+  left: 0px;                  /* this must not be more than the width of the parent block, or the mouse will
+                                  have to move off the element to move between blocks, and the menu will close */
+  /*padding-top: 4px;*/
+  
+}
+ul.makeMenu li:hover, ul.makeMenu li.CSStoHighlight {
+  background-color: black;      /* gives the active menu items a yellow background */
+  color: #fff;                 /* makes the active menu item text black */ 
+  padding: 2px 4px;
+}
+
+ul.makeMenu ul.CSStoShow {     /* must not be combined with the next rule or IE gets confused */
+  display: block;              /* specially to go with the className changes in the behaviour file */
+}
+ul.makeMenu li:hover > ul {    /* one of the most important declarations - the browser must detect hovering over arbitrary elements
+                                  the > targets only the child ul, not any child uls of that child ul */
+  display: block;              /* makes the child block visible - one of the most important declarations */
+}
+/* and some link styles */
+ul.makeMenu li a { color: #fff; display: inline; width: 100%; height:100%;text-decoration: none; }
+ul.makeMenu li a:hover, ul.makeMenu li a.CSStoHighLink { color: #000; background:#fff; }
+ul.makeMenu li:hover > a { color: #000; } /* supports links in branch headings - should not be display: block; */
+
+.signin-box
+{
+	color:white;
+	position:absolute;
+	top:180px;
+	left:760px;
+	z-index:1000;
+	font-size:14px;
+}
+
+
+/*-------------------------------------------------
+Main Content
+-------------------------------------------------*/
+
+.homecontent
+{
+	/**/
+	float: left;
+	width: 1000px;
+	color:#fff;
+	display: block;
+	
+	margin-bottom:20px;
+	padding-left:20px;
+	width: 980px;
+	height: 280px;
+	background:url(../images/slash.png) 0 0 repeat;
+}
+
+.lowerpart {
+	position: absolute;
+}
+
+.maincontent
+{
+/*	background: #fafafa;*/
+/*	background:url(../images/slash.png) repeat-x;*/
+	/*margin: 8px 8px 8px 8px;*/
+	margin: 20px;
+	margin-bottom:50px;
+	padding-left:20px;
+/*	-webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);*/
+/*	-moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);*/
+	float: left;
+	width: 700px;
+	color:#fff;
+	display: block;
+	position:relative;
+}
+
+
+
+.maincontent h1
+{
+	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	margin:20px 0px;
+	
+	color:#fff;
+	border-bottom:1px solid #ccc;
+	
+}
+
+.inpage-nav
+{
+	list-style:none;
+	position:absolute;
+	top:15px;
+	left:150px;
+}
+
+.inpage-nav li
+{
+	float:left;
+}
+
+.inpage-nav li a 
+{
+	color:#fff;
+	text-decoration:none;
+	/*padding:3px 10px;*/
+	padding: 2px 10px 2px 10px;
+	height: 18px;
+}
+
+.inpage-nav li a:hover 
+{
+	color:#000;
+	text-decoration:none;
+	background:#fff;
+}
+
+.inpage-nav li a.current
+{
+	color:#000;
+	font-weight:bold;
+	text-decoration:none;
+	background:#fff;
+}
+
+.maincontent h2
+{
+	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	margin: 20px 0px 10px 0px;
+	color:#ffcb66;
+	border:none;
+}
+
+.maincontent h3
+{
+	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	margin: 16px 0px 4px 0px;
+	color:#21d0cc;
+	border:none;
+}
+
+.maincontent p
+{
+	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+	font-size:13px;
+	line-height:15px;	
+	color:#fff;
+/*	font-weight:bold;*/
+	
+}
+
+.maincontent .highlight
+{
+	font-size:13px;
+	font-weight:bold;
+	color:#ffcb66;
+	border:none;
+}
+
+.maincontent .highlight-green
+{
+	font-size:13px;
+	font-weight:bold;
+	color:#21d0cc;
+	border:none;
+}
+
+.maincontent a
+{
+	text-decoration:underline;
+	color:#92edac;	
+	
+}
+
+.others
+{
+	float:left;
+	width:200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position:relative;	
+}
+
+.others img.side-image
+{
+    position:absolute;
+	top:30px;
+	left:-50px;
+}
+
+.other-div
+{
+	margin-top:30px;
+	width:200px;
+	
+}
+
+
+.other-div h2
+{
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	background:#000;
+	width:150px;
+	padding-left:10px;
+	margin-bottom:0px;
+}
+
+.other-div-content
+{
+	background:#ccc;
+	width:200px;
+}
+
+
+.dcm_bottom_photo
+{
+	position:absolute;
+	bottom: 60px;
+	left: 0px;
+	width: 1000px;	
+}
+
+
+
+/*-------------------------------------------------
+Main Content: HOME
+-------------------------------------------------*/
+.sub-div
+{
+   	/*float:left;*/
+	padding:15px;
+	width:300px;
+	color:#fff;	
+}
+
+.sub-div h5
+{
+	padding:0px;
+	margin:0px;
+	color:#fff;
+	font-size:18px;
+	line-height:22px;
+	font-weight:bold;
+	border-bottom:none;
+	margin-bottom:10px;
+}
+
+#left
+{
+   	font-family: Tahoma, Verdana, arial, helvetica, sans-serif;
+	font-size:18px;
+	line-height:22px;
+	font-weight:bold;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#left a 
+{
+	color:#0aefe3;
+	border-bottom:1px dashed #999;
+}
+
+#left a:hover 
+{
+/*	color:#000;*/
+	text-decoration:none;
+	border-bottom:1px dashed #000;
+}
+
+
+#middle
+{
+	font-family: Tahoma, Arial, helvetica, sans-serif;
+	font-size:13px;
+	line-height:18px;
+	font-weight:normal;
+	color:#fff;
+	position: absolute;
+	top: 0px;
+	left: 330px;
+}
+
+#right
+{  
+	/*position:relative;*/
+	/*padding:30px;*/
+	width:220px; 	
+	font-family: Tahoma, Verdana, arial, helvetica, sans-serif;
+	font-size:18px;
+	line-height:22px;
+	font-weight:bold;
+	color:#fff;
+	
+	position: absolute;
+	top: 0px;
+	left: 645px;
+}
+
+#right img
+{
+	position:absolute;
+	top:0px;
+	left:40px;
+}
+
+#right p
+{
+	position:absolute;
+	top:200px;
+	left:30px;	
+}
+
+
+#middle a ,#right a
+{
+	font-size:13px;
+	font-weight:normal;
+	color:#fff;
+	border-bottom:1px dashed #999;
+	
+}
+
+#middle a:hover ,#right a:hover 
+{
+	color:#fff;
+	text-decoration:none;
+	border-bottom:1px dashed #000;
+}
+
+table {
+	width: 100%;
+	border-left: 3px solid #f7af1f;
+	border-right: 3px solid #f7af1f;
+	border-bottom: 3px solid #f7af1f;
+}
+table th {
+	padding: 8px 18px;
+	background: #f7af1f;
+}
+table td {
+	color: #fff;
+	border-right: 1px solid #f7af1f;
+}
+table td.border-row {
+	border-top: 1px solid #f7af1f;
+}
+table td a:link {
+	color: #fff;
+}
+table td.link:hover {
+	background: #0044aa;
+}
+
+tfoot {
+	line-height: 1px;
+	padding: 0px;
+}
+
+
+#fade { /*--Transparent background layer--*/
+	display: none; /*--hidden by default--*/
+	background: #000;
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	opacity: .60;
+	z-index: 9999;
+}
+.course_detail {
+	display: none; /*--hidden by default--*/
+	
+	background: #111111;
+    background: -moz-linear-gradient(top, #444444, #111111);
+    background: -webkit-gradient(linear,left top, left bottom, from(#444444), to(#111111));
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+                StartColorStr='#444444', EndColorStr='#111111', GradientType=0);
+	
+	opacity: .92;
+	
+	color: #fff;
+	padding: 20px;
+	/*border: 20px solid #ddd;*/
+	float: left;
+	font-size: 1.2em;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	
+	/*--CSS3 Box Shadows--*/
+	-webkit-box-shadow: 0px 0px 12px #000;
+	-moz-box-shadow: 0px 0px 12px #000;
+	box-shadow: 0px 0px 12px #000;
+	
+	/*--CSS3 Rounded Corners--*/
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	border-radius: 14px;
+	
+	border: solid 2px #f7af1f;
+}
+.course_detail h2 {
+	color: #f7af1f;
+	opacity: 1.0;
+	line-height: 24px;
+	margin: 0px;
+	padding: 0px 0px 8px 0px;
+	margin: 0px 0px 8px 0px;
+}
+.course_detail p {
+	line-height: 18px;
+	opacity: 1.0;
+}
+img.btn_close {
+	float: right;
+	margin: -20px -20px 0 0;
+}
+
+/*--Making IE6 Understand Fixed Positioning--*/
+*html #fade {
+	position: absolute;
+}
+*html .course_detail {
+	position: absolute;
+}
+
+.banner-image {
+	display: none;
+}
+
+.closebutton {
+	margin: 16px auto 0px auto;
+	display: block;
+	width: 50px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.5);
+	
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	
+	-webkit-box-shadow:inset 0 0px 6px rgba(0,0,0,.9);
+	-moz-box-shadow:inset 0 0px 6px rgba(0,0,0,.9);
+	box-shadow:inset 0 0px 6px rgba(0,0,0,.9);
+	
+	color: #fffbf9;	
+	
+	background: #222222;
+    background: -moz-linear-gradient(top, #666666, #222222);
+    background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#222222));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#666666', EndColorStr='#222222', GradientType=0);
+
+	opacity: 1.0;
+	border: solid 1.5px #f7af1f;
+}
+.closebutton:hover {
+	color: #fffbf9;	
+	background: #666666;
+    background: -moz-linear-gradient(top, #999999, #666666);
+    background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#666666));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#999999', EndColorStr='#666666', GradientType=0);
+}
+.closebutton:active {
+	color: #f7af1f;	
+	background: #666666;
+    background: -moz-linear-gradient(top, #999999, #666666);
+    background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#666666));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#999999', EndColorStr='#666666', GradientType=0);
+}
+
+.toggle_button
+{
+	border:2px solid #333;
+	padding:5px;
+	background:#111;
+	cursor: pointer;
+}
+
+.toggle_div
+{
+	background:#ffe7b8;
+	border:1px solid #ffcb66;
+	padding:10px 10px;
+}
+
+.toggle_div h5
+{
+	border-bottom:none;
+	font-size:10px;
+	color:#333;
+}
+
+.toggle_div h5 span.title
+{
+   	font-style:italic;	
+	font-size:14px;
+	color:#82053a;
+}
+
+.toggle_div p
+{
+	color:#333;
+	font-weight:normal;
+	
+}
+
+
+.content_list
+{
+	padding:10px 10px 20px 10px; 
+	border-bottom:1px dotted #999;
+}
+
+.content_list img
+{
+	float:right; 
+	margin: 10px 10px 20px 10px;
+	-webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+	-moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.oh-schedule {
+}
+
+.oh-schedule h3 {
+	float: left;
+	font-size: 18px;
+	width: 200px;
+	margin: 0px;
+	padding: 0px;
+	text-transform:none;
+}
+.oh-schedule p {
+	float: left;
+	width: 650px;
+	padding: 0px;
+	margin: 4px 0px 16px 0px;
+}
+.oh-schedule ul {
+	list-style:none;
+}
+.oh-schedule li {	
+}
+#oh-home-photo1 {
+	position:relative;
+	left: 560px;
+	top: -340px;
+	-webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+	-moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#oh-home-photo2 {
+	position:relative;
+	left: 43px;
+	top: -186px;
+	-webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+	-moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#openhouse-tag {
+	display: inline;
+	position: absolute;
+	left: 820px;
+	top: 60px;
+	opacity: 1;
+	/*
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+	*/
+}

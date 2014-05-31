@@ -1,0 +1,215 @@
+/*
+Title: Endorsed Logo Template
+Copyright: (c) 2008 Arizona Board of Regents
+Authors: Christopher Puleo, Kathy Marks, Nathan Gudmunson and Arizona State University
+Designers: The ASU Template Design Team, led by Cindi Farmer, Natalie Goebig and Anish Adalja
+Description: Gold header and universal horizontal nav styles for all templates which feature of an endorsed logo							
+*/
+
+
+/* =Gold Header
+--------------------------------------------------------- */
+
+#asu_gold_hdr {
+   min-height: 97px;
+   margin: 0; padding: 0 28px 0 0;
+   border-bottom: 3px solid #9a2537;
+   background: #ffcb66 url(/asuthemes/2.0/images/sunburst-bg.gif) left bottom no-repeat;
+   }
+
+#asu_logo {
+   margin: 0; padding: 1.33em 0 0 28px;
+   display: block;
+   float: left;
+   }
+
+/* ----{ Sign-In Links }---- */
+
+/* Push everything in the outer wrapper down for consistent vertical
+   placement regardless of the options selected (sign-in links,
+   scoped search) */
+#asu_login_search {
+   padding: 2.03em 0 5px 0;
+   float: right;
+   width: 60%;
+   }
+
+/* Then, pull the sign-in links back up near the top of the DIV.
+   This ensures that the positioning  of the search box (and 
+   everything underneath) doesn't rely on the presence of the
+   sign-in module */
+#asu_login_module {
+   margin: -1em 0 0 0; padding: 0;
+   float: right;
+   }
+
+#asu_login_module li {
+   border-right: 2px solid #000;
+   color: #000;
+   line-height: 1em;
+   float: left;
+   list-style-type: none;
+   margin: 0; padding: 0 .41em;
+   }
+
+#asu_login_module li.no-border {
+   text-transform: uppercase;
+   padding-right: 0;
+   }
+
+#asu_login_module li a {
+   color: #9a2537;
+   text-decoration: none;
+   }
+
+#asu_login_module li a:hover {
+   color: #9a2537;
+   text-decoration: underline;
+   }
+
+/* ----{ Search Module }---- */
+
+#asu_search_module {
+   clear: right;
+   float: right;
+   height: 1.5em;
+   font-size: .92em;
+   line-height: 2em;
+   margin: 1px 0 5px;
+   padding: 6px 0 0 0;
+   text-align: right;
+   vertical-align: middle;
+   }
+   
+#asu_search_module label.hidden,
+#asu_search_module .search_range legend {
+   display: none;
+   }
+   
+#asu_search_module input#asu_search {
+   border-top: 3px groove #f9f9f9;
+   border-left: 3px groove #f9f9f9;
+   border-bottom: none;
+   border-right: none;
+   color: #666;
+   padding-top: 1px;
+   padding-bottom: 2px;
+   margin-right: 24px;
+   margin-bottom: 2px;
+   background-color: #fff;
+   font-size: 1em;
+   }
+   
+#asu_search_module fieldset.search_range {
+   border: none;
+   margin: 0 24px 0 0;
+   padding: 0;
+   }
+   
+#asu_search_module fieldset.search_range input {
+   cursor: pointer;
+   }
+   
+#asu_search_module fieldset.search_range label {
+   cursor: default;
+   }
+   
+/* For accessibility, the scoped search needs to come before
+   the search button in the code. To compensate for the
+   reverse order from the visual display, the button needs
+   to be pulled up into position next to the search box.
+   
+   Once this is done, the button loses the ability to affect
+   the positioning of the search box next to it. As a result,
+   the alt text under the button is partially hidden by
+   the search box when images are disabled in the browser.
+   
+   Giving the element a negative text indent pulls the alt text
+   to the left of the search box, where it has plenty of room
+   to display fully and expand with the box on resize. */
+#asu_search_module input.asu_search_button {
+   margin: -22px 0 0 0;
+   padding: 0;
+   border: none;
+   background-color: #ffcb66;
+   color: #231f20;
+   display: block;
+   float: right;
+   text-indent: -21.05em;
+   }
+
+/* ----{ Float Clearing }---- */
+
+#asu_gold_hdr:after,
+#asu_login_search:after,
+#asu_search_module:after,
+#asu_search_module div:after,
+#asu_search_module ul:after,
+#asu_universal_nav ul:after {
+   content: ".";
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;
+   }
+   
+/* This props open the header at the bottom to
+   allow room for the text to expand without
+   the lower elements spilling into the middle
+   content area */
+#asu_login_search .clear {
+   clear: both;
+   }
+
+/* =Universal Nav
+------------------------------------------------------ */
+
+/* The text links should expand down, not out.
+   To prevent the list from expanding too far to
+   the left and bumping into the ASU logo, a hard
+   width needs to be set on the list container.
+   This, however, poses problems as different browsers
+   interpret the size of the list in different ways
+   as a result of the fact that the font-size and
+   line-height are set in EMs.
+   
+   When a value is chosen for the width of the list,
+   some browsers will put more (or less) space at its
+   right edge, throwing off the alignment of the last
+   link and the right edge of the search button below it.
+   
+   To preserve flush-right alignment between the list and
+   the search button in all browsers, a max-width is set,
+   allowing each browser to size the list without adding
+   space to either side and avoid wrapping the text links
+   at the browser's default text size setting.  */
+#asu_universal_nav {
+   margin: 0; padding: 6px 0 0;
+   float: right;
+   max-width: 593px;
+   }
+
+#asu_universal_nav li {
+   font: bold 1em/1em Tahoma, Arial, sans-serif; color: #666;
+   display: inline; list-style-type: none;
+   margin: 0; padding: 0;
+   float: left;
+   text-align: right;
+   border-right: 2px solid #999;
+   }
+
+#asu_universal_nav li a {
+   padding: 0 .55em;
+   }
+   
+#asu_universal_nav li a:link, #asu_universal_nav li a:visited {
+   color: #666; text-decoration: none;
+   }
+   
+#asu_universal_nav li a:hover, #asu_universal_nav li a:active {
+   color: #000; text-decoration: underline;
+   }
+   
+#asu_universal_nav li.no-border a {
+   padding-right: 0;
+   }

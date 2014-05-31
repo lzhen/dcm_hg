@@ -1,0 +1,5 @@
+      <!-- START SSFD LOGO /asuthemes/2.0/custom/ssfd/includes/html/ssfd_logo.shtml -->
+      <div id="asu_logo">
+        <a href="http://ssfd.asu.edu/" title="ASU School of Social and Family Dynamics"><img src="<?=$httpProtocol?>://www.asu.edu/asuthemes/2.0/custom/ssfd/images/ssfd_logo.png" alt="School of Social and Family Dynamics" height="65" width="275" title="School of Social and Family Dynamics" /></a>
+      </div>
+      <!-- END SSFD LOGO -->

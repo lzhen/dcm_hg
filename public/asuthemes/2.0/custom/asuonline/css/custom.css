@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* @import url("http://asuonline.asu.edu/_assets/css/gallery.css"); */
+
+body {
+	background-color: #ddd;
+}
+
+.asu_set_fixed_width {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+/* from asu_template_lite_maroon.css */
+
+#asu_gold_hdr { /* ID name kept to preserve legacy sites */
+   margin: 0; padding: 0 28px 0 0;
+   }
+
+#asu_logo {
+/*   margin: 0; padding: 2.5em 0 0 28px;*/
+   margin: 0; padding: 20px 0 0 28px;
+   }
+
+
+/* OPTIONAL */
+
+/* If you want to use index_gold_no_globals_NoLH.html (ie no left hand columns, uncomment this */
+
+#asu_content {
+   background-image: none ! important;
+   }
+
+/* End no LH column */
+
+/* If you must have 800px, uncomment this */
+
+.asu_set_fixed_width, #asu_container, #asu_content {
+	width: 800px ! important;
+}
+#asu_gold_hdr {
+	width: 772px ! important;
+}
+#asu_footer {
+	width: 775px ! important;
+}
+#asu_footer_contact_info {
+	width: 770px ! important;
+}
+
+/* End 800px */

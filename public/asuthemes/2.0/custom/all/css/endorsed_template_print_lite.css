@@ -1,0 +1,79 @@
+/*
+Title: Endorsed Logo Print Stylesheet
+Copyright: (c) 2008 Arizona Board of Regents
+Authors: Christopher Puleo, Kathy Marks, Nathan Gudmunson and Arizona State University
+Designers: The ASU Template Design Team, led by Cindi Farmer, Natalie Goebig and Anish Adalja
+Description: Print styles for basic Endorsed Logo template
+*/
+
+
+/* =Basics
+-------------------------------------*/
+
+* { 
+   margin: 0; padding: 0;
+   }
+   
+body {
+   margin: .5in .25in;
+   }
+   
+#asu_gold_hdr {
+   background-color: #fff; background-image: none;
+   font: 11pt/15pt Tahoma, Arial, Helvetica, sans-serif; color: black;
+   width: auto;
+   }
+
+#asu_gold_hdr a,
+#asu_footer_contact_info a,
+#asu_gold_hdr a img {
+   border: none;
+   text-decoration: none;
+   font-size: inherit;
+   color: #903;
+   }
+   
+#asu_gold_hdr a:link,
+#asu_gold_hdr a:visited,
+#asu_footer_contact_info a:link,
+#asu_footer_contact_info a:visited {
+   text-decoration: underline;
+   }
+   
+#asu_logo a {
+   color: #903;
+   }
+   
+#asu_gold_hdr img {
+   border: none;
+   display: block;
+   }
+
+.skip {
+   display: none;
+   }
+
+#asu_login_search,
+#asu_universal_nav,
+#asu_nav,
+.asu_breadcrumb,
+#asu_right_content_column,
+#asu_footer {
+   display: none;
+   }
+   
+#asu_logo {
+   margin-bottom: .25in;
+   }
+   
+#asu_footer_contact_info {
+   border-top: thin solid #ccc;
+   margin: .25in 0 .1in 0; padding-top: .07in;
+   font: 75%/1.1em Arial, Helvetica, sans-serif;
+   }
+
+.asu_body_copy {
+   display: block;
+   height: 1%;
+   margin: 0;
+   }

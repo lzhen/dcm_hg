@@ -1,0 +1,148 @@
+/*
+CVS: $Id: leftnav_dynamic.css,v 1.2 2007/06/08 23:00:35 cvsdevel Exp $
+Title: ASU Template
+Copyright: (c) 2007
+Authors: Jon Revie / Aaron Smitthipong
+Company: Rhino Internet Solutions
+Description: Navigation controls for ASU Template
+
+Updated By		Updated Date		Description
+Eric Caslake		7/31/2007		added /asuthemes/1.0 to URLs
+*/
+
+/* =Primary Navigation
+----------------------------------------------*/
+
+#asu_nav {
+   float: left;
+   display: block;
+   padding: 10px 0;
+   vertical-align: top;
+   width: 195px;
+   }
+
+#asu_nav ul.asu_primary {
+   background-color: transparent;
+   margin: 0; padding: 0 15px;
+   }
+
+#asu_nav ul.asu_primary li {
+   border-top: 1px dashed #CCC;
+   font-weight: bold; color: #000; line-height: 12px;
+   list-style: none;
+   padding: 10px 0 10px 15px; margin: 0;
+   }
+
+#asu_nav ul.asu_primary li.closed {
+   background: transparent url(http://www.asu.edu/asuthemes/2.0/images/asu_nav_closed.gif) 0 1.05em no-repeat;
+   }
+
+#asu_nav ul.asu_primary li.opened {
+   background: transparent url(http://www.asu.edu/asuthemes/2.0/images/asu_nav_opened.gif) 0 1.05em no-repeat;
+   }
+
+#asu_nav ul.asu_primary li a {
+   font-weight: bold; color: #903;
+   text-decoration: none; line-height: 11px;
+   padding: 0; margin: 0;
+   outline: none;
+   }
+
+#asu_nav ul.asu_primary li a:hover {
+   color: #000; text-decoration: underline;
+   }
+
+/* =Secondary Navigation
+----------------------------------------------*/
+
+#asu_nav ul.asu_primary li ul {
+   padding: 0; margin: 5px 0 0 0;
+   }
+
+#asu_nav ul.asu_primary li ul,
+#asu_nav ul.asu_primary li.opened ul li ul {
+   display: none;
+   }
+
+#asu_nav ul.asu_primary li ul li {
+   border: none;
+   color: #000;
+   list-style: none;
+   padding: 8px 0 0 15px; margin: 0;
+   }
+
+#asu_nav ul.asu_primary li ul li:first-child {
+   margin-top: -4px;
+   }
+
+#asu_nav ul.asu_primary li ul li.closed {
+   background: transparent url(http://www.asu.edu/asuthemes/2.0/images/asu_nav_closed.gif) 0 10px no-repeat;
+   }
+
+#asu_nav ul.asu_primary li ul li.opened {
+   background: transparent url(http://www.asu.edu/asuthemes/2.0/images/asu_nav_opened.gif) 0 10px no-repeat;
+   }
+
+#asu_nav ul.asu_primary li ul li a {
+   font-weight: normal; color: #903; line-height: 12px;
+   text-decoration: none; outline: none;
+   }
+
+#asu_nav ul.asu_primary li ul li a:hover {
+   color: #000; text-decoration: underline;
+   }
+
+#asu_nav ul.asu_primary li ul li.selected a,
+#asu_nav ul.asu_primary li ul li.selected a:hover {
+   font-weight: bold;
+   }
+
+/* =Tertiary Navigation
+----------------------------------------------*/
+
+#asu_nav ul.asu_primary li ul li ul {
+   padding: 0 0 0 0; margin: 8px 0 0 0;
+   }
+
+#asu_nav ul.asu_primary li.opened ul,
+#asu_nav ul.asu_primary li ul li.opened ul {
+   display: block;
+   }
+
+#asu_nav ul.asu_primary li ul li ul li,
+#asu_nav ul.asu_primary li ul li ul li.opened {
+   background: transparent url(http://www.asu.edu/asuthemes/2.0/images/asu_nav_bullet.gif) 0 12px no-repeat;
+   border: none;
+   padding: 8px 0 0 12px; margin: 0;
+   color: #903;
+   }
+
+#asu_nav ul.asu_primary li ul li ul li:first-child {
+   margin-top: -8px;
+   }
+
+#asu_nav ul.asu_primary li ul li ul  li a {
+   text-decoration: none; color: #903;
+   }
+
+#asu_nav ul.asu_primary li ul li ul li a:hover {
+   text-decoration: underline; color: #000;
+   outline: none;
+   }
+
+#asu_nav ul.asu_primary li ul li.selected ul li a,
+#asu_nav ul.asu_primary li ul li.selected ul li a:hover {
+   font-weight: normal;
+   }
+
+#asu_nav ul.asu_primary li ul li ul li.selected a,
+#asu_nav ul.asu_primary li ul li ul li.selected a:hover {
+   font-weight: bold;
+   }
+
+/* Left Column 4th Nav Bar
+--------------------------------------------*/
+
+#asu_nav ul.asu_primary li ul li.opened ul li ul { 
+   display: none;
+   }

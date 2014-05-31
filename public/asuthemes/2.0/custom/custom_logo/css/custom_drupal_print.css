@@ -1,0 +1,211 @@
+/*
+Title: School of Social and Family Dynamics Template
+Copyright: (c) 2008 Arizona Board of Regents
+Authors: Christopher Puleo, Kathy Marks, Nathan Gudmunson and Arizona State University
+Designers: The ASU Template Design Team, led by Cindi Farmer, Natalie Goebig and Anish Adalja
+Description: Print styles for School of Social and Family Dynamics Template
+*/
+
+
+/* =Basics
+-------------------------------------*/
+
+* { 
+   margin: 0; padding: 0;
+   }
+
+body {
+   background-color: white;
+   font: 11pt/15pt Arial, Helvetica, sans-serif; color: black;
+   margin: .5in .25in;
+   width: auto;
+   }
+
+a,
+a img {
+   border: none;
+   text-decoration: none;
+   font-size: inherit;
+   color: #903;
+   }
+   
+a:link,
+a:visited {
+   text-decoration: underline;
+   }
+   
+strong {
+   font-weight: bold;
+   }
+
+em {
+   font-style: italic;
+   }
+
+img {
+   border: none;
+   display: block;
+   }
+
+p {
+   padding: .5em 0;
+   }
+
+h1 {
+   border-bottom: thin solid #ccc;  
+   font-size: 200%;
+   margin: .25in 0 .35in; padding: 0 0 .15in 0;
+   }
+   
+h2 {
+   border-bottom: thin dashed #ccc;
+   font-size: 150%;
+   margin: .1in 0; padding: 0 0 .1in 0;
+   }
+   
+h3 {
+   border-bottom: thin dashed #ccc;
+   font-size: 110%; letter-spacing: 2pt;
+   margin: .1in 0; padding: 0 0 .1in 0;
+   text-transform: uppercase;
+   }
+   
+h4 {
+   border-bottom: thin dashed #ccc;
+   font-size: 110%;
+   margin: .1in 0; padding: 0 0 .1in 0;
+   }
+   
+h5 {
+   border-bottom: thin dashed #ccc;
+   font-size: 100%;
+   margin: .1in 0; padding: 0 0 .1in 0;
+   }
+
+table {
+   font-size: 1em;
+   border: thin solid #ccc;
+   }
+
+tr {
+   background-color: #fff;
+   }
+
+thead th {
+   border-bottom: thin solid #ccc;
+   font-weight: bold;
+   }
+
+table td {
+   border-bottom: thin dashed #ccc;
+   background-color: #fff;
+   font-size: 1em;
+   padding: .03in .06in; margin: 0;
+   }
+
+dl {
+   margin: 0; padding: 0;
+   }
+
+dt {
+   font-size: inherit; font-weight: bolder;
+   }
+
+dd {
+   padding-bottom: .05in;
+   }
+
+fieldset {
+   border: thin solid #ccc;
+   padding: .1in;
+   }
+
+legend {
+   font-weight: bold; font-size: 1.16em;
+   }
+
+ul {
+   margin-left: .38in;
+   padding-left: 0;
+   margin-bottom: 1em;
+   }
+
+li {
+   font-size: inherit;
+   }
+
+input[type="file"],
+input[type="password"],
+input[type="text"],
+textarea {
+   border: thin solid #999;
+   background-color: #fff;
+   padding: .03in;
+   }
+
+select {
+   border: thin solid #999;
+   background-color: #fff;
+   padding: 0 0 0 .02in;
+   }
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input.form-submit,
+input.button {
+   border: thin solid #999;
+   padding: .03in;
+   }
+
+.skip {
+   display: none;
+   }
+
+.visible {
+   visibility: visible;
+   }
+
+.hidden {
+   visibility: hidden;
+   }
+
+#asu_login_search,
+#asu_universal_nav,
+#asu_nav,
+.asu_breadcrumb,
+#asu_right_content_column,
+#asu_footer {
+   display: none;
+   }
+   
+#asu_logo {
+   padding-bottom: .25in;
+   }
+   
+#asu_logo:before {
+   content: url(/asuthemes/2.0/custom/ssfd/images/ssfd_logo.png);
+   }
+   
+#asu_logo img {
+   display: none;
+   }
+   
+#asu_footer_contact_info {
+   border-top: thin solid #ccc;
+   margin: .25in 0 .1in 0;
+   font-size: 90%; line-height: 1.1em;
+   }
+
+.asu_body_copy {
+   display: block;
+   height: 1%;
+   margin: 0;
+   }
+
+.asu_body_copy ul {
+   margin-left: .38in; padding-left: 0;
+   }
+#squeeze {
+	overflow: visible;
+}

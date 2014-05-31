@@ -1,0 +1,14 @@
+/* 
+/**
+* Styles to address IE8 browser inconsistencies
+*/
+
+#asu_search_module input.asu_search_button {
+   margin-top: -1px;
+}
+#asu_search_module input#asu_search {
+   margin-right: 2px;
+   }
+#asu_login_module li {
+   padding: 0 0 0 .41em;
+   }

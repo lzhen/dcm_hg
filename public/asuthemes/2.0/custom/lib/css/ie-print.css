@@ -1,0 +1,27 @@
+/*
+Title: ASU Libraries Template
+Copyright: (c) 2008 Arizona Board of Regents
+Authors: Christopher Puleo, Kathy Marks, Nathan Gudmunson and Arizona State University
+Designers: The ASU Template Design Team, led by Cindi Farmer, Natalie Goebig and Anish Adalja
+Description: Print styles for ASU Libraries Template served specifically to Internet Explorer versions 7 and lower
+*/
+
+
+/* IE 6 and 7 do not support the "generated content" method of
+   inserting the ASU logo from a stylesheet which is used as
+   part of the ASU template to serve the same PNG file to the
+   printed version of each page regardless of the screen version's
+   logo color (as of 4/15/08, choices were gold and white).
+   
+   This workaround targets only IE 7 and lower and sends the
+   browser a background image of the gold logo. Unfortunately,
+   this is not a perfect solution because users will need to
+   turn on background image printing for the logo to show up. */
+   
+#asu_logo {
+   background: white url(/asuthemes/2.0/custom/lib/images/lib_logo.gif) 0 0 no-repeat;
+   display: block;
+   width: 274px;
+   height: 65px;
+   }
+

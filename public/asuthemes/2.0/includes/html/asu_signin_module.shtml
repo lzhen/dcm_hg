@@ -1,0 +1,6 @@
+          <!-- START USER SIGNIN MODULE /asuthemes/2.0/includes/html/asu_signin_module.shtml -->
+          <ul id="asu_login_module">
+            <li><strong>Full name</strong></li>
+            <li class="no-border"><a href="#"><strong>Sign Out</strong></a></li>
+          </ul>
+          <!-- END USER SIGNIN MODULE -->

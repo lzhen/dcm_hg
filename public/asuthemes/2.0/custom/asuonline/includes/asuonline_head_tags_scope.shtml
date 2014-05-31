@@ -1,0 +1,37 @@
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="/asuthemes/2.0/css/global.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/asuthemes/2.0/css/asu_header_nav_scope.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/asuthemes/2.0/css/leftnav_dynamic.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/asuthemes/2.0/css/asu_footer.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/asuthemes/2.0/css/asu_print.css" type="text/css" media="print" />
+  <link rel="shortcut icon" href="/asuthemes/2.0/images/favicon.ico" type="image/x-icon" />
+  <!--[if lte IE 6]>
+  <link rel="stylesheet" href="/asuthemes/2.0/custom/asuonline/css/ie-classic-scope.css" type="text/css" media="screen" />
+  <![endif]-->
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/asuthemes/2.0/custom/asuonline/css/ie-vista-scope.css" type="text/css" media="screen" />
+  <![endif]-->	
+  <!--[if lte IE 7]>
+  <link rel="stylesheet" href="/asuthemes/2.0/custom/asuonline/css/ie-print.css" type="text/css" media="print" />
+  <![endif]-->
+  <script type="text/javascript" src="/asuthemes/2.0/javascript/menu.js"></script>
+  <script type="text/javascript" src="/asuthemes/2.0/javascript/external.js"></script>
+
+<!-- custom CSS and JS -->
+
+    <link rel="stylesheet" type="text/css" href="/asuthemes/2.0/custom/asuonline/css/custom.css"/>
+   	<script src="/_assets/js/AC_OETags.js" language="javascript" type="text/javascript"></script>
+
+	<script language="JavaScript" type="text/javascript">
+ 
+		// -----------------------------------------------------------------------------
+		// Globals
+		// Major version of Flash required
+		var requiredMajorVersion = 8;
+		// Minor version of Flash required
+		var requiredMinorVersion = 0;
+		// Minor version of Flash required
+		var requiredRevision = 0;
+		//-----------------------------------------------------------------------------
+
+    </script>

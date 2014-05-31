@@ -1,0 +1,68 @@
+select {
+	margin: 0px 0px 0px 8px;
+}
+input[type="checkbox"] {
+	margin: 0px 0px 0px 5px;
+}
+.fieldWithErrors input[type="text"] {
+	border: 2px solid #F24458;
+	margin: 0px 0px 0px 5px;
+}
+.fieldWithErrors textarea {
+	border: 2px solid #F24458;
+	margin: 0px 0px 0px 5px;
+}
+.fieldWithErrors select {
+	border: 2px solid #F24458;
+	margin: 0px 0px 0px 5px;
+}
+.section {
+	padding: 0px 0px 8px 0px;
+	margin: 8px;
+}
+.wide_sheet {
+	margin: 0px 0px 8px 0px;
+}
+#dcm_body_content {
+	margin: 234px 0px 0px 0px;
+	padding: 234px 0px 0px 0px;
+}
+#courses table {
+	width: 770px;
+}
+
+
+
+
+
+.d-description {
+	float: left;
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	width: 770px;
+}
+
+#course_details_bar {
+	background: #bababa;
+	/*padding: 8px 16px 1px 16px;*/
+	padding: 0px 0px 8px 0px;
+	margin: 0px 0px 0px 0px;
+	float:left; 
+	width: 100%
+}
+.bartitle {
+	float: left;
+	font-weight: bold;
+	font-size: 130%;
+	color: #666666;
+	padding: 8px 16px 1px 16px;
+}
+
+
+
+.menu ul {
+	float: left;
+	margin: 6px 0px;
+	padding: 6px 0px;
+}

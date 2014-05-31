@@ -1,0 +1,62 @@
+/* IE7 */
+
+/*  
+Title: ASU Template
+Copyright: (c) 2008 Arizona Board of Regents
+Authors: Christopher Puleo, Kathy Marks, Nathan Gudmunson and Arizona State University
+Designers: The ASU Template Design Team, led by Cindi Farmer, Natalie Goebig and Anish Adalja
+Description: Styles specifically served to Internet Explorer 7.0
+*/
+
+
+body {
+   behavior: url(/asuthemes/2.0/css/csshover.htc); /* WinIE behavior call */
+   }
+
+#asu_container {
+   min-width: 996px;
+   }
+
+/* Windows fonts are slightly larger, so the max-width
+   we set on the horizontal nav is too short. Bump it
+   up by two pixels */
+#asu_universal_nav {
+   max-width: 595px;
+   }
+
+/* For IE, the default line height of 1em doesn't
+   provide sufficient space to show an underline on hover */
+#asu_universal_nav li, #asu_login_module li {
+   line-height: 1.05em;
+   }
+
+/* Correct for IE's unbalanced padding with EMs */
+#asu_footer li a {
+   padding: 0 .41em 0 .66em;
+   }
+
+/* Various padding adjustments for consistent precision
+   spacing with good browsers */
+#asu_login_search {
+   padding-top: 2.03em; padding-bottom: 0;
+   }
+
+#asu_login_module {
+   margin: -1.1em 0 0 0;
+   }
+
+#asu_search_module {
+   padding-top: 4px;
+   height: 0.25em;
+   }
+
+#asu_search_module input#asu_search {
+   margin-bottom: 0;
+   padding-top: 0;
+   padding-bottom: 4px;
+   }
+
+#asu_search_module input.asu_search_button {
+   margin-top: -21px;
+   }
+
