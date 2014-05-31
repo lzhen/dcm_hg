@@ -1,0 +1,9 @@
+--- 
+user: dcuser
+cwd: /usr/local/apps/dcm/current
+port: '8000'
+environment: production
+group: webdev
+address: 127.0.0.1
+pid_file: /usr/local/apps/dcm/shared/pids/mongrel.pid
+servers: 4
