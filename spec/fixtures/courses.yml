@@ -1,0 +1,14 @@
+topics_course:
+  id: 1
+  title: Topics in Digital Culture
+  prefix: AME
+  number: 101
+  description: Topics in Digital Culture examines the effects of digital technology on the way we live, communicate, learn, and create. It proposes that we are moving towards a hybrid (physical-digital) existence and culture.
+  credit_hours: 3
+  is_existing: true
+  anticipated_start_date: <%= Date.civil(2010,8,15).to_s %>
+  classification: Humanistic-Technological
+  frequency: Every Year
+  facility_needs: Reconfigurable DC Room- 25
+  total_seats: 25,
+  reserved_seats: 100

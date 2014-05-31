@@ -1,0 +1,11 @@
+cf_1:
+  id: 1
+  course_id: 1
+  proficiency_id: 1
+  proficiency_direction: Outgoing
+
+cf_2:
+  id: 2
+  course_id: 1
+  proficiency_id: 5
+  proficiency_direction: Outgoing

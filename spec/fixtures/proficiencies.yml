@@ -1,0 +1,39 @@
+computational_tools_100:
+  id: 1
+  name: Computational Tools
+  level: 100
+
+computational_tools_200:
+  id: 2
+  name: Computational Tools
+  level: 200
+
+computational_tools_300:
+  id: 3
+  name: Computational Tools
+  level: 300
+
+computational_tools_400:
+  id: 4
+  name: Computational Tools
+  level: 400
+
+sensors_and_signals_100:
+  id: 5
+  name: Sensors and Signals
+  level: 100
+
+sensors_and_signals_200:
+  id: 6
+  name: Sensors and Signals
+  level: 200
+
+sensors_and_signals_300:
+  id: 7
+  name: Sensors and Signals
+  level: 300
+
+sensors_and_signals_400:
+  id: 8
+  name: Sensors and Signals
+  level: 400
